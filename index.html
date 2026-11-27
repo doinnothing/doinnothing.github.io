@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -872,6 +871,38 @@
       padding: 12px;
     }
 
+    .profile-rank-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .rank-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 2px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1.5px solid var(--accent-color);
+      color: var(--accent-text);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .rank-next-hint {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
     .history-trigger-btn {
       width: 100%;
       background: var(--bg-surface);
@@ -1335,6 +1366,18 @@
       padding: 2px 6px;
       font-weight: 800;
       color: var(--text-primary);
+    }
+
+    .history-mini-tag.elo-pos {
+      background: var(--success-bg);
+      border-color: var(--success-color);
+      color: var(--success-text);
+    }
+
+    .history-mini-tag.elo-neg {
+      background: var(--danger-bg);
+      border-color: var(--danger-color);
+      color: var(--danger-text);
     }
 
     .history-score {
@@ -2962,6 +3005,25 @@
       font-weight: 900;
       color: var(--text-primary);
     }
+
+    .elo-delta-pos {
+      color: var(--success-text);
+    }
+
+    .elo-delta-neg {
+      color: var(--danger-text);
+    }
+.auth-msg {
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      display: none;
+    }
+    .auth-msg.err { display: block; background: var(--danger-bg); color: var(--danger-text); border: 1.5px solid var(--danger-color); }
+    .auth-msg.ok  { display: block; background: var(--success-bg); color: var(--success-text); border: 1.5px solid var(--success-color); }
+    .auth-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   </style>
 </head>
 <body>
@@ -3004,11 +3066,35 @@
       </div>
 
       <div class="history-toolbar">
-        <span id="history-modal-stats" class="history-summary-pill">Всего: 0 • В: 0 / П: 0</span>
+        <span id="history-modal-stats" class="history-summary-pill">Всего: 0 • В: 0 / П: 0 • 0 ELO</span>
         <button type="button" id="btn-clear-history" class="clear-history-btn">🗑️ Очистить историю</button>
       </div>
 
       <div id="history-list" class="history-list"></div>
+    </div>
+  </div>
+<!-- Auth Modal -->
+  <div id="auth-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span id="auth-modal-title" class="modal-title">🔐 Аккаунт</span>
+        <button type="button" id="btn-close-auth-modal" class="modal-close-btn" aria-label="Закрыть">✕</button>
+      </div>
+
+      <div id="auth-form-box" style="display:flex; flex-direction:column; gap:10px;">
+        <input type="email" id="auth-email" class="nickname-input" placeholder="Почта (email)" autocomplete="email" />
+        <input type="password" id="auth-pass" class="nickname-input" placeholder="Пароль (мин. 6 символов)" autocomplete="current-password" />
+        <div id="auth-msg" class="auth-msg"></div>
+        <div class="auth-actions">
+          <button type="button" id="btn-auth-login" class="primary-btn" style="margin-top:0; padding:11px;">Войти</button>
+          <button type="button" id="btn-auth-reg" class="secondary-btn" style="padding:11px;">Регистрация</button>
+        </div>
+      </div>
+
+      <div id="auth-user-box" style="display:none; flex-direction:column; gap:10px;">
+        <div class="room-status-banner ready" id="auth-user-email">Вы вошли</div>
+        <button type="button" id="btn-auth-logout" class="secondary-btn">Выйти из аккаунта</button>
+      </div>
     </div>
   </div>
 
@@ -3121,12 +3207,20 @@
               placeholder="Введи никнейм..."
               aria-label="Никнейм игрока"
             />
+            <div class="profile-rank-row">
+              <span id="profile-rank-badge" class="rank-pill">🌱 Новичок • 0 ELO</span>
+              <span id="profile-rank-next" class="rank-next-hint">До «Путник»: 50</span>
+            </div>
           </div>
         </div>
 
         <button type="button" id="btn-open-history" class="history-trigger-btn">
           <span class="history-trigger-left">📜 История игр</span>
           <span id="history-wl-counter" class="history-wl-counter">В: 0 / П: 0</span>
+        </button>
+<button type="button" id="btn-open-auth" class="history-trigger-btn">
+          <span class="history-trigger-left">🔐 Аккаунт</span>
+          <span id="auth-status-pill" class="history-wl-counter">Гость</span>
         </button>
       </section>
 
@@ -3159,7 +3253,7 @@
               <div class="diff-emoji">🌱</div>
               <div>
                 <span class="diff-name">Старт с нуля (A0)</span>
-                <span class="diff-desc">Приветствия, цифры, цвета, еда и картинки</span>
+                <span class="diff-desc">Приветствия, цифры, цвета, еда • +5 / -10 ELO</span>
               </div>
             </div>
             <span class="diff-tag">A0</span>
@@ -3170,7 +3264,7 @@
               <div class="diff-emoji">🧭</div>
               <div>
                 <span class="diff-name">Новичок (A1)</span>
-                <span class="diff-desc">Время, погода, кафе и простые глаголы</span>
+                <span class="diff-desc">Время, погода, кафе, глаголы • +10 / -10 ELO</span>
               </div>
             </div>
             <span class="diff-tag">A1</span>
@@ -3181,7 +3275,7 @@
               <div class="diff-emoji">🎯</div>
               <div>
                 <span class="diff-name">Знаток (A2–B1)</span>
-                <span class="diff-desc">Ser/Estar, Por/Para и прошедшее время</span>
+                <span class="diff-desc">Ser/Estar, Por/Para, времена • +20 / -20 ELO</span>
               </div>
             </div>
             <span class="diff-tag">A2–B1</span>
@@ -3468,6 +3562,10 @@
             <span id="stat-dmg-dealt" class="stat-val">0 HP</span>
           </div>
           <div class="stat-tile full">
+            <span class="stat-label">Ранг и изменение ELO</span>
+            <span id="stat-rank-change" class="stat-val">🌱 Новичок • 0 ELO</span>
+          </div>
+          <div class="stat-tile full">
             <span class="stat-label">Режим таймера и правила</span>
             <span id="stat-timer-mode" class="stat-val">30 сек / раунд</span>
           </div>
@@ -3493,7 +3591,7 @@
     const SUPABASE_ANON_KEY = 'sb_publishable_xeYsmDuMs2l0cL4HMr6pew_ZinjSnrM';
 
     /* ==========================================================================
-       1. CONSTANTS & PROFILES
+       1. CONSTANTS, RANKS & PROFILES
        ========================================================================== */
     const DEFAULT_HP = 5000;
     const VALID_HP_OPTIONS = [2500, 5000, 10000, 15000];
@@ -3506,6 +3604,24 @@
     const VALID_THEMES = ["ocean", "espana", "emerald", "violet", "amber"];
     const HISTORY_STORAGE_KEY = "lingoduel_history";
     const HISTORY_MAX_ITEMS = 30;
+    const ELO_STORAGE_KEY = "linguaduel_rank";
+
+    const ELO_RULES = {
+      principiante: { win: 5, loss: -10 },
+      novato: { win: 10, loss: -10 },
+      conocedor: { win: 20, loss: -20 }
+    };
+
+    const RANK_TIERS = [
+      { minElo: 0,    icon: "🌱", name: "Новичок" },
+      { minElo: 50,   icon: "🧭", name: "Путник" },
+      { minElo: 125,  icon: "⚔️", name: "Дуэлянт" },
+      { minElo: 250,  icon: "🛡️", name: "Идальго" },
+      { minElo: 450,  icon: "👑", name: "Кабальеро" },
+      { minElo: 700,  icon: "🔥", name: "Маэстро" },
+      { minElo: 1000, icon: "🏆", name: "Легенда" }
+    ];
+
     const BOT_RANDOM_NAMES = [
       "Carlos_AI",
       "Lucía_Bot",
@@ -3572,6 +3688,39 @@
       return VALID_QMODE_OPTIONS.includes(val) ? val : "all";
     }
 
+    function loadPlayerElo() {
+      try {
+        const raw = localStorage.getItem(ELO_STORAGE_KEY);
+        if (!raw) return 0;
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed.elo === "number" && !Number.isNaN(parsed.elo)) {
+          return Math.max(0, Math.floor(parsed.elo));
+        }
+      } catch (e) {}
+      return 0;
+    }
+
+    function savePlayerElo(elo) {
+      const clean = Math.max(0, Math.floor(Number(elo) || 0));
+      try {
+        localStorage.setItem(ELO_STORAGE_KEY, JSON.stringify({ elo: clean }));
+      } catch (e) {}
+      return clean;
+    }
+
+    function getRankForElo(elo) {
+      const clean = Math.max(0, Math.floor(Number(elo) || 0));
+      let current = RANK_TIERS[0];
+      let next = null;
+      for (let i = 0; i < RANK_TIERS.length; i++) {
+        if (clean >= RANK_TIERS[i].minElo) {
+          current = RANK_TIERS[i];
+          next = RANK_TIERS[i + 1] || null;
+        }
+      }
+      return { ...current, next };
+    }
+
     const state = {
       gameMode: "bot", // "bot" | "friend"
       selectedDiff: "principiante",
@@ -3580,6 +3729,10 @@
       soundEnabled: true,
       theme: "espana",
       customBgUrl: "",
+
+      // Rank & ELO
+      elo: loadPlayerElo(),
+      lastMatchElo: null,
 
       // Saved local duel settings (used when starting bot game or creating a room)
       duelSettings: {
@@ -3700,11 +3853,13 @@
       qmodeBtns: document.querySelectorAll(".setting-pill-btn[data-qmode]"),
       btnStartDuel: document.getElementById("btn-start-duel"),
 
-      // Profile & Avatar modal
+      // Profile, Rank & Avatar modal
       profileAvatarDisplay: document.getElementById("profile-avatar-display"),
       btnOpenAvatarCircle: document.getElementById("btn-open-avatar-circle"),
       btnOpenAvatarLink: document.getElementById("btn-open-avatar-link"),
       nicknameInput: document.getElementById("nickname-input"),
+      profileRankBadge: document.getElementById("profile-rank-badge"),
+      profileRankNext: document.getElementById("profile-rank-next"),
       avatarModal: document.getElementById("avatar-modal"),
       btnCloseAvatarModal: document.getElementById("btn-close-avatar-modal"),
       emojiGrid: document.getElementById("emoji-grid"),
@@ -3803,6 +3958,7 @@
       statRounds: document.getElementById("stat-rounds"),
       statAccuracy: document.getElementById("stat-accuracy"),
       statDmgDealt: document.getElementById("stat-dmg-dealt"),
+      statRankChange: document.getElementById("stat-rank-change"),
       statTimerMode: document.getElementById("stat-timer-mode"),
       btnPlayAgain: document.getElementById("btn-play-again"),
       btnChangeBot: document.getElementById("btn-change-bot")
@@ -3969,8 +4125,42 @@
     })();
 
     /* ==========================================================================
-       2.3. MATCH HISTORY MANAGER (LOCALSTORAGE: lingoduel_history, LAST 30)
+       2.3. RANK SYSTEM & MATCH HISTORY MANAGER (LOCALSTORAGE: lingoduel_history)
        ========================================================================== */
+    function updateRankUI() {
+      const elo = state.elo;
+      const rankInfo = getRankForElo(elo);
+      if (el.profileRankBadge) {
+        el.profileRankBadge.textContent = `${rankInfo.icon} ${rankInfo.name} • ${elo} ELO`;
+      }
+      if (el.profileRankNext) {
+        if (rankInfo.next) {
+          const diff = rankInfo.next.minElo - elo;
+          el.profileRankNext.textContent = `До «${rankInfo.next.name}»: ${diff}`;
+        } else {
+          el.profileRankNext.textContent = "Макс. ранг!";
+        }
+      }
+    }
+
+    function applyMatchElo(playerWon) {
+      const rule = ELO_RULES[state.selectedDiff] || ELO_RULES.principiante;
+      const rawDelta = playerWon ? rule.win : rule.loss;
+      const before = state.elo;
+      const after = savePlayerElo(Math.max(0, before + rawDelta));
+      const actualDelta = after - before;
+      state.elo = after;
+      state.lastMatchElo = {
+        before,
+        after,
+        delta: actualDelta,
+        rawDelta,
+        rank: getRankForElo(after)
+      };
+      updateRankUI();
+      return state.lastMatchElo;
+    }
+
     function loadMatchHistory() {
       try {
         const raw = localStorage.getItem(HISTORY_STORAGE_KEY);
@@ -4010,6 +4200,7 @@
       if (state.historySavedForMatch) return;
       state.historySavedForMatch = true;
 
+      const eloResult = applyMatchElo(playerWon);
       const levelMeta = LEVEL_META[state.selectedDiff] || LEVEL_META.principiante;
       const levelShort = levelMeta.tierLabel.replace("Уровень ", "");
 
@@ -4029,6 +4220,8 @@
         won: Boolean(playerWon),
         playerHp: state.playerHp,
         oppHp: state.oppHp,
+        eloDelta: eloResult.delta,
+        eloAfter: eloResult.after,
         mistakes: Array.isArray(state.stats.mistakes) ? state.stats.mistakes.slice(0, 50) : []
       };
 
@@ -4065,7 +4258,7 @@
         el.historyWlCounter.textContent = `В: ${wins} / П: ${losses}`;
       }
       if (el.historyModalStats) {
-        el.historyModalStats.textContent = `Всего: ${history.length} • В: ${wins} / П: ${losses}`;
+        el.historyModalStats.textContent = `Всего: ${history.length} • В: ${wins} / П: ${losses} • ${state.elo} ELO`;
       }
       if (el.btnClearHistory) {
         el.btnClearHistory.disabled = history.length === 0;
@@ -4155,6 +4348,13 @@
         tagsWrap.appendChild(modeTag);
         tagsWrap.appendChild(levelTag);
         tagsWrap.appendChild(rulesTag);
+
+        if (typeof item.eloDelta === "number") {
+          const eloTag = document.createElement("span");
+          eloTag.className = `history-mini-tag ${item.eloDelta > 0 ? "elo-pos" : item.eloDelta < 0 ? "elo-neg" : ""}`;
+          eloTag.textContent = `${item.eloDelta > 0 ? "+" : ""}${item.eloDelta} ELO`;
+          tagsWrap.appendChild(eloTag);
+        }
 
         const scoreEl = document.createElement("span");
         scoreEl.className = "history-score";
@@ -4259,7 +4459,6 @@
 
       updateHistorySummaryUI();
     })();
-
     /* ==========================================================================
        2.5. WEB AUDIO API SOUND SYNTHESIZER (NO EXTERNAL FILES)
        ========================================================================== */
@@ -4574,6 +4773,8 @@
         const isSelected = state.profile.avatarType === "emoji" && btn.dataset.emoji === state.profile.avatarData;
         btn.classList.toggle("selected", isSelected);
       });
+
+      updateRankUI();
 
       if (state.gameMode === "friend" && !state.matchStarted && state.roomChannel) {
         updatePresenceSlots(state.isHost ? true : state.hostConnected, state.isHost ? state.oppConnected : true);
@@ -5697,7 +5898,7 @@
               damageScale: state.matchRules.damageScale,
               questionMode: state.matchRules.questionMode,
               hostId: state.clientId,
-hostProfile: getSanitizedProfilePayload()
+              hostProfile: getSanitizedProfilePayload()
             }
           });
         }
@@ -5835,6 +6036,7 @@ hostProfile: getSanitizedProfilePayload()
       state.matchStarted = true;
       state.gameOver = false;
       state.historySavedForMatch = false;
+      state.lastMatchElo = null;
       state.oppDisconnected = false;
       state.myRematchReady = false;
       state.oppRematchReady = false;
@@ -6103,6 +6305,7 @@ hostProfile: getSanitizedProfilePayload()
       state.matchStarted = true;
       state.gameOver = false;
       state.historySavedForMatch = false;
+      state.lastMatchElo = null;
       state.opponentProfile = {
         nickname: `${randomBotName} (${botMeta.tierLabel.replace("Уровень ", "")})`,
         avatarType: "emoji",
@@ -6849,6 +7052,29 @@ hostProfile: getSanitizedProfilePayload()
       el.statRounds.textContent = state.stats.roundsPlayed;
       el.statAccuracy.textContent = `${accuracy}%`;
       el.statDmgDealt.textContent = `${state.stats.damageDealt} HP`;
+
+      if (el.statRankChange) {
+        const eloInfo = state.lastMatchElo || {
+          after: state.elo,
+          delta: 0,
+          rank: getRankForElo(state.elo)
+        };
+        el.statRankChange.textContent = "";
+        const rankMain = document.createTextNode(`${eloInfo.rank.icon} ${eloInfo.rank.name} • ${eloInfo.after} ELO `);
+        const deltaSpan = document.createElement("span");
+        if (eloInfo.delta > 0) {
+          deltaSpan.className = "elo-delta-pos";
+          deltaSpan.textContent = `(+${eloInfo.delta})`;
+        } else if (eloInfo.delta < 0) {
+          deltaSpan.className = "elo-delta-neg";
+          deltaSpan.textContent = `(${eloInfo.delta})`;
+        } else {
+          deltaSpan.textContent = "(0)";
+        }
+        el.statRankChange.appendChild(rankMain);
+        el.statRankChange.appendChild(deltaSpan);
+      }
+
       const timerLabel = state.selectedTimerSec === 0
         ? "∞ (Без лимита)"
         : `${state.selectedTimerSec} сек / раунд`;
@@ -6856,11 +7082,92 @@ hostProfile: getSanitizedProfilePayload()
 
       switchScreen("gameover");
     }
+/* ==========================================================================
+       9.5. EMAIL + PASSWORD AUTH (SUPABASE)
+       ========================================================================== */
+    (function initEmailAuth() {
+      const modal = document.getElementById("auth-modal");
+      const btnOpen = document.getElementById("btn-open-auth");
+      const btnClose = document.getElementById("btn-close-auth-modal");
+      const pill = document.getElementById("auth-status-pill");
+      const formBox = document.getElementById("auth-form-box");
+      const userBox = document.getElementById("auth-user-box");
+      const userEmailEl = document.getElementById("auth-user-email");
+      const emailIn = document.getElementById("auth-email");
+      const passIn = document.getElementById("auth-pass");
+      const msgEl = document.getElementById("auth-msg");
+      const btnLogin = document.getElementById("btn-auth-login");
+      const btnReg = document.getElementById("btn-auth-reg");
+      const btnLogout = document.getElementById("btn-auth-logout");
+
+      function showMsg(text, ok) {
+        msgEl.textContent = text;
+        msgEl.className = "auth-msg " + (ok ? "ok" : "err");
+      }
+
+      function renderAuthUser(user) {
+        state.authUser = user || null;
+        if (user) {
+          pill.textContent = "✓ " + user.email;
+          formBox.style.display = "none";
+          userBox.style.display = "flex";
+          userEmailEl.textContent = "Вы вошли как: " + user.email;
+        } else {
+          pill.textContent = "Гость";
+          formBox.style.display = "flex";
+          userBox.style.display = "none";
+        }
+      }
+
+      btnOpen.addEventListener("click", () => {
+        msgEl.className = "auth-msg";
+        modal.classList.add("open");
+      });
+      btnClose.addEventListener("click", () => modal.classList.remove("open"));
+      modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
+
+      async function handleAuth(isSignUp) {
+        const client = ensureSupabaseClient();
+        if (!client) return showMsg("Supabase не подключён", false);
+        const email = emailIn.value.trim();
+        const password = passIn.value;
+        if (!email || password.length < 6) return showMsg("Введи email и пароль (от 6 символов)", false);
+
+        btnLogin.disabled = btnReg.disabled = true;
+        const { data, error } = isSignUp
+          ? await client.auth.signUp({ email, password })
+          : await client.auth.signInWithPassword({ email, password });
+        btnLogin.disabled = btnReg.disabled = false;
+
+        if (error) return showMsg(error.message, false);
+        if (isSignUp && !data.session) {
+          return showMsg("Письмо отправлено! Подтверди почту и войди.", true);
+        }
+        renderAuthUser(data.user);
+        showMsg("Успешный вход!", true);
+        setTimeout(() => modal.classList.remove("open"), 500);
+      }
+
+      btnLogin.addEventListener("click", () => handleAuth(false));
+      btnReg.addEventListener("click", () => handleAuth(true));
+      btnLogout.addEventListener("click", async () => {
+        const client = ensureSupabaseClient();
+        if (client) await client.auth.signOut();
+        renderAuthUser(null);
+      });
+
+      const client = ensureSupabaseClient();
+      if (client) {
+        client.auth.getSession().then(({ data }) => renderAuthUser(data?.session?.user));
+        client.auth.onAuthStateChange((_ev, session) => renderAuthUser(session?.user));
+      }
+    })();
 
     /* ==========================================================================
        10. BOOTSTRAP: CHECK URL FOR ?room=ID&level=LEVEL&hp=...&scale=...&qmode=...
        ========================================================================== */
     (function bootstrapApp() {
+      updateRankUI();
       updateLobbyUI();
       updateResumeDuelBanner();
       updateHistorySummaryUI();
@@ -6886,3 +7193,6 @@ hostProfile: getSanitizedProfilePayload()
   </script>
 </body>
 </html>
+
+
+

@@ -3061,6 +3061,95 @@
       border-radius: var(--radius-sm);
       padding: 6px 10px;
     }
+/* Leaderboard Modal */
+    .leaderboard-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 2px 4px 8px 2px;
+    }
+
+    .leaderboard-row {
+      flex: 0 0 auto;
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 0 var(--shadow-color);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .leaderboard-row.me {
+      border-color: var(--accent-color);
+      background: var(--accent-soft);
+      box-shadow: 0 4px 0 var(--accent-shadow);
+    }
+
+    .leaderboard-left {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .leaderboard-pos {
+      width: 28px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .leaderboard-avatar {
+      width: 34px;
+      height: 34px;
+      font-size: 17px;
+    }
+
+    .leaderboard-info {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .leaderboard-name {
+      font-size: 13.5px;
+      font-weight: 900;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .leaderboard-sub {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .leaderboard-elo {
+      flex-shrink: 0;
+      font-size: 12.5px;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      border: 1.5px solid var(--border-color);
+      color: var(--accent-text);
+      font-variant-numeric: tabular-nums;
+    }
 
 .auth-msg {
       font-size: 12px;
@@ -3120,6 +3209,22 @@
       </div>
 
       <div id="history-list" class="history-list"></div>
+    </div>
+  </div>
+<!-- Leaderboard Modal -->
+  <div id="leaderboard-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="leaderboard-modal-title">
+    <div class="modal-card history-modal-card">
+      <div class="modal-header">
+        <span id="leaderboard-modal-title" class="modal-title">🏆 Таблица лидеров</span>
+        <button type="button" id="btn-close-leaderboard-modal" class="modal-close-btn" aria-label="Закрыть">✕</button>
+      </div>
+
+      <div class="history-toolbar">
+        <span id="leaderboard-status" class="history-summary-pill">Топ-20 игроков по ELO</span>
+        <button type="button" id="btn-refresh-leaderboard" class="change-avatar-link">↻ Обновить</button>
+      </div>
+
+      <div id="leaderboard-list" class="leaderboard-list"></div>
     </div>
   </div>
 <!-- Auth Modal -->
@@ -3271,6 +3376,10 @@
         <button type="button" id="btn-open-mistakes-review" class="history-trigger-btn">
           <span class="history-trigger-left">🎯 Работа над ошибками</span>
           <span id="mistakes-review-counter" class="history-wl-counter">0 ош.</span>
+        </button>
+<button type="button" id="btn-open-leaderboard" class="history-trigger-btn">
+          <span class="history-trigger-left">🏆 Таблица лидеров</span>
+          <span id="leaderboard-pill" class="history-wl-counter">Топ-20</span>
         </button>
 <button type="button" id="btn-open-auth" class="history-trigger-btn">
           <span class="history-trigger-left">🔐 Аккаунт</span>
@@ -3890,6 +3999,9 @@
       // Rank & ELO
       elo: loadPlayerElo(),
       lastMatchElo: null,
+authUser: null,
+      cloudStats: { wins: 0, losses: 0, loaded: false },
+      cloudSyncDebounce: null,
 
       // Saved local duel settings (used when starting bot game or creating a room)
       duelSettings: {
@@ -4400,6 +4512,113 @@
       }
     }
 
+function getLocalWinsLosses() {
+      const history = loadMatchHistory();
+      let wins = 0;
+      let losses = 0;
+      history.forEach(item => {
+        if (item && item.won) wins += 1;
+        else losses += 1;
+      });
+      return { wins, losses };
+    }
+
+    async function syncCloudProfile() {
+      if (!state.authUser) return;
+      const client = ensureSupabaseClient();
+      if (!client) return;
+
+      const prof = getSanitizedProfilePayload();
+      const wl = state.cloudStats.loaded ? state.cloudStats : getLocalWinsLosses();
+
+      try {
+        await client.from("profiles").upsert({
+          id: state.authUser.id,
+          nickname: prof.nickname,
+          avatar_type: prof.avatarType,
+          avatar_data: prof.avatarData,
+          elo: Math.max(0, Math.floor(Number(state.elo) || 0)),
+          wins: Math.max(0, Math.floor(Number(wl.wins) || 0)),
+          losses: Math.max(0, Math.floor(Number(wl.losses) || 0)),
+          updated_at: new Date().toISOString()
+        }, { onConflict: "id" });
+      } catch (e) {}
+    }
+
+    function scheduleCloudProfileSync() {
+      if (!state.authUser) return;
+      if (state.cloudSyncDebounce) clearTimeout(state.cloudSyncDebounce);
+      state.cloudSyncDebounce = setTimeout(() => {
+        state.cloudSyncDebounce = null;
+        syncCloudProfile();
+      }, 600);
+    }
+
+    let lastLoadedCloudUserId = null;
+
+    async function loadCloudProfile(user) {
+      if (!user) {
+        lastLoadedCloudUserId = null;
+        state.cloudStats = { wins: 0, losses: 0, loaded: false };
+        return;
+      }
+      if (lastLoadedCloudUserId === user.id && state.cloudStats.loaded) return;
+
+      const client = ensureSupabaseClient();
+      if (!client) return;
+
+      try {
+        const { data, error } = await client
+          .from("profiles")
+          .select("*")
+          .eq("id", user.id)
+          .maybeSingle();
+
+        if (error) return;
+        lastLoadedCloudUserId = user.id;
+
+        if (data) {
+          state.profile.nickname = (data.nickname || state.profile.nickname || generateDefaultNickname()).slice(0, 20);
+          if (data.avatar_type === "image" && typeof data.avatar_data === "string" && data.avatar_data.startsWith("data:image/")) {
+            state.profile.avatarType = "image";
+            state.profile.avatarData = data.avatar_data;
+          } else if (data.avatar_data) {
+            state.profile.avatarType = "emoji";
+            state.profile.avatarData = data.avatar_data;
+          }
+          saveProfileToStorage();
+
+          // Если в облаке 0 ELO, а гостем уже наиграли ELO — сохраняем максимум
+          const cloudElo = Math.max(0, Number(data.elo) || 0);
+          const mergedElo = cloudElo === 0 && state.elo > 0 ? state.elo : cloudElo;
+          state.elo = savePlayerElo(mergedElo);
+
+          const localWl = getLocalWinsLosses();
+          const wins = Number(data.wins) || 0;
+          const losses = Number(data.losses) || 0;
+          state.cloudStats = {
+            wins: wins === 0 && losses === 0 ? localWl.wins : wins,
+            losses: wins === 0 && losses === 0 ? localWl.losses : losses,
+            loaded: true
+          };
+
+          updateProfileUI();
+          updateRankUI();
+          updateHistorySummaryUI();
+
+          if (mergedElo !== cloudElo || (wins === 0 && losses === 0 && (localWl.wins > 0 || localWl.losses > 0))) {
+            syncCloudProfile();
+          }
+        } else {
+          // Первый вход после регистрации — создаём запись из локального профиля
+          const localWl = getLocalWinsLosses();
+          state.cloudStats = { wins: localWl.wins, losses: localWl.losses, loaded: true };
+          await syncCloudProfile();
+          updateHistorySummaryUI();
+        }
+      } catch (e) {}
+    }
+
     function saveMatchToHistory(playerWon) {
       if (state.historySavedForMatch) return;
       state.historySavedForMatch = true;
@@ -4407,6 +4626,11 @@
       const eloResult = applyMatchElo(playerWon);
       const levelMeta = LEVEL_META[state.selectedDiff] || LEVEL_META.principiante;
       const levelShort = levelMeta.tierLabel.replace("Уровень ", "");
+
+      if (state.authUser && state.cloudStats.loaded) {
+        if (playerWon) state.cloudStats.wins += 1;
+        else state.cloudStats.losses += 1;
+      }
 
       const record = {
         id: generateRandomId(8),
@@ -4433,21 +4657,7 @@
       history.unshift(record);
       persistMatchHistory(history);
       updateHistorySummaryUI();
-    }
-
-    function formatHistoryDate(ts) {
-      try {
-        const d = new Date(ts);
-        return d.toLocaleString("ru-RU", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-          hour: "2-digit",
-          minute: "2-digit"
-        });
-      } catch (e) {
-        return "";
-      }
+      syncCloudProfile();
     }
 
     function findQuestionForMistake(mistake) {
@@ -4529,8 +4739,9 @@
         if (item && item.won) wins += 1;
         else losses += 1;
       });
-      if (el.historyWlCounter) {
-        el.historyWlCounter.textContent = `В: ${wins} / П: ${losses}`;
+     if (el.historyWlCounter) {
+        const showWl = state.authUser && state.cloudStats.loaded ? state.cloudStats : { wins, losses };
+        el.historyWlCounter.textContent = `В: ${showWl.wins} / П: ${showWl.losses}`;
       }
       if (el.historyModalStats) {
         el.historyModalStats.textContent = `Всего: ${history.length} • В: ${wins} / П: ${losses} • ${state.elo} ELO`;
@@ -5174,6 +5385,7 @@
           saveProfileToStorage();
           updateProfileUI();
           syncProfileToRoomIfWaiting(true);
+syncCloudProfile();
           closeAvatarModal();
         });
         el.emojiGrid.appendChild(btn);
@@ -5212,6 +5424,7 @@
           saveProfileToStorage();
           updateProfileUI();
           syncProfileToRoomIfWaiting(true);
+syncCloudProfile();
           closeAvatarModal();
         } catch (err) {
           alert("Не удалось обработать фото. Выбери другой файл изображения.");
@@ -5223,6 +5436,7 @@
         saveProfileToStorage();
         updateProfileUI();
         syncProfileToRoomIfWaiting(false);
+scheduleCloudProfileSync();
       }
 
       function handleNicknameBlur() {
@@ -5231,6 +5445,7 @@
           saveProfileToStorage();
           updateProfileUI();
           syncProfileToRoomIfWaiting(true);
+syncCloudProfile();
         }
       }
 
@@ -7794,85 +8009,204 @@ function showGameOver() {
 })();
 
 /* ==========================================================================
-9.5. EMAIL + PASSWORD AUTH (SUPABASE)
-========================================================================== */
-(function initEmailAuth() { const modal = document.getElementById("auth-modal");
-const btnOpen = document.getElementById("btn-open-auth"); const btnClose =
-document.getElementById("btn-close-auth-modal"); const pill =
-document.getElementById("auth-status-pill"); const formBox =
-document.getElementById("auth-form-box"); const userBox =
-document.getElementById("auth-user-box"); const userEmailEl =
-document.getElementById("auth-user-email"); const emailIn =
-document.getElementById("auth-email"); const passIn =
-document.getElementById("auth-pass"); const msgEl =
-document.getElementById("auth-msg"); const btnLogin =
-document.getElementById("btn-auth-login"); const btnReg =
-document.getElementById("btn-auth-reg"); const btnLogout =
-document.getElementById("btn-auth-logout");
+       9.5. EMAIL + PASSWORD AUTH (SUPABASE)
+       ========================================================================== */
+    (function initEmailAuth() {
+      const modal = document.getElementById("auth-modal");
+      const btnOpen = document.getElementById("btn-open-auth");
+      const btnClose = document.getElementById("btn-close-auth-modal");
+      const pill = document.getElementById("auth-status-pill");
+      const formBox = document.getElementById("auth-form-box");
+      const userBox = document.getElementById("auth-user-box");
+      const userEmailEl = document.getElementById("auth-user-email");
+      const emailIn = document.getElementById("auth-email");
+      const passIn = document.getElementById("auth-pass");
+      const msgEl = document.getElementById("auth-msg");
+      const btnLogin = document.getElementById("btn-auth-login");
+      const btnReg = document.getElementById("btn-auth-reg");
+      const btnLogout = document.getElementById("btn-auth-logout");
 
-  function showMsg(text, ok) {
-    msgEl.textContent = text;
-    msgEl.className = "auth-msg " + (ok ? "ok" : "err");
-  }
+      function showMsg(text, ok) {
+        msgEl.textContent = text;
+        msgEl.className = "auth-msg " + (ok ? "ok" : "err");
+      }
 
-  function renderAuthUser(user) {
-    state.authUser = user || null;
-    if (user) {
-      pill.textContent = "✓ " + user.email;
-      formBox.style.display = "none";
-      userBox.style.display = "flex";
-      userEmailEl.textContent = "Вы вошли как: " + user.email;
-    } else {
-      pill.textContent = "Гость";
-      formBox.style.display = "flex";
-      userBox.style.display = "none";
-    }
-  }
+      function renderAuthUser(user) {
+        state.authUser = user || null;
+        if (user) {
+          pill.textContent = "✓ " + user.email;
+          formBox.style.display = "none";
+          userBox.style.display = "flex";
+          userEmailEl.textContent = "Вы вошли как: " + user.email;
+          loadCloudProfile(user);
+        } else {
+          pill.textContent = "Гость";
+          formBox.style.display = "flex";
+          userBox.style.display = "none";
+          loadCloudProfile(null);
+        }
+      }
 
-  btnOpen.addEventListener("click", () => {
-    msgEl.className = "auth-msg";
-    modal.classList.add("open");
-  });
-  btnClose.addEventListener("click", () => modal.classList.remove("open"));
-  modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
+      btnOpen.addEventListener("click", () => {
+        msgEl.className = "auth-msg";
+        modal.classList.add("open");
+      });
+      btnClose.addEventListener("click", () => modal.classList.remove("open"));
+      modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
 
-  async function handleAuth(isSignUp) {
-    const client = ensureSupabaseClient();
-    if (!client) return showMsg("Supabase не подключён", false);
-    const email = emailIn.value.trim();
-    const password = passIn.value;
-    if (!email || password.length < 6) return showMsg("Введи email и пароль (от 6 символов)", false);
+      async function handleAuth(isSignUp) {
+        const client = ensureSupabaseClient();
+        if (!client) return showMsg("Supabase не подключён", false);
+        const email = emailIn.value.trim();
+        const password = passIn.value;
+        if (!email || password.length < 6) return showMsg("Введи email и пароль (от 6 символов)", false);
 
-    btnLogin.disabled = btnReg.disabled = true;
-    const { data, error } = isSignUp
-      ? await client.auth.signUp({ email, password })
-      : await client.auth.signInWithPassword({ email, password });
-    btnLogin.disabled = btnReg.disabled = false;
+        btnLogin.disabled = btnReg.disabled = true;
+        const { data, error } = isSignUp
+          ? await client.auth.signUp({ email, password })
+          : await client.auth.signInWithPassword({ email, password });
+        btnLogin.disabled = btnReg.disabled = false;
 
-    if (error) return showMsg(error.message, false);
-    if (isSignUp && !data.session) {
-      return showMsg("Письмо отправлено! Подтверди почту и войди.", true);
-    }
-    renderAuthUser(data.user);
-    showMsg("Успешный вход!", true);
-    setTimeout(() => modal.classList.remove("open"), 500);
-  }
+        if (error) return showMsg(error.message, false);
+        if (isSignUp && !data.session) {
+          return showMsg("Письмо отправлено! Подтверди почту и войди.", true);
+        }
+        renderAuthUser(data.user);
+        showMsg("Успешный вход!", true);
+        setTimeout(() => modal.classList.remove("open"), 500);
+      }
 
-  btnLogin.addEventListener("click", () => handleAuth(false));
-  btnReg.addEventListener("click", () => handleAuth(true));
-  btnLogout.addEventListener("click", async () => {
-    const client = ensureSupabaseClient();
-    if (client) await client.auth.signOut();
-    renderAuthUser(null);
-  });
+      btnLogin.addEventListener("click", () => handleAuth(false));
+      btnReg.addEventListener("click", () => handleAuth(true));
+      btnLogout.addEventListener("click", async () => {
+        const client = ensureSupabaseClient();
+        if (client) await client.auth.signOut();
+        state.elo = savePlayerElo(0);
+        renderAuthUser(null);
+        updateRankUI();
+        updateHistorySummaryUI();
+      });
 
-  const client = ensureSupabaseClient();
-  if (client) {
-    client.auth.getSession().then(({ data }) => renderAuthUser(data?.session?.user));
-    client.auth.onAuthStateChange((_ev, session) => renderAuthUser(session?.user));
-  }
-})();
+      const client = ensureSupabaseClient();
+      if (client) {
+        client.auth.getSession().then(({ data }) => renderAuthUser(data?.session?.user));
+        client.auth.onAuthStateChange((_ev, session) => renderAuthUser(session?.user));
+      }
+    })();
 
+    /* ==========================================================================
+       9.6. CLOUD LEADERBOARD MODAL (TOP 20)
+       ========================================================================== */
+    (function initLeaderboard() {
+      const modal = document.getElementById("leaderboard-modal");
+      const btnOpen = document.getElementById("btn-open-leaderboard");
+      const btnClose = document.getElementById("btn-close-leaderboard-modal");
+      const btnRefresh = document.getElementById("btn-refresh-leaderboard");
+      const statusEl = document.getElementById("leaderboard-status");
+      const listEl = document.getElementById("leaderboard-list");
+
+      async function loadLeaderboard() {
+        const client = ensureSupabaseClient();
+        if (!client) {
+          statusEl.textContent = "Supabase не подключён";
+          listEl.innerHTML = `<div class="history-empty">Нет подключения к базе данных.</div>`;
+          return;
+        }
+
+        statusEl.textContent = "Загружаем Топ-20...";
+        listEl.innerHTML = `<div class="history-empty">⏳ Загрузка рейтинга...</div>`;
+
+        try {
+          const { data, error } = await client
+            .from("profiles")
+            .select("id, nickname, avatar_type, avatar_data, elo, wins, losses")
+            .order("elo", { ascending: false })
+            .order("wins", { ascending: false })
+            .limit(20);
+
+          if (error) {
+            statusEl.textContent = "Ошибка загрузки";
+            listEl.innerHTML = `<div class="history-empty">Не удалось загрузить таблицу лидеров.</div>`;
+            return;
+          }
+
+          const rows = Array.isArray(data) ? data : [];
+          statusEl.textContent = `Игроков в топе: ${rows.length}`;
+          listEl.innerHTML = "";
+
+          if (rows.length === 0) {
+            const empty = document.createElement("div");
+            empty.className = "history-empty";
+            empty.textContent = "Пока никто не попал в рейтинг. Войди в аккаунт и сыграй первый матч!";
+            listEl.appendChild(empty);
+            return;
+          }
+
+          rows.forEach((row, index) => {
+            const isMe = state.authUser && row.id === state.authUser.id;
+            const rankInfo = getRankForElo(row.elo);
+            const medal = index === 0 ? "🥇" : index === 1 ? "🥈" : index === 2 ? "🥉" : `#${index + 1}`;
+
+            const card = document.createElement("div");
+            card.className = `leaderboard-row${isMe ? " me" : ""}`;
+
+            const left = document.createElement("div");
+            left.className = "leaderboard-left";
+
+            const pos = document.createElement("span");
+            pos.className = "leaderboard-pos";
+            pos.textContent = medal;
+
+            const av = document.createElement("div");
+            av.className = "avatar-circle leaderboard-avatar";
+            renderAvatarInto(av, row.avatar_type === "image" ? "image" : "emoji", row.avatar_data || "🦊", "🦊");
+
+            const info = document.createElement("div");
+            info.className = "leaderboard-info";
+
+            const name = document.createElement("span");
+            name.className = "leaderboard-name";
+            name.textContent = (row.nickname || "Amigo") + (isMe ? " (Ты)" : "");
+
+            const sub = document.createElement("span");
+            sub.className = "leaderboard-sub";
+            sub.textContent = `${rankInfo.icon} ${rankInfo.name} • В: ${row.wins || 0} / П: ${row.losses || 0}`;
+
+            info.appendChild(name);
+            info.appendChild(sub);
+            left.appendChild(pos);
+            left.appendChild(av);
+            left.appendChild(info);
+
+            const eloBadge = document.createElement("span");
+            eloBadge.className = "leaderboard-elo";
+            eloBadge.textContent = `${row.elo || 0} ELO`;
+
+            card.appendChild(left);
+            card.appendChild(eloBadge);
+            listEl.appendChild(card);
+          });
+        } catch (e) {
+          statusEl.textContent = "Ошибка сети";
+          listEl.innerHTML = `<div class="history-empty">Проверь подключение к интернету.</div>`;
+        }
+      }
+
+      btnOpen.addEventListener("click", () => {
+        modal.classList.add("open");
+        loadLeaderboard();
+      });
+      btnRefresh.addEventListener("click", loadLeaderboard);
+      btnClose.addEventListener("click", () => modal.classList.remove("open"));
+      modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.remove("open");
+      });
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && modal.classList.contains("open")) {
+          modal.classList.remove("open");
+        }
+      });
+    })();
 /* ==========================================================================
    10. BOOTSTRAP: CHECK URL FOR ?room=ID&level=LEVEL&hp=...&scale=...&qmode=...
    ========================================================================== */

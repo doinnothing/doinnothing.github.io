@@ -4060,6 +4060,7 @@ authUser: null,
       flashTimeout: null,
       timeoutGraceTimer: null,
       autoSpeakTimeout: null,
+      gameOverDelayTimeout: null,
 
       // Friend multiplayer state
       clientId: "p_" + generateRandomId(10),
@@ -5774,17 +5775,14 @@ syncCloudProfile();
       submitPlayerAnswer({ fromTimeout: false });
     });
 
-    el.btnNextRound.addEventListener("click", () => {
+   el.btnNextRound.addEventListener("click", () => {
       stopSpanishSpeech();
+      if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
       if (state.gameMode === "friend") {
         handleFriendNextRoundClick();
       } else {
-        if (state.playerHp <= 0 || state.oppHp <= 0) {
-          showGameOver();
-        } else {
-          state.round += 1;
-          startRound();
-        }
+        state.round += 1;
+        startRound();
       }
     });
 
@@ -6331,11 +6329,11 @@ function connectToRoomChannel(client) {
         updatePresenceSlots(hostOnline, true);
       }
     } else {
-      if (!other && !state.oppDisconnected) {
+     if (!other && !state.oppDisconnected) {
         state.oppDisconnected = true;
         el.botStatus.className = "bot-live-indicator disconnected";
         el.botStatus.textContent = "Соперник вышел";
-        if (state.roundResolved && !state.oppNextReady) {
+        if (state.roundResolved && !state.oppNextReady && state.playerHp > 0 && state.oppHp > 0) {
           el.btnNextRound.disabled = false;
           el.btnNextRound.textContent = "Соперник вышел — в меню";
         }
@@ -6636,6 +6634,7 @@ function handleRoundSyncBroadcast(payload) {
 }
 
 function handleFriendNextRoundClick() {
+  if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
   if (state.oppDisconnected) {
     returnToMainLobby();
     return;
@@ -6659,11 +6658,11 @@ function handleFriendNextRoundClick() {
 
 function handleOpponentNextReady(payload) {
   if (!payload || payload.round !== state.round) return;
+  if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
   state.oppNextReady = true;
   el.oppReadyNote.classList.add("visible");
   checkBothReadyForNextRound();
 }
-
 function checkBothReadyForNextRound() {
   if (state.myNextReady && state.oppNextReady) {
     if (state.playerHp <= 0 || state.oppHp <= 0) {
@@ -6898,6 +6897,8 @@ function startRound() {
   state.lastTickSec = null;
   state.myNextReady = false;
   state.oppNextReady = false;
+
+el.btnNextRound.style.display = "";
 
   el.btnNextRound.disabled = false;
   el.oppReadyNote.classList.remove("visible");
@@ -7166,7 +7167,7 @@ function startRoundTimer() {
   el.timerText.textContent = `⏱️ ${state.selectedTimerSec.toFixed(1)}s`;
   el.timerBarFill.style.width = "100%";
 
-  state.timerInterval = setInterval(() => {
+state.timerInterval = setInterval(() => {
     if (state.roundResolved) return;
 
     const remainingMs = Math.max(0, state.timerDeadlineAt - Date.now());
@@ -7254,9 +7255,13 @@ function clearTimers() {
     clearTimeout(state.botAnswerTimeout);
     state.botAnswerTimeout = null;
   }
-  if (state.timerInterval) {
+ if (state.timerInterval) {
     clearInterval(state.timerInterval);
     state.timerInterval = null;
+  }
+  if (state.gameOverDelayTimeout) {
+    clearTimeout(state.gameOverDelayTimeout);
+    state.gameOverDelayTimeout = null;
   }
 }
 
@@ -7501,14 +7506,30 @@ function resolveRound() {
   el.outcomeDmgPill.textContent = dmgText;
   el.explanationText.innerHTML = `<strong>Пояснение:</strong> ${state.currentQuestion.explanation}`;
 
-  if (state.gameMode === "friend" && state.oppDisconnected) {
-    el.btnNextRound.textContent = "Соперник вышел — в меню";
-  } else if (state.playerHp <= 0 || state.oppHp <= 0) {
-    el.btnNextRound.textContent = "Итоги дуэли 🏆";
+  const isMatchFinished = state.playerHp <= 0 || state.oppHp <= 0;
+
+  if (isMatchFinished) {
+    el.btnNextRound.style.display = "none";
+    el.oppReadyNote.classList.remove("visible");
     saveMatchToHistory(state.oppHp <= 0 && state.playerHp > 0);
+
+    if (state.gameOverDelayTimeout) {
+      clearTimeout(state.gameOverDelayTimeout);
+    }
+    state.gameOverDelayTimeout = setTimeout(() => {
+      state.gameOverDelayTimeout = null;
+      if (!state.gameOver && state.matchStarted) {
+        showGameOver();
+      }
+    }, 2000);
   } else {
-    const nextStake = getRoundStake(state.round + 1);
-    el.btnNextRound.textContent = `Следующий раунд (на кону ${nextStake} HP)`;
+    el.btnNextRound.style.display = "";
+    if (state.gameMode === "friend" && state.oppDisconnected) {
+      el.btnNextRound.textContent = "Соперник вышел — в меню";
+    } else {
+      const nextStake = getRoundStake(state.round + 1);
+      el.btnNextRound.textContent = `Следующий раунд (на кону ${nextStake} HP)`;
+    }
   }
 
   el.roundResultBox.classList.add("visible");

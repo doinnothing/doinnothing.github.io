@@ -845,7 +845,7 @@
     }
 
     /* ==========================================================================
-       5. PROFILE CARD, HISTORY TRIGGER BUTTON & MODALS (AVATAR + HISTORY)
+       5. PROFILE CARD, HISTORY TRIGGER BUTTON & MODALS (AVATAR + HISTORY + VOCAB)
        ========================================================================== */
     .profile-block {
       display: flex;
@@ -1191,7 +1191,7 @@
       margin-top: -4px;
     }
 
-    /* History Modal Styles */
+    /* History & Vocab Shared Modal Toolbar Styles */
     .history-toolbar {
       display: flex;
       align-items: center;
@@ -1458,6 +1458,239 @@
       font-size: 11px;
       font-weight: 700;
       color: var(--danger-text);
+    }
+
+    /* ==========================================================================
+       5.5. PERSONAL VOCABULARY STYLES (TOKENS, ROUND CHIPS & MODAL CARDS)
+       ========================================================================== */
+    .vocab-word-token {
+      display: inline;
+      border-bottom: 2px dotted var(--accent-color);
+      border-radius: 4px;
+      padding: 0 2px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .vocab-word-token:hover {
+      background: var(--accent-soft);
+      color: var(--accent-text);
+    }
+
+    .vocab-word-token.saved {
+      background: var(--success-bg);
+      border-bottom: 2px solid var(--success-color);
+      color: var(--success-text);
+      font-weight: 900;
+    }
+
+    .vocab-round-strip {
+      background: var(--bg-surface);
+      border: 2px dashed var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 9px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .vocab-round-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-secondary);
+    }
+
+    .vocab-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .vocab-chip {
+      background: var(--bg-elevated);
+      border: 1.5px solid var(--border-color);
+      box-shadow: 0 2px 0 var(--shadow-color);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .vocab-chip:hover {
+      border-color: var(--accent-color);
+      background: var(--bg-surface-hover);
+    }
+
+    .vocab-chip:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 var(--shadow-color);
+    }
+
+    .vocab-chip.saved {
+      background: var(--success-bg);
+      border-color: var(--success-color);
+      box-shadow: 0 2px 0 var(--success-shadow);
+      color: var(--success-text);
+    }
+
+    .vocab-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .vocab-filter-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .vocab-filter-btn {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color);
+      box-shadow: 0 2px 0 var(--shadow-color);
+      border-radius: var(--radius-sm);
+      padding: 6px 4px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .vocab-filter-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 var(--shadow-color);
+    }
+
+    .vocab-filter-btn.selected {
+      background: var(--accent-soft);
+      border-color: var(--accent-color);
+      box-shadow: 0 2px 0 var(--accent-shadow);
+      color: var(--accent-text);
+    }
+
+    .vocab-card {
+      flex: 0 0 auto;
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 0 var(--shadow-color);
+      border-radius: var(--radius-md);
+      padding: 11px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .vocab-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .vocab-word-left {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+
+    .vocab-word-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--text-primary);
+      word-break: break-word;
+    }
+
+    .vocab-level-pill {
+      font-size: 10px;
+      font-weight: 900;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--accent-text);
+    }
+
+    .vocab-card-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+
+    .vocab-action-btn {
+      height: 30px;
+      min-width: 30px;
+      padding: 0 8px;
+      border-radius: 9px;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 2px 0 var(--shadow-color);
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.15s ease;
+    }
+
+    .vocab-action-btn:hover {
+      border-color: var(--accent-color);
+    }
+
+    .vocab-action-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 var(--shadow-color);
+    }
+
+    .vocab-action-btn.del {
+      background: var(--danger-bg);
+      border-color: var(--danger-color);
+      box-shadow: 0 2px 0 var(--danger-shadow);
+      color: var(--danger-text);
+      font-size: 11px;
+    }
+
+    .vocab-context {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      background: var(--bg-inset);
+      border-left: 3px solid var(--accent-color);
+      border-radius: 6px;
+      padding: 6px 8px;
+      line-height: 1.35;
+    }
+
+    .vocab-note-input {
+      width: 100%;
+      background: var(--bg-inset);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 6px 9px;
+      color: var(--text-primary);
+      font-size: 12px;
+      font-weight: 700;
+      outline: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .vocab-note-input:focus {
+      border-color: var(--accent-color);
+      background: var(--bg-surface);
     }
 
     /* ==========================================================================
@@ -2613,16 +2846,20 @@
       transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.15s ease, background 0.15s ease;
     }
 
-    .option-btn:hover:not(:disabled) {
+    .option-btn:hover:not(:disabled):not(.resolved) {
       border-color: var(--accent-color);
       background: var(--bg-surface-hover);
       transform: translateY(-1px);
       box-shadow: 0 5px 0 var(--shadow-color);
     }
 
-    .option-btn:active:not(:disabled) {
+    .option-btn:active:not(:disabled):not(.resolved) {
       transform: translateY(3px);
       box-shadow: 0 1px 0 var(--shadow-color);
+    }
+
+    .option-btn.resolved {
+      cursor: default;
     }
 
     .option-btn.selected-pending {
@@ -3061,7 +3298,8 @@
       border-radius: var(--radius-sm);
       padding: 6px 10px;
     }
-/* Leaderboard Modal */
+
+    /* Leaderboard Modal */
     .leaderboard-list {
       display: flex;
       flex-direction: column;
@@ -3151,7 +3389,7 @@
       font-variant-numeric: tabular-nums;
     }
 
-.auth-msg {
+    .auth-msg {
       font-size: 12px;
       font-weight: 800;
       text-align: center;
@@ -3211,7 +3449,41 @@
       <div id="history-list" class="history-list"></div>
     </div>
   </div>
-<!-- Leaderboard Modal -->
+
+  <!-- Personal Vocabulary Modal -->
+  <div id="vocab-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="vocab-modal-title">
+    <div class="modal-card history-modal-card">
+      <div class="modal-header">
+        <span id="vocab-modal-title" class="modal-title">📖 Личный словарь</span>
+        <button type="button" id="btn-close-vocab-modal" class="modal-close-btn" aria-label="Закрыть">✕</button>
+      </div>
+
+      <div class="history-toolbar">
+        <span id="vocab-modal-stats" class="history-summary-pill">Всего слов: 0</span>
+        <button type="button" id="btn-clear-vocab" class="clear-history-btn">🗑️ Очистить словарь</button>
+      </div>
+
+      <div class="vocab-controls">
+        <input
+          type="search"
+          id="vocab-search-input"
+          class="nickname-input"
+          placeholder="Поиск по слову, переводу или заметке..."
+          aria-label="Поиск в личном словаре"
+        />
+        <div class="vocab-filter-row" id="vocab-filter-row">
+          <button type="button" class="vocab-filter-btn selected" data-vlevel="all">Все</button>
+          <button type="button" class="vocab-filter-btn" data-vlevel="A0">A0</button>
+          <button type="button" class="vocab-filter-btn" data-vlevel="A1">A1</button>
+          <button type="button" class="vocab-filter-btn" data-vlevel="A2–B1">A2–B1</button>
+        </div>
+      </div>
+
+      <div id="vocab-list" class="history-list"></div>
+    </div>
+  </div>
+
+  <!-- Leaderboard Modal -->
   <div id="leaderboard-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="leaderboard-modal-title">
     <div class="modal-card history-modal-card">
       <div class="modal-header">
@@ -3227,7 +3499,8 @@
       <div id="leaderboard-list" class="leaderboard-list"></div>
     </div>
   </div>
-<!-- Auth Modal -->
+
+  <!-- Auth Modal -->
   <div id="auth-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
     <div class="modal-card">
       <div class="modal-header">
@@ -3341,7 +3614,7 @@
         <span class="resume-duel-cta">В бой →</span>
       </button>
 
-      <!-- Player Profile Card + Match History & Mistakes Review Buttons -->
+      <!-- Player Profile Card + Match History, Mistakes Review & Personal Vocab Buttons -->
       <section class="profile-block" aria-label="Профиль игрока и история игр">
         <div class="profile-card">
           <button type="button" id="btn-open-avatar-circle" class="profile-avatar-btn" title="Сменить аватарку">
@@ -3377,11 +3650,18 @@
           <span class="history-trigger-left">🎯 Работа над ошибками</span>
           <span id="mistakes-review-counter" class="history-wl-counter">0 ош.</span>
         </button>
-<button type="button" id="btn-open-leaderboard" class="history-trigger-btn">
+
+        <button type="button" id="btn-open-vocab" class="history-trigger-btn">
+          <span class="history-trigger-left">📖 Личный словарь</span>
+          <span id="vocab-counter" class="history-wl-counter">0 сл.</span>
+        </button>
+
+        <button type="button" id="btn-open-leaderboard" class="history-trigger-btn">
           <span class="history-trigger-left">🏆 Таблица лидеров</span>
           <span id="leaderboard-pill" class="history-wl-counter">Топ-20</span>
         </button>
-<button type="button" id="btn-open-auth" class="history-trigger-btn">
+
+        <button type="button" id="btn-open-auth" class="history-trigger-btn">
           <span class="history-trigger-left">🔐 Аккаунт</span>
           <span id="auth-status-pill" class="history-wl-counter">Гость</span>
         </button>
@@ -3690,6 +3970,10 @@
             <span id="outcome-dmg-pill" class="outcome-dmg-pill">0 HP</span>
           </div>
           <p id="explanation-text" class="explanation-text"></p>
+          <div id="vocab-round-strip" class="vocab-round-strip" style="display: none;">
+            <span class="vocab-round-label">📖 Нажми на незнакомое слово, чтобы сохранить его в словарь с озвучкой (или нажми на слово прямо в тексте выше):</span>
+            <div id="vocab-round-chips" class="vocab-chips-row"></div>
+          </div>
           <span id="opp-ready-note" class="opp-ready-note">✓ Соперник готов к следующему раунду</span>
           <button type="button" id="btn-next-round" class="primary-btn">
             Следующий раунд
@@ -3871,6 +4155,8 @@
     const HISTORY_STORAGE_KEY = "lingoduel_history";
     const HISTORY_MAX_ITEMS = 30;
     const ELO_STORAGE_KEY = "linguaduel_rank";
+    const VOCAB_STORAGE_KEY = "linguaduel_vocab";
+    const VOCAB_IGNORED_WORDS = new Set(["hp", "elo", "ai", "a0", "a1", "a2", "b1", "b2", "c1", "c2", "pvp", "svg"]);
 
     const ELO_RULES = {
       principiante: { win: 5, loss: -10 },
@@ -3999,7 +4285,7 @@
       // Rank & ELO
       elo: loadPlayerElo(),
       lastMatchElo: null,
-authUser: null,
+      authUser: null,
       cloudStats: { wins: 0, losses: 0, loaded: false },
       cloudSyncDebounce: null,
 
@@ -4034,6 +4320,8 @@ authUser: null,
       oppHp: DEFAULT_HP,
       round: 1,
       currentQuestion: null,
+      currentRoundVocabContext: "",
+      currentRoundVocabLevel: "A0",
       shuffledOptions: [],
       correctOptionIndex: 0,
       draftChoice: null,           // unconfirmed visual index (0..3) before clicking "Ответить"
@@ -4137,11 +4425,20 @@ authUser: null,
       btnUploadAvatarPhoto: document.getElementById("btn-upload-avatar-photo"),
       avatarFileInput: document.getElementById("avatar-file-input"),
 
-      // History modal & Mistakes Review trigger
+      // History modal, Personal Vocab & Mistakes Review trigger
       btnOpenHistory: document.getElementById("btn-open-history"),
       historyWlCounter: document.getElementById("history-wl-counter"),
       btnOpenMistakesReview: document.getElementById("btn-open-mistakes-review"),
       mistakesReviewCounter: document.getElementById("mistakes-review-counter"),
+      btnOpenVocab: document.getElementById("btn-open-vocab"),
+      vocabCounter: document.getElementById("vocab-counter"),
+      vocabModal: document.getElementById("vocab-modal"),
+      btnCloseVocabModal: document.getElementById("btn-close-vocab-modal"),
+      vocabModalStats: document.getElementById("vocab-modal-stats"),
+      btnClearVocab: document.getElementById("btn-clear-vocab"),
+      vocabSearchInput: document.getElementById("vocab-search-input"),
+      vocabFilterRow: document.getElementById("vocab-filter-row"),
+      vocabList: document.getElementById("vocab-list"),
       historyModal: document.getElementById("history-modal"),
       btnCloseHistoryModal: document.getElementById("btn-close-history-modal"),
       historyModalStats: document.getElementById("history-modal-stats"),
@@ -4219,6 +4516,8 @@ authUser: null,
       outcomeTitle: document.getElementById("outcome-title"),
       outcomeDmgPill: document.getElementById("outcome-dmg-pill"),
       explanationText: document.getElementById("explanation-text"),
+      vocabRoundStrip: document.getElementById("vocab-round-strip"),
+      vocabRoundChips: document.getElementById("vocab-round-chips"),
       oppReadyNote: document.getElementById("opp-ready-note"),
       btnNextRound: document.getElementById("btn-next-round"),
 
@@ -4440,8 +4739,7 @@ authUser: null,
         }
       });
     })();
-
-    /* ==========================================================================
+/* ==========================================================================
        2.3. RANK SYSTEM & MATCH HISTORY MANAGER (LOCALSTORAGE: lingoduel_history)
        ========================================================================== */
     function updateRankUI() {
@@ -4513,7 +4811,7 @@ authUser: null,
       }
     }
 
-function getLocalWinsLosses() {
+    function getLocalWinsLosses() {
       const history = loadMatchHistory();
       let wins = 0;
       let losses = 0;
@@ -4660,7 +4958,8 @@ function getLocalWinsLosses() {
       updateHistorySummaryUI();
       syncCloudProfile();
     }
-function formatHistoryDate(ts) {
+
+    function formatHistoryDate(ts) {
       try {
         const d = new Date(ts);
         return d.toLocaleString("ru-RU", {
@@ -4754,7 +5053,7 @@ function formatHistoryDate(ts) {
         if (item && item.won) wins += 1;
         else losses += 1;
       });
-     if (el.historyWlCounter) {
+      if (el.historyWlCounter) {
         const showWl = state.authUser && state.cloudStats.loaded ? state.cloudStats : { wins, losses };
         el.historyWlCounter.textContent = `В: ${showWl.wins} / П: ${showWl.losses}`;
       }
@@ -4968,6 +5267,428 @@ function formatHistoryDate(ts) {
 
       updateHistorySummaryUI();
     })();
+
+    /* ==========================================================================
+       2.4. PERSONAL VOCABULARY MANAGER (LOCALSTORAGE: linguaduel_vocab)
+       ========================================================================== */
+    const vocabState = {
+      filterLevel: "all",
+      searchQuery: ""
+    };
+
+    function cleanVocabWord(raw) {
+      if (typeof raw !== "string") return "";
+      return raw
+        .trim()
+        .replace(/^[¿¡"'«»()\[\]{}.,:;!?—–\-]+|[¿¡"'«»()\[\]{}.,:;!?—–\-]+$/g, "")
+        .trim();
+    }
+
+    function isSpanishVocabToken(raw) {
+      const clean = cleanVocabWord(raw);
+      if (!clean) return false;
+      if (!/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/.test(clean)) return false;
+      if (/[А-Яа-яЁё]/.test(clean)) return false;
+      if (VOCAB_IGNORED_WORDS.has(clean.toLowerCase())) return false;
+      return true;
+    }
+
+    function loadVocabList() {
+      try {
+        const raw = localStorage.getItem(VOCAB_STORAGE_KEY);
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function persistVocabList(items) {
+      try {
+        localStorage.setItem(VOCAB_STORAGE_KEY, JSON.stringify(items));
+      } catch (e) {}
+    }
+
+    function isWordInVocab(word) {
+      const clean = cleanVocabWord(word);
+      if (!clean) return false;
+      const key = clean.toLowerCase();
+      return loadVocabList().some(item => item && item.key === key);
+    }
+
+    function updateVocabCounterUI() {
+      const items = loadVocabList();
+      if (el.vocabCounter) {
+        el.vocabCounter.textContent = `${items.length} сл.`;
+      }
+      if (el.vocabModalStats) {
+        el.vocabModalStats.textContent = `Всего слов: ${items.length}`;
+      }
+      if (el.btnClearVocab) {
+        el.btnClearVocab.disabled = items.length === 0;
+      }
+    }
+
+    function refreshRoundVocabHighlights() {
+      const savedKeys = new Set(loadVocabList().map(item => item.key));
+
+      document.querySelectorAll("#screen-duel .vocab-word-token").forEach(tok => {
+        const key = (tok.dataset.vocabKey || "").toLowerCase();
+        tok.classList.toggle("saved", savedKeys.has(key));
+      });
+
+      if (el.vocabRoundChips) {
+        el.vocabRoundChips.querySelectorAll(".vocab-chip").forEach(chip => {
+          const key = (chip.dataset.vocabKey || "").toLowerCase();
+          const isSaved = savedKeys.has(key);
+          chip.classList.toggle("saved", isSaved);
+          chip.textContent = isSaved ? `✓ ${chip.dataset.vocabWord}` : `+ ${chip.dataset.vocabWord}`;
+        });
+      }
+    }
+
+    function saveVocabWord(rawWord, context = "", level = "A0") {
+      const clean = cleanVocabWord(rawWord);
+      if (!isSpanishVocabToken(clean)) return false;
+
+      const key = clean.toLowerCase();
+      const list = loadVocabList();
+      const existing = list.find(item => item && item.key === key);
+
+      if (!existing) {
+        list.unshift({
+          id: generateRandomId(8),
+          key,
+          word: clean,
+          context: String(context || "").trim().slice(0, 220),
+          level: String(level || "A0"),
+          note: "",
+          timestamp: Date.now()
+        });
+        persistVocabList(list);
+      }
+
+      updateVocabCounterUI();
+      refreshRoundVocabHighlights();
+      speakSpanish(clean, 1.0);
+      return true;
+    }
+
+    function extractSpanishWordsFromText(text, targetMap) {
+      if (typeof text !== "string" || !text.trim()) return;
+      const regex = /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:-[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*/g;
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        const clean = cleanVocabWord(match[0]);
+        if (!isSpanishVocabToken(clean)) continue;
+        const key = clean.toLowerCase();
+        if (!targetMap.has(key)) {
+          targetMap.set(key, clean);
+        }
+      }
+    }
+
+    function tokenizeSpanishWordsIntoElement(container) {
+      if (!container) return;
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null);
+      const textNodes = [];
+      let current;
+      while ((current = walker.nextNode())) {
+        if (!current.nodeValue || !/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/.test(current.nodeValue)) continue;
+        if (current.parentElement && current.parentElement.classList.contains("vocab-word-token")) continue;
+        textNodes.push(current);
+      }
+
+      const wordRegex = /([A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:-[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*)/g;
+      textNodes.forEach(node => {
+        const text = node.nodeValue;
+        wordRegex.lastIndex = 0;
+        let lastIndex = 0;
+        let match;
+        const frag = document.createDocumentFragment();
+        let replacedAny = false;
+
+        while ((match = wordRegex.exec(text)) !== null) {
+          const rawToken = match[0];
+          const clean = cleanVocabWord(rawToken);
+          if (!isSpanishVocabToken(clean)) continue;
+
+          replacedAny = true;
+          if (match.index > lastIndex) {
+            frag.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+          }
+
+          const span = document.createElement("span");
+          span.className = "vocab-word-token";
+          if (isWordInVocab(clean)) {
+            span.classList.add("saved");
+          }
+          span.dataset.vocabWord = clean;
+          span.dataset.vocabKey = clean.toLowerCase();
+          span.title = "Нажми, чтобы сохранить в словарь и озвучить";
+          span.textContent = rawToken;
+          span.addEventListener("click", ev => {
+            ev.stopPropagation();
+            saveVocabWord(clean, state.currentRoundVocabContext, state.currentRoundVocabLevel);
+          });
+          frag.appendChild(span);
+          lastIndex = match.index + rawToken.length;
+        }
+
+        if (replacedAny) {
+          if (lastIndex < text.length) {
+            frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+          }
+          node.parentNode.replaceChild(frag, node);
+        }
+      });
+    }
+
+    function buildRoundVocabContext(q, correctAnswerText) {
+      if (!q) return "";
+      if (q.subprompt) {
+        return correctAnswerText ? `${q.subprompt} — ${correctAnswerText}` : q.subprompt;
+      }
+      if (q.audioText) {
+        return correctAnswerText ? `${q.audioText} — ${correctAnswerText}` : q.audioText;
+      }
+      if (q.type === "builder" && Array.isArray(q.answer)) {
+        return `${q.answer.join(" ")} (${q.prompt})`;
+      }
+      return correctAnswerText ? `${q.prompt} → ${correctAnswerText}` : q.prompt;
+    }
+
+    function prepareRoundVocabTools(q, correctAnswerText) {
+      if (!q) return;
+      state.currentRoundVocabContext = buildRoundVocabContext(q, correctAnswerText);
+      state.currentRoundVocabLevel = getTierLabel(q.tier).replace("Уровень ", "");
+
+      // Делаем испанские слова кликабельными в текстах раунда
+      if (el.questionSubprompt.style.display !== "none") {
+        tokenizeSpanishWordsIntoElement(el.questionSubprompt);
+      }
+      if (typeof q.audioText === "string" && q.audioText.trim()) {
+        tokenizeSpanishWordsIntoElement(el.audioFallbackText);
+      }
+      tokenizeSpanishWordsIntoElement(el.questionPrompt);
+      tokenizeSpanishWordsIntoElement(el.explanationText);
+
+      if (q.type === "builder") {
+        tokenizeSpanishWordsIntoElement(el.builderFeedback);
+      } else {
+        el.optionsList.querySelectorAll(".option-left span:last-child").forEach(span => {
+          tokenizeSpanishWordsIntoElement(span);
+        });
+      }
+
+      // Собираем уникальные испанские слова раунда в удобную панель чипсов
+      const wordsMap = new Map();
+      extractSpanishWordsFromText(q.subprompt, wordsMap);
+      extractSpanishWordsFromText(q.audioText, wordsMap);
+      if (q.type === "builder") {
+        (q.answer || []).forEach(w => extractSpanishWordsFromText(w, wordsMap));
+        (q.words || []).forEach(w => extractSpanishWordsFromText(w, wordsMap));
+      } else {
+        extractSpanishWordsFromText(correctAnswerText, wordsMap);
+        (state.shuffledOptions || []).forEach(o => extractSpanishWordsFromText(o.text, wordsMap));
+      }
+      extractSpanishWordsFromText(q.prompt, wordsMap);
+      extractSpanishWordsFromText(q.explanation, wordsMap);
+
+      el.vocabRoundChips.innerHTML = "";
+      if (wordsMap.size > 0) {
+        el.vocabRoundStrip.style.display = "flex";
+        wordsMap.forEach((cleanWord, key) => {
+          const chip = document.createElement("button");
+          chip.type = "button";
+          const saved = isWordInVocab(cleanWord);
+          chip.className = saved ? "vocab-chip saved" : "vocab-chip";
+          chip.dataset.vocabWord = cleanWord;
+          chip.dataset.vocabKey = key;
+          chip.textContent = saved ? `✓ ${cleanWord}` : `+ ${cleanWord}`;
+          chip.addEventListener("click", () => {
+            saveVocabWord(cleanWord, state.currentRoundVocabContext, state.currentRoundVocabLevel);
+          });
+          el.vocabRoundChips.appendChild(chip);
+        });
+      } else {
+        el.vocabRoundStrip.style.display = "none";
+      }
+    }
+
+    function renderVocabModalList() {
+      const allItems = loadVocabList();
+      updateVocabCounterUI();
+      el.vocabList.innerHTML = "";
+
+      const q = vocabState.searchQuery.trim().toLowerCase();
+      const filtered = allItems.filter(item => {
+        if (!item) return false;
+        if (vocabState.filterLevel !== "all" && item.level !== vocabState.filterLevel) {
+          return false;
+        }
+        if (q) {
+          const inWord = (item.word || "").toLowerCase().includes(q);
+          const inCtx = (item.context || "").toLowerCase().includes(q);
+          const inNote = (item.note || "").toLowerCase().includes(q);
+          if (!inWord && !inCtx && !inNote) return false;
+        }
+        return true;
+      });
+
+      if (allItems.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "history-empty";
+        empty.textContent = "Словарь пока пуст. После любого раунда нажимай на незнакомые испанские слова, чтобы сохранить их сюда с озвучкой!";
+        el.vocabList.appendChild(empty);
+        return;
+      }
+
+      if (filtered.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "history-empty";
+        empty.textContent = "По твоему запросу слов не найдено.";
+        el.vocabList.appendChild(empty);
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "vocab-card";
+
+        const top = document.createElement("div");
+        top.className = "vocab-card-top";
+
+        const left = document.createElement("div");
+        left.className = "vocab-word-left";
+
+        const title = document.createElement("span");
+        title.className = "vocab-word-title";
+        title.textContent = item.word;
+
+        const lvl = document.createElement("span");
+        lvl.className = "vocab-level-pill";
+        lvl.textContent = item.level || "A0";
+
+        left.appendChild(title);
+        left.appendChild(lvl);
+
+        const actions = document.createElement("div");
+        actions.className = "vocab-card-actions";
+
+        const btnSpeak = document.createElement("button");
+        btnSpeak.type = "button";
+        btnSpeak.className = "vocab-action-btn";
+        btnSpeak.title = "Озвучить слово";
+        btnSpeak.textContent = "🔊";
+        btnSpeak.addEventListener("click", () => speakSpanish(item.word, 1.0));
+
+        const btnSlow = document.createElement("button");
+        btnSlow.type = "button";
+        btnSlow.className = "vocab-action-btn";
+        btnSlow.title = "Озвучить медленно";
+        btnSlow.textContent = "🐢";
+        btnSlow.addEventListener("click", () => speakSpanish(item.word, 0.75));
+
+        const btnDel = document.createElement("button");
+        btnDel.type = "button";
+        btnDel.className = "vocab-action-btn del";
+        btnDel.title = "Удалить слово из словаря";
+        btnDel.textContent = "✕";
+        btnDel.addEventListener("click", () => {
+          const updated = loadVocabList().filter(entry => entry && entry.key !== item.key);
+          persistVocabList(updated);
+          renderVocabModalList();
+          refreshRoundVocabHighlights();
+        });
+
+        actions.appendChild(btnSpeak);
+        actions.appendChild(btnSlow);
+        actions.appendChild(btnDel);
+
+        top.appendChild(left);
+        top.appendChild(actions);
+        card.appendChild(top);
+
+        if (item.context) {
+          const ctx = document.createElement("div");
+          ctx.className = "vocab-context";
+          ctx.textContent = item.context;
+          card.appendChild(ctx);
+        }
+
+        const noteInput = document.createElement("input");
+        noteInput.type = "text";
+        noteInput.className = "vocab-note-input";
+        noteInput.maxLength = 100;
+        noteInput.placeholder = "Добавить свой перевод или заметку...";
+        noteInput.value = item.note || "";
+        noteInput.addEventListener("input", () => {
+          const list = loadVocabList();
+          const target = list.find(entry => entry && entry.key === item.key);
+          if (target) {
+            target.note = noteInput.value.slice(0, 100);
+            persistVocabList(list);
+          }
+        });
+        card.appendChild(noteInput);
+
+        el.vocabList.appendChild(card);
+      });
+    }
+
+    (function initVocabModal() {
+      function openVocabModal() {
+        renderVocabModalList();
+        el.vocabModal.classList.add("open");
+      }
+
+      function closeVocabModal() {
+        el.vocabModal.classList.remove("open");
+      }
+
+      el.btnOpenVocab.addEventListener("click", openVocabModal);
+      el.btnCloseVocabModal.addEventListener("click", closeVocabModal);
+      el.vocabModal.addEventListener("click", e => {
+        if (e.target === el.vocabModal) closeVocabModal();
+      });
+
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && el.vocabModal.classList.contains("open")) {
+          closeVocabModal();
+        }
+      });
+
+      el.vocabSearchInput.addEventListener("input", () => {
+        vocabState.searchQuery = el.vocabSearchInput.value || "";
+        renderVocabModalList();
+      });
+
+      el.vocabFilterRow.querySelectorAll(".vocab-filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          vocabState.filterLevel = btn.dataset.vlevel || "all";
+          el.vocabFilterRow.querySelectorAll(".vocab-filter-btn").forEach(b => {
+            b.classList.toggle("selected", b === btn);
+          });
+          renderVocabModalList();
+        });
+      });
+
+      el.btnClearVocab.addEventListener("click", () => {
+        const list = loadVocabList();
+        if (!list.length) return;
+        if (!confirm("Очистить весь личный словарь?")) return;
+        try {
+          localStorage.removeItem(VOCAB_STORAGE_KEY);
+        } catch (e) {}
+        renderVocabModalList();
+        refreshRoundVocabHighlights();
+      });
+
+      updateVocabCounterUI();
+    })();
+
     /* ==========================================================================
        2.5. WEB AUDIO API SOUND SYNTHESIZER (NO EXTERNAL FILES)
        ========================================================================== */
@@ -5092,7 +5813,7 @@ function formatHistoryDate(ts) {
     })();
 
     /* ==========================================================================
-       2.6. WEB SPEECH API — SPANISH TTS FOR LISTENING & BUILDER TASKS
+       2.6. WEB SPEECH API — SPANISH TTS FOR LISTENING, BUILDER & VOCAB
        ========================================================================== */
     let cachedVoices = [];
 
@@ -5400,7 +6121,7 @@ function formatHistoryDate(ts) {
           saveProfileToStorage();
           updateProfileUI();
           syncProfileToRoomIfWaiting(true);
-syncCloudProfile();
+          syncCloudProfile();
           closeAvatarModal();
         });
         el.emojiGrid.appendChild(btn);
@@ -5439,7 +6160,7 @@ syncCloudProfile();
           saveProfileToStorage();
           updateProfileUI();
           syncProfileToRoomIfWaiting(true);
-syncCloudProfile();
+          syncCloudProfile();
           closeAvatarModal();
         } catch (err) {
           alert("Не удалось обработать фото. Выбери другой файл изображения.");
@@ -5451,7 +6172,7 @@ syncCloudProfile();
         saveProfileToStorage();
         updateProfileUI();
         syncProfileToRoomIfWaiting(false);
-scheduleCloudProfileSync();
+        scheduleCloudProfileSync();
       }
 
       function handleNicknameBlur() {
@@ -5460,7 +6181,7 @@ scheduleCloudProfileSync();
           saveProfileToStorage();
           updateProfileUI();
           syncProfileToRoomIfWaiting(true);
-syncCloudProfile();
+          syncCloudProfile();
         }
       }
 
@@ -5472,8 +6193,7 @@ syncCloudProfile();
 
       updateProfileUI();
     })();
-
-    /* ==========================================================================
+/* ==========================================================================
        4. CUSTOM BACKGROUND IMAGE MANAGER
        ========================================================================== */
     (function initCustomBackground() {
@@ -5643,6 +6363,7 @@ syncCloudProfile();
       if (name === "lobby") {
         updateResumeDuelBanner();
         updateHistorySummaryUI();
+        updateVocabCounterUI();
       }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -5775,7 +6496,7 @@ syncCloudProfile();
       submitPlayerAnswer({ fromTimeout: false });
     });
 
-   el.btnNextRound.addEventListener("click", () => {
+    el.btnNextRound.addEventListener("click", () => {
       stopSpanishSpeech();
       if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
       if (state.gameMode === "friend") {
@@ -5888,2162 +6609,2179 @@ syncCloudProfile();
       return `${base}?room=${encodeURIComponent(roomId)}&level=${encodeURIComponent(level)}&hp=${encodeURIComponent(r.maxHp)}&scale=${encodeURIComponent(r.damageScale)}&qmode=${encodeURIComponent(r.questionMode)}`;
     }
 
-function clearRoomQueryParams() {
-  try {
-    if (window.location.search.includes("room=")) {
-      const cleanUrl = window.location.pathname;
-      window.history.replaceState({}, "", cleanUrl);
+    function clearRoomQueryParams() {
+      try {
+        if (window.location.search.includes("room=")) {
+          const cleanUrl = window.location.pathname;
+          window.history.replaceState({}, "", cleanUrl);
+        }
+      } catch (e) {}
     }
-  } catch (e) {}
-}
 
-function formatTimerPillText(sec) {
-  return sec === 0 ? "⏱️ ∞" : `⏱️ ${sec} сек`;
-}
-
-function setRoomBanner(text, type = "info") {
-  el.roomStatusBanner.textContent = text;
-  el.roomStatusBanner.className = "room-status-banner";
-  if (type === "error") el.roomStatusBanner.classList.add("error");
-  if (type === "ready") el.roomStatusBanner.classList.add("ready");
-}
-
-function ensureSupabaseClient() {
-  if (state.supabaseClient) return state.supabaseClient;
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    return null;
-  }
-  if (!window.supabase || typeof window.supabase.createClient !== "function") {
-    return null;
-  }
-  state.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  return state.supabaseClient;
-}
-
-function shuffleArray(arr) {
-  const copy = arr.slice();
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
-
-function matchesQuestionMode(q, mode) {
-  if (!q) return false;
-  if (mode === "audio") return q.type === "audio";
-  if (mode === "builder") return q.type === "builder";
-  if (mode === "text") return q.type !== "audio" && q.type !== "builder";
-  return true;
-}
-
-function getTierPoolIndices(tier, questionMode) {
-  const tierIndices = [];
-  QUESTION_BANK.forEach((q, idx) => {
-    if (q.tier === tier) tierIndices.push(idx);
-  });
-
-  if (questionMode === "all") {
-    return tierIndices;
-  }
-
-  const filtered = tierIndices.filter(idx => matchesQuestionMode(QUESTION_BANK[idx], questionMode));
-  if (filtered.length >= 5) {
-    return filtered;
-  }
-
-  const otherTierSameMode = [];
-  QUESTION_BANK.forEach((q, idx) => {
-    if (q.tier !== tier && matchesQuestionMode(q, questionMode)) {
-      otherTierSameMode.push(idx);
+    function formatTimerPillText(sec) {
+      return sec === 0 ? "⏱️ ∞" : `⏱️ ${sec} сек`;
     }
-  });
-  const combined = filtered.concat(shuffleArray(otherTierSameMode));
-  if (combined.length >= 5) {
-    return combined;
-  }
 
-  const remaining = shuffleArray(tierIndices.filter(idx => !combined.includes(idx)));
-  const needed = Math.max(0, 5 - combined.length);
-  return combined.concat(remaining.slice(0, needed));
-}
-
-function buildFriendDeckForLevel(level, questionMode = "all") {
-  let primaryTier = 0;
-  let fallbackTiers = [1, 2];
-  if (level === "novato") {
-    primaryTier = 1;
-    fallbackTiers = [2, 0];
-  } else if (level === "conocedor") {
-    primaryTier = 2;
-    fallbackTiers = [1, 0];
-  }
-
-  const primaryPool = shuffleArray(getTierPoolIndices(primaryTier, questionMode));
-  const fallbackPool = fallbackTiers.flatMap(t => shuffleArray(getTierPoolIndices(t, questionMode)));
-
-  const seen = new Set();
-  const deckIndices = [];
-  primaryPool.concat(fallbackPool).forEach(idx => {
-    if (!seen.has(idx)) {
-      seen.add(idx);
-      deckIndices.push(idx);
+    function setRoomBanner(text, type = "info") {
+      el.roomStatusBanner.textContent = text;
+      el.roomStatusBanner.className = "room-status-banner";
+      if (type === "error") el.roomStatusBanner.classList.add("error");
+      if (type === "ready") el.roomStatusBanner.classList.add("ready");
     }
-  });
 
-  const optionOrders = deckIndices.map(() => shuffleArray([0, 1, 2, 3]));
-  const wordOrders = deckIndices.map(qIdx => {
-    const q = QUESTION_BANK[qIdx];
-    const len = q && Array.isArray(q.words) ? q.words.length : 0;
-    const indices = Array.from({ length: len }, (_, i) => i);
-    return shuffleArray(indices);
-  });
-
-  return { deckIndices, optionOrders, wordOrders };
-}
-
-function createFriendRoom() {
-  const roomId = generateRandomId(8);
-  state.gameMode = "friend";
-  state.isHost = true;
-  state.roomId = roomId;
-  state.matchRules = { ...state.duelSettings };
-
-  const inviteUrl = buildInviteUrl(roomId, state.selectedDiff, state.matchRules);
-  try {
-    window.history.replaceState(
-      {},
-      "",
-      `?room=${encodeURIComponent(roomId)}&level=${encodeURIComponent(state.selectedDiff)}&hp=${encodeURIComponent(state.matchRules.maxHp)}&scale=${encodeURIComponent(state.matchRules.damageScale)}&qmode=${encodeURIComponent(state.matchRules.questionMode)}`
-    );
-  } catch (e) {}
-
-  openFriendWaitingLobby(inviteUrl);
-}
-
-function joinFriendRoomFromUrl(roomId, level, urlRules = {}) {
-  const validLevel = LEVEL_META[level] ? level : "principiante";
-  state.gameMode = "friend";
-  state.selectedDiff = validLevel;
-  state.isHost = false;
-  state.roomId = roomId;
-  state.matchRules = {
-    maxHp: sanitizeMaxHp(urlRules.hp),
-    damageScale: sanitizeDamageScale(urlRules.scale),
-    questionMode: sanitizeQuestionMode(urlRules.qmode)
-  };
-  updateLobbyUI();
-
-  const inviteUrl = buildInviteUrl(roomId, validLevel, state.matchRules);
-  openFriendWaitingLobby(inviteUrl);
-}
-
-function openFriendWaitingLobby(inviteUrl) {
-  stopSpanishSpeech();
-  leaveSupabaseRoom();
-
-  state.matchStarted = false;
-  state.gameOver = false;
-  updateResumeDuelBanner();
-
-  state.hostConnected = state.isHost;
-  state.oppConnected = false;
-  state.oppDisconnected = false;
-  state.guestSentReady = false;
-  state.guestReadyFlag = false;
-  state.roomTimerSynced = state.isHost;
-  state.hostId = state.isHost ? state.clientId : null;
-  state.guestId = state.isHost ? null : state.clientId;
-  state.opponentProfile = {
-    nickname: state.isHost ? "Друг" : "Создатель комнаты",
-    avatarType: "emoji",
-    avatarData: state.isHost ? "👥" : "👑"
-  };
-
-  const meta = LEVEL_META[state.selectedDiff] || LEVEL_META.principiante;
-  el.roomTitle.textContent = state.isHost ? "Комната создана" : "Приглашение в дуэль";
-  el.roomLevelPill.textContent = `${meta.emoji} ${meta.tierLabel}`;
-  el.roomTimerPill.textContent = state.isHost ? formatTimerPillText(state.selectedTimerSec) : "⏱️ ...";
-  el.roomIdPill.textContent = `ID: ${state.roomId}`;
-  el.inviteLinkInput.value = inviteUrl;
-  updateRoomRulesDisplay();
-
-  if (state.isHost) {
-    el.inviteBox.style.display = "flex";
-    el.guestReadyControls.style.display = "none";
-  } else {
-    el.inviteBox.style.display = "none";
-    el.guestReadyControls.style.display = "flex";
-    el.btnGuestReady.disabled = true;
-    el.btnGuestReady.textContent = "Ожидаем создателя комнаты...";
-    updateProfileUI();
-  }
-
-  updatePresenceSlots(state.isHost, !state.isHost);
-  switchScreen("friendLobby");
-
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    setRoomBanner(
-      "Укажи SUPABASE_URL и SUPABASE_ANON_KEY в начале <script>, чтобы играть с другом онлайн.",
-      "error"
-    );
-    return;
-  }
-
-  const client = ensureSupabaseClient();
-  if (!client) {
-    setRoomBanner("Не удалось загрузить Supabase JS v2. Проверь подключение к интернету.", "error");
-    return;
-  }
-
-  setRoomBanner("Подключаемся к комнате...", "info");
-  connectToRoomChannel(client);
-}
-
-function updatePresenceSlots(hostOnline, guestOnline) {
-  const myProf = getSanitizedProfilePayload();
-  const oppProf = state.opponentProfile;
-
-  if (state.isHost) {
-    el.slotHostTitle.textContent = myProf.nickname;
-    renderAvatarInto(el.slotHostAvatar, myProf.avatarType, myProf.avatarData, "👑");
-    el.slotHostState.textContent = hostOnline ? "Ты (Хост) ✓" : "Подключение...";
-
-    el.slotGuestTitle.textContent = guestOnline ? oppProf.nickname : "Друг (Гость)";
-    renderAvatarInto(
-      el.slotGuestAvatar,
-      guestOnline ? oppProf.avatarType : "emoji",
-      guestOnline ? oppProf.avatarData : "👥",
-      "👥"
-    );
-    if (!guestOnline) {
-      el.slotGuestState.textContent = "Ожидание...";
-    } else if (state.guestReadyFlag) {
-      el.slotGuestState.textContent = "Готов к бою! ✓";
-    } else {
-      el.slotGuestState.textContent = "Настраивает профиль...";
-    }
-  } else {
-    el.slotHostTitle.textContent = hostOnline ? oppProf.nickname : "Создатель комнаты";
-    renderAvatarInto(
-      el.slotHostAvatar,
-      hostOnline ? oppProf.avatarType : "emoji",
-      hostOnline ? oppProf.avatarData : "👑",
-      "👑"
-    );
-    el.slotHostState.textContent = hostOnline ? "Пригласил тебя ✓" : "Ожидание хоста...";
-
-    el.slotGuestTitle.textContent = myProf.nickname;
-    renderAvatarInto(el.slotGuestAvatar, myProf.avatarType, myProf.avatarData, "🧑");
-    el.slotGuestState.textContent = state.guestSentReady ? "Готов к бою! ✓" : "Настройка профиля";
-  }
-
-  el.slotHost.classList.toggle("online", hostOnline);
-  el.slotGuest.classList.toggle("online", guestOnline);
-}
-
-function sendMyProfileBroadcast() {
-  if (!state.roomChannel) return;
-  const prof = getSanitizedProfilePayload();
-  state.roomChannel.send({
-    type: "broadcast",
-    event: "player_profile",
-    payload: {
-      senderId: state.clientId,
-      nickname: prof.nickname,
-      avatarType: prof.avatarType,
-      avatarData: prof.avatarData
-    }
-  });
-}
-
-function sendHostRoomInfoBroadcast() {
-  if (!state.roomChannel || !state.isHost) return;
-  state.roomChannel.send({
-    type: "broadcast",
-    event: "room_info",
-    payload: {
-      level: state.selectedDiff,
-      timerSec: state.selectedTimerSec,
-      maxHp: state.matchRules.maxHp,
-      damageScale: state.matchRules.damageScale,
-      questionMode: state.matchRules.questionMode,
-      hostProfile: getSanitizedProfilePayload()
-    }
-  });
-}
-
-function applyReceivedOpponentProfile(prof) {
-  if (!prof || typeof prof !== "object") return;
-  const cleanName = typeof prof.nickname === "string" && prof.nickname.trim()
-    ? prof.nickname.trim().slice(0, 20)
-    : (state.isHost ? "Друг" : "Создатель комнаты");
-  const validType = prof.avatarType === "image" && typeof prof.avatarData === "string" && prof.avatarData.startsWith("data:image/")
-    ? "image"
-    : "emoji";
-  const validData = validType === "image"
-    ? prof.avatarData
-    : (typeof prof.avatarData === "string" && prof.avatarData.trim() ? prof.avatarData.trim().slice(0, 4) : "👥");
-
-  state.opponentProfile = {
-    nickname: cleanName,
-    avatarType: validType,
-    avatarData: validData
-  };
-
-  if (state.matchStarted) {
-    updateDuelIdentityUI();
-    updateResumeDuelBanner();
-  }
-}
-
-function handleGuestReadyClick() {
-  if (state.isHost || state.matchStarted || state.guestSentReady) return;
-
-  if (!state.profile.nickname.trim()) {
-    state.profile.nickname = generateDefaultNickname();
-    saveProfileToStorage();
-    updateProfileUI();
-  }
-
-  state.guestSentReady = true;
-  el.btnGuestReady.disabled = true;
-  el.btnGuestReady.textContent = "⏳ Запускаем дуэль...";
-  setRoomBanner("Ты готов! Ожидаем синхронного старта...", "ready");
-  updatePresenceSlots(state.hostConnected, true);
-
-  const sendReady = () => {
-    if (!state.roomChannel || state.matchStarted) return;
-    state.roomChannel.send({
-      type: "broadcast",
-      event: "guest_ready",
-      payload: {
-        senderId: state.clientId,
-        profile: getSanitizedProfilePayload()
+    function ensureSupabaseClient() {
+      if (state.supabaseClient) return state.supabaseClient;
+      if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        return null;
       }
-    });
-  };
-
-  sendReady();
-  if (state.guestReadyRetryTimer) clearInterval(state.guestReadyRetryTimer);
-  state.guestReadyRetryTimer = setInterval(() => {
-    if (state.matchStarted || !state.roomChannel) {
-      clearInterval(state.guestReadyRetryTimer);
-      state.guestReadyRetryTimer = null;
-      return;
-    }
-    sendReady();
-  }, 1500);
-}
-
-function connectToRoomChannel(client) {
-  const channelName = `linguaduel-room-${state.roomId}`;
-  const channel = client.channel(channelName, {
-    config: {
-      broadcast: { self: false },
-      presence: { key: state.clientId }
-    }
-  });
-
-  state.roomChannel = channel;
-
-  // 1. Presence tracking
-  channel.on("presence", { event: "sync" }, () => {
-    const presenceState = channel.presenceState();
-    const participants = [];
-
-    Object.keys(presenceState).forEach(key => {
-      const metas = presenceState[key];
-      if (Array.isArray(metas) && metas.length > 0) {
-        participants.push(metas[0]);
+      if (!window.supabase || typeof window.supabase.createClient !== "function") {
+        return null;
       }
-    });
-
-    participants.sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
-
-    const myIndex = participants.findIndex(p => p.clientId === state.clientId);
-    if (myIndex >= 2) {
-      setRoomBanner("Комната уже заполнена (максимум 2 игрока).", "error");
-      return;
+      state.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      return state.supabaseClient;
     }
 
-    const hostUser = participants.find(p => p.role === "host");
-    const guestUser = participants.find(p => p.role === "guest");
+    function shuffleArray(arr) {
+      const copy = arr.slice();
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
 
-    if (!hostUser && participants.length >= 2) {
-      if (participants[0].clientId === state.clientId) {
-        state.isHost = true;
+    function matchesQuestionMode(q, mode) {
+      if (!q) return false;
+      if (mode === "audio") return q.type === "audio";
+      if (mode === "builder") return q.type === "builder";
+      if (mode === "text") return q.type !== "audio" && q.type !== "builder";
+      return true;
+    }
+
+    function getTierPoolIndices(tier, questionMode) {
+      const tierIndices = [];
+      QUESTION_BANK.forEach((q, idx) => {
+        if (q.tier === tier) tierIndices.push(idx);
+      });
+
+      if (questionMode === "all") {
+        return tierIndices;
+      }
+
+      const filtered = tierIndices.filter(idx => matchesQuestionMode(QUESTION_BANK[idx], questionMode));
+      if (filtered.length >= 5) {
+        return filtered;
+      }
+
+      const otherTierSameMode = [];
+      QUESTION_BANK.forEach((q, idx) => {
+        if (q.tier !== tier && matchesQuestionMode(q, questionMode)) {
+          otherTierSameMode.push(idx);
+        }
+      });
+      const combined = filtered.concat(shuffleArray(otherTierSameMode));
+      if (combined.length >= 5) {
+        return combined;
+      }
+
+      const remaining = shuffleArray(tierIndices.filter(idx => !combined.includes(idx)));
+      const needed = Math.max(0, 5 - combined.length);
+      return combined.concat(remaining.slice(0, needed));
+    }
+
+    function buildFriendDeckForLevel(level, questionMode = "all") {
+      let primaryTier = 0;
+      let fallbackTiers = [1, 2];
+      if (level === "novato") {
+        primaryTier = 1;
+        fallbackTiers = [2, 0];
+      } else if (level === "conocedor") {
+        primaryTier = 2;
+        fallbackTiers = [1, 0];
+      }
+
+      const primaryPool = shuffleArray(getTierPoolIndices(primaryTier, questionMode));
+      const fallbackPool = fallbackTiers.flatMap(t => shuffleArray(getTierPoolIndices(t, questionMode)));
+
+      const seen = new Set();
+      const deckIndices = [];
+      primaryPool.concat(fallbackPool).forEach(idx => {
+        if (!seen.has(idx)) {
+          seen.add(idx);
+          deckIndices.push(idx);
+        }
+      });
+
+      const optionOrders = deckIndices.map(() => shuffleArray([0, 1, 2, 3]));
+      const wordOrders = deckIndices.map(qIdx => {
+        const q = QUESTION_BANK[qIdx];
+        const len = q && Array.isArray(q.words) ? q.words.length : 0;
+        const indices = Array.from({ length: len }, (_, i) => i);
+        return shuffleArray(indices);
+      });
+
+      return { deckIndices, optionOrders, wordOrders };
+    }
+
+    function createFriendRoom() {
+      const roomId = generateRandomId(8);
+      state.gameMode = "friend";
+      state.isHost = true;
+      state.roomId = roomId;
+      state.matchRules = { ...state.duelSettings };
+
+      const inviteUrl = buildInviteUrl(roomId, state.selectedDiff, state.matchRules);
+      try {
+        window.history.replaceState(
+          {},
+          "",
+          `?room=${encodeURIComponent(roomId)}&level=${encodeURIComponent(state.selectedDiff)}&hp=${encodeURIComponent(state.matchRules.maxHp)}&scale=${encodeURIComponent(state.matchRules.damageScale)}&qmode=${encodeURIComponent(state.matchRules.questionMode)}`
+        );
+      } catch (e) {}
+
+      openFriendWaitingLobby(inviteUrl);
+    }
+
+    function joinFriendRoomFromUrl(roomId, level, urlRules = {}) {
+      const validLevel = LEVEL_META[level] ? level : "principiante";
+      state.gameMode = "friend";
+      state.selectedDiff = validLevel;
+      state.isHost = false;
+      state.roomId = roomId;
+      state.matchRules = {
+        maxHp: sanitizeMaxHp(urlRules.hp),
+        damageScale: sanitizeDamageScale(urlRules.scale),
+        questionMode: sanitizeQuestionMode(urlRules.qmode)
+      };
+      updateLobbyUI();
+
+      const inviteUrl = buildInviteUrl(roomId, validLevel, state.matchRules);
+      openFriendWaitingLobby(inviteUrl);
+    }
+
+    function openFriendWaitingLobby(inviteUrl) {
+      stopSpanishSpeech();
+      leaveSupabaseRoom();
+
+      state.matchStarted = false;
+      state.gameOver = false;
+      updateResumeDuelBanner();
+
+      state.hostConnected = state.isHost;
+      state.oppConnected = false;
+      state.oppDisconnected = false;
+      state.guestSentReady = false;
+      state.guestReadyFlag = false;
+      state.roomTimerSynced = state.isHost;
+      state.hostId = state.isHost ? state.clientId : null;
+      state.guestId = state.isHost ? null : state.clientId;
+      state.opponentProfile = {
+        nickname: state.isHost ? "Друг" : "Создатель комнаты",
+        avatarType: "emoji",
+        avatarData: state.isHost ? "👥" : "👑"
+      };
+
+      const meta = LEVEL_META[state.selectedDiff] || LEVEL_META.principiante;
+      el.roomTitle.textContent = state.isHost ? "Комната создана" : "Приглашение в дуэль";
+      el.roomLevelPill.textContent = `${meta.emoji} ${meta.tierLabel}`;
+      el.roomTimerPill.textContent = state.isHost ? formatTimerPillText(state.selectedTimerSec) : "⏱️ ...";
+      el.roomIdPill.textContent = `ID: ${state.roomId}`;
+      el.inviteLinkInput.value = inviteUrl;
+      updateRoomRulesDisplay();
+
+      if (state.isHost) {
         el.inviteBox.style.display = "flex";
         el.guestReadyControls.style.display = "none";
-        channel.track({
-          clientId: state.clientId,
-          role: "host",
-          joinedAt: participants[0].joinedAt || Date.now()
-        });
+      } else {
+        el.inviteBox.style.display = "none";
+        el.guestReadyControls.style.display = "flex";
+        el.btnGuestReady.disabled = true;
+        el.btnGuestReady.textContent = "Ожидаем создателя комнаты...";
+        updateProfileUI();
+      }
+
+      updatePresenceSlots(state.isHost, !state.isHost);
+      switchScreen("friendLobby");
+
+      if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        setRoomBanner(
+          "Укажи SUPABASE_URL и SUPABASE_ANON_KEY в начале <script>, чтобы играть с другом онлайн.",
+          "error"
+        );
         return;
       }
+
+      const client = ensureSupabaseClient();
+      if (!client) {
+        setRoomBanner("Не удалось загрузить Supabase JS v2. Проверь подключение к интернету.", "error");
+        return;
+      }
+
+      setRoomBanner("Подключаемся к комнате...", "info");
+      connectToRoomChannel(client);
     }
 
-    const hostOnline = Boolean(hostUser);
-    const guestOnline = Boolean(guestUser) || (participants.length >= 2 && hostOnline);
+    function updatePresenceSlots(hostOnline, guestOnline) {
+      const myProf = getSanitizedProfilePayload();
+      const oppProf = state.opponentProfile;
 
-    if (hostUser) state.hostId = hostUser.clientId;
-    state.hostConnected = hostOnline;
-
-    const other = participants.find(p => p.clientId !== state.clientId);
-    state.oppConnected = Boolean(other);
-
-    if (!state.matchStarted) {
       if (state.isHost) {
-        if (guestOnline) {
-          sendHostRoomInfoBroadcast();
-          if (!state.guestReadyFlag) {
-            setRoomBanner("Друг зашёл в лобби, настраивает профиль...", "ready");
-          }
+        el.slotHostTitle.textContent = myProf.nickname;
+        renderAvatarInto(el.slotHostAvatar, myProf.avatarType, myProf.avatarData, "👑");
+        el.slotHostState.textContent = hostOnline ? "Ты (Хост) ✓" : "Подключение...";
+
+        el.slotGuestTitle.textContent = guestOnline ? oppProf.nickname : "Друг (Гость)";
+        renderAvatarInto(
+          el.slotGuestAvatar,
+          guestOnline ? oppProf.avatarType : "emoji",
+          guestOnline ? oppProf.avatarData : "👥",
+          "👥"
+        );
+        if (!guestOnline) {
+          el.slotGuestState.textContent = "Ожидание...";
+        } else if (state.guestReadyFlag) {
+          el.slotGuestState.textContent = "Готов к бою! ✓";
         } else {
-          state.guestReadyFlag = false;
-          setRoomBanner("Ожидание друга...", "info");
+          el.slotGuestState.textContent = "Настраивает профиль...";
         }
-        updatePresenceSlots(true, guestOnline);
       } else {
-        if (hostOnline) {
-          if (!state.guestSentReady) {
-            el.btnGuestReady.disabled = false;
-            el.btnGuestReady.textContent = "Я готов! Начать дуэль";
-            setRoomBanner("Настрой профиль и нажми «Я готов! Начать дуэль»", "ready");
-          }
-          if (!state.roomTimerSynced) {
-            channel.send({
-              type: "broadcast",
-              event: "request_room_info",
-              payload: { senderId: state.clientId, guestProfile: getSanitizedProfilePayload() }
-            });
-          }
-        } else {
-          if (!state.guestSentReady) {
-            el.btnGuestReady.disabled = true;
-            el.btnGuestReady.textContent = "Ожидаем создателя комнаты...";
-          }
-          setRoomBanner("Ожидаем создателя комнаты...", "info");
-        }
-        updatePresenceSlots(hostOnline, true);
+        el.slotHostTitle.textContent = hostOnline ? oppProf.nickname : "Создатель комнаты";
+        renderAvatarInto(
+          el.slotHostAvatar,
+          hostOnline ? oppProf.avatarType : "emoji",
+          hostOnline ? oppProf.avatarData : "👑",
+          "👑"
+        );
+        el.slotHostState.textContent = hostOnline ? "Пригласил тебя ✓" : "Ожидание хоста...";
+
+        el.slotGuestTitle.textContent = myProf.nickname;
+        renderAvatarInto(el.slotGuestAvatar, myProf.avatarType, myProf.avatarData, "🧑");
+        el.slotGuestState.textContent = state.guestSentReady ? "Готов к бою! ✓" : "Настройка профиля";
       }
-    } else {
-     if (!other && !state.oppDisconnected) {
-        state.oppDisconnected = true;
-        el.botStatus.className = "bot-live-indicator disconnected";
-        el.botStatus.textContent = "Соперник вышел";
-        if (state.roundResolved && !state.oppNextReady && state.playerHp > 0 && state.oppHp > 0) {
-          el.btnNextRound.disabled = false;
-          el.btnNextRound.textContent = "Соперник вышел — в меню";
-        }
-      }
-    }
-  });
 
-  // 2. Broadcast events
-  channel.on("broadcast", { event: "player_profile" }, ({ payload }) => {
-    applyReceivedOpponentProfile(payload);
-    if (!state.matchStarted) {
-      updatePresenceSlots(state.isHost ? true : state.hostConnected, state.isHost ? state.oppConnected : true);
+      el.slotHost.classList.toggle("online", hostOnline);
+      el.slotGuest.classList.toggle("online", guestOnline);
     }
-  });
 
-  channel.on("broadcast", { event: "request_room_info" }, ({ payload }) => {
-    if (payload && payload.guestProfile) {
-      applyReceivedOpponentProfile(payload.guestProfile);
-    }
-    if (state.isHost && !state.matchStarted) {
-      sendHostRoomInfoBroadcast();
-      updatePresenceSlots(true, state.oppConnected);
-    }
-  });
-
-  channel.on("broadcast", { event: "room_info" }, ({ payload }) => {
-    if (!payload || state.isHost || state.matchStarted) return;
-    if (payload.hostProfile) {
-      applyReceivedOpponentProfile(payload.hostProfile);
-    }
-    if (payload.level && LEVEL_META[payload.level]) {
-      state.selectedDiff = payload.level;
-      const meta = LEVEL_META[payload.level];
-      el.roomLevelPill.textContent = `${meta.emoji} ${meta.tierLabel}`;
-    }
-    if (typeof payload.timerSec === "number") {
-      state.selectedTimerSec = payload.timerSec;
-      state.roomTimerSynced = true;
-      el.roomTimerPill.textContent = formatTimerPillText(payload.timerSec);
-    }
-    if (payload.maxHp !== undefined) {
-      state.matchRules.maxHp = sanitizeMaxHp(payload.maxHp);
-    }
-    if (payload.damageScale !== undefined) {
-      state.matchRules.damageScale = sanitizeDamageScale(payload.damageScale);
-    }
-    if (payload.questionMode !== undefined) {
-      state.matchRules.questionMode = sanitizeQuestionMode(payload.questionMode);
-    }
-    updateRoomRulesDisplay();
-    updatePresenceSlots(state.hostConnected, true);
-  });
-
-  channel.on("broadcast", { event: "guest_ready" }, ({ payload }) => {
-    if (!state.isHost || state.matchStarted) return;
-    if (payload && payload.profile) {
-      applyReceivedOpponentProfile(payload.profile);
-    }
-    state.guestReadyFlag = true;
-    updatePresenceSlots(true, true);
-    setRoomBanner("Друг готов! Запускаем дуэль...", "ready");
-    hostBroadcastMatchStart();
-  });
-
-  channel.on("broadcast", { event: "match_start" }, ({ payload }) => {
-    if (!payload || !Array.isArray(payload.deckIndices)) return;
-    if (payload.hostProfile) {
-      applyReceivedOpponentProfile(payload.hostProfile);
-    }
-    if (state.matchStarted && payload.matchToken === state.currentMatchToken) return;
-    beginSyncedFriendMatch(payload);
-  });
-
-  channel.on("broadcast", { event: "request_match_start" }, ({ payload }) => {
-    if (payload && payload.guestProfile) {
-      applyReceivedOpponentProfile(payload.guestProfile);
-    }
-    if (state.isHost && state.matchStarted && state.friendDeck.length) {
-      channel.send({
+    function sendMyProfileBroadcast() {
+      if (!state.roomChannel) return;
+      const prof = getSanitizedProfilePayload();
+      state.roomChannel.send({
         type: "broadcast",
-        event: "match_start",
+        event: "player_profile",
         payload: {
-          matchToken: state.currentMatchToken,
-          deckIndices: state.friendDeck,
-          optionOrders: state.friendOptionOrders,
-          wordOrders: state.friendWordOrders,
-          timerSec: state.selectedTimerSec,
+          senderId: state.clientId,
+          nickname: prof.nickname,
+          avatarType: prof.avatarType,
+          avatarData: prof.avatarData
+        }
+      });
+    }
+
+    function sendHostRoomInfoBroadcast() {
+      if (!state.roomChannel || !state.isHost) return;
+      state.roomChannel.send({
+        type: "broadcast",
+        event: "room_info",
+        payload: {
           level: state.selectedDiff,
+          timerSec: state.selectedTimerSec,
           maxHp: state.matchRules.maxHp,
           damageScale: state.matchRules.damageScale,
           questionMode: state.matchRules.questionMode,
-          hostId: state.clientId,
           hostProfile: getSanitizedProfilePayload()
         }
       });
     }
-  });
 
-  channel.on("broadcast", { event: "player_answer" }, ({ payload }) => {
-    handleOpponentAnswerBroadcast(payload);
-  });
-
-  channel.on("broadcast", { event: "round_sync" }, ({ payload }) => {
-    handleRoundSyncBroadcast(payload);
-  });
-
-  channel.on("broadcast", { event: "next_round_ready" }, ({ payload }) => {
-    handleOpponentNextReady(payload);
-  });
-
-  channel.on("broadcast", { event: "duel_reaction" }, ({ payload }) => {
-    if (!payload || payload.senderId === state.clientId) return;
-    if (!ALLOWED_DUEL_REACTIONS.includes(payload.emoji)) return;
-    if (!screens.duel.classList.contains("active")) return;
-    showReactionBubble("opp", payload.emoji);
-  });
-
-  channel.on("broadcast", { event: "rematch_ready" }, ({ payload }) => {
-    if (payload && payload.profile) {
-      applyReceivedOpponentProfile(payload.profile);
-    }
-    state.oppRematchReady = true;
-    checkFriendRematchStart();
-  });
-
-  channel.subscribe(async status => {
-    if (status === "SUBSCRIBED") {
-      await channel.track({
-        clientId: state.clientId,
-        role: state.isHost ? "host" : "guest",
-        joinedAt: Date.now()
-      });
-
-      sendMyProfileBroadcast();
-
-      if (state.isHost) {
-        sendHostRoomInfoBroadcast();
-      } else {
-        channel.send({
-          type: "broadcast",
-          event: "request_room_info",
-          payload: {
-            senderId: state.clientId,
-            guestProfile: getSanitizedProfilePayload()
-          }
-        });
-      }
-    } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
-      setRoomBanner("Ошибка подключения к Supabase Realtime. Проверь ключи и интернет.", "error");
-    }
-  });
-}
-
-function leaveSupabaseRoom() {
-  if (state.guestReadyRetryTimer) {
-    clearInterval(state.guestReadyRetryTimer);
-    state.guestReadyRetryTimer = null;
-  }
-  if (state.profileSyncDebounce) {
-    clearTimeout(state.profileSyncDebounce);
-    state.profileSyncDebounce = null;
-  }
-  if (state.roomChannel && state.supabaseClient) {
-    try {
-      state.roomChannel.untrack();
-      state.supabaseClient.removeChannel(state.roomChannel);
-    } catch (e) {}
-  }
-  state.roomChannel = null;
-}
-
-function hostBroadcastMatchStart() {
-  if (!state.roomChannel || !state.isHost) return;
-
-  const rules = {
-    maxHp: sanitizeMaxHp(state.matchRules.maxHp),
-    damageScale: sanitizeDamageScale(state.matchRules.damageScale),
-    questionMode: sanitizeQuestionMode(state.matchRules.questionMode)
-  };
-
-  const { deckIndices, optionOrders, wordOrders } = buildFriendDeckForLevel(state.selectedDiff, rules.questionMode);
-  const matchToken = generateRandomId(6);
-
-  const payload = {
-    matchToken,
-    deckIndices,
-    optionOrders,
-    wordOrders,
-    timerSec: state.selectedTimerSec,
-    level: state.selectedDiff,
-    maxHp: rules.maxHp,
-    damageScale: rules.damageScale,
-    questionMode: rules.questionMode,
-    hostId: state.clientId,
-    hostProfile: getSanitizedProfilePayload()
-  };
-
-  state.roomChannel.send({
-    type: "broadcast",
-    event: "match_start",
-    payload
-  });
-
-  beginSyncedFriendMatch(payload);
-}
-
-function beginSyncedFriendMatch(payload) {
-  stopSpanishSpeech();
-  clearTimers();
-  if (state.guestReadyRetryTimer) {
-    clearInterval(state.guestReadyRetryTimer);
-    state.guestReadyRetryTimer = null;
-  }
-
-  state.matchRules = {
-    maxHp: sanitizeMaxHp(payload.maxHp !== undefined ? payload.maxHp : state.matchRules.maxHp),
-    damageScale: sanitizeDamageScale(payload.damageScale !== undefined ? payload.damageScale : state.matchRules.damageScale),
-    questionMode: sanitizeQuestionMode(payload.questionMode !== undefined ? payload.questionMode : state.matchRules.questionMode)
-  };
-
-  state.currentMatchToken = payload.matchToken;
-  state.friendDeck = payload.deckIndices;
-  state.friendOptionOrders = payload.optionOrders;
-  state.friendWordOrders = Array.isArray(payload.wordOrders) ? payload.wordOrders : [];
-  state.selectedTimerSec = typeof payload.timerSec === "number" ? payload.timerSec : 30;
-  state.selectedDiff = payload.level && LEVEL_META[payload.level] ? payload.level : state.selectedDiff;
-  state.hostId = payload.hostId;
-  state.matchStarted = true;
-  state.gameOver = false;
-  state.historySavedForMatch = false;
-  state.lastMatchElo = null;
-  state.oppDisconnected = false;
-  state.myRematchReady = false;
-  state.oppRematchReady = false;
-
-  sendMyProfileBroadcast();
-
-  state.playerHp = state.matchRules.maxHp;
-  state.oppHp = state.matchRules.maxHp;
-  state.round = 1;
-  state.stats = {
-    roundsPlayed: 0,
-    correctAnswers: 0,
-    damageDealt: 0,
-    mistakes: []
-  };
-
-  updateDuelIdentityUI();
-  updateHpBars();
-  switchScreen("duel");
-  startRound();
-}
-
-function handleOpponentAnswerBroadcast(payload) {
-  if (!payload || payload.round !== state.round || state.roundResolved) return;
-  if (state.oppChoice !== null) return;
-
-  const vc = payload.visualChoice;
-  if (typeof vc === "number") {
-    state.oppChoice = vc;
-  } else if (vc && typeof vc === "object" && vc.kind === "builder") {
-    state.oppChoice = {
-      kind: "builder",
-      words: Array.isArray(vc.words) ? vc.words : [],
-      isCorrect: Boolean(vc.isCorrect)
-    };
-  } else {
-    state.oppChoice = null;
-  }
-
-  if (state.playerChoice === null) {
-    triggerPreemptPenalty();
-  }
-
-  const oppName = state.opponentProfile.nickname || "Друг";
-  el.botStatus.className = "bot-live-indicator locked";
-  el.botStatus.textContent = `${oppName} ответил ✓`;
-
-  checkIfBothReady();
-}
-
-function handleRoundSyncBroadcast(payload) {
-  if (!payload || payload.round !== state.round) return;
-  if (state.roundResolved) return;
-
-  clearTimeout(state.timeoutGraceTimer);
-  state.timeoutGraceTimer = null;
-
-  if (state.isHost) {
-    state.playerChoice = payload.hostChoice;
-    state.oppChoice = payload.guestChoice;
-  } else {
-    state.playerChoice = payload.guestChoice;
-    state.oppChoice = payload.hostChoice;
-  }
-
-  resolveRound();
-}
-
-function handleFriendNextRoundClick() {
-  if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
-  if (state.oppDisconnected) {
-    returnToMainLobby();
-    return;
-  }
-  if (state.myNextReady) return;
-
-  state.myNextReady = true;
-  el.btnNextRound.disabled = true;
-  el.btnNextRound.textContent = "⏳ Ожидаем друга...";
-
-  if (state.roomChannel) {
-    state.roomChannel.send({
-      type: "broadcast",
-      event: "next_round_ready",
-      payload: { senderId: state.clientId, round: state.round }
-    });
-  }
-
-  checkBothReadyForNextRound();
-}
-
-function handleOpponentNextReady(payload) {
-  if (!payload || payload.round !== state.round) return;
-  if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
-  state.oppNextReady = true;
-  el.oppReadyNote.classList.add("visible");
-  checkBothReadyForNextRound();
-}
-function checkBothReadyForNextRound() {
-  if (state.myNextReady && state.oppNextReady) {
-    if (state.playerHp <= 0 || state.oppHp <= 0) {
-      showGameOver();
-    } else {
-      state.round += 1;
-      startRound();
-    }
-  }
-}
-
-function handleFriendRematchClick() {
-  if (state.oppDisconnected) {
-    returnToMainLobby();
-    return;
-  }
-  if (state.myRematchReady) return;
-  state.myRematchReady = true;
-  el.btnPlayAgain.disabled = true;
-  el.btnPlayAgain.textContent = "⏳ Ожидаем согласия друга...";
-
-  if (state.roomChannel) {
-    state.roomChannel.send({
-      type: "broadcast",
-      event: "rematch_ready",
-      payload: {
-        senderId: state.clientId,
-        profile: getSanitizedProfilePayload()
-      }
-    });
-  }
-  checkFriendRematchStart();
-}
-
-function checkFriendRematchStart() {
-  if (state.myRematchReady && state.oppRematchReady) {
-    if (state.isHost) {
-      hostBroadcastMatchStart();
-    }
-  }
-}
-
-/* ==========================================================================
-   8. SENTENCE BUILDER HELPERS & DUEL MATCH / ROUND LOGIC
-   ========================================================================== */
-function isBuilderAnswerCorrect(assembledWords, expectedAnswer) {
-  if (!Array.isArray(assembledWords) || !Array.isArray(expectedAnswer)) return false;
-  if (assembledWords.length !== expectedAnswer.length || expectedAnswer.length === 0) return false;
-  for (let i = 0; i < expectedAnswer.length; i++) {
-    const a = String(assembledWords[i] || "").trim().toLowerCase();
-    const b = String(expectedAnswer[i] || "").trim().toLowerCase();
-    if (a !== b) return false;
-  }
-  return true;
-}
-
-function hasPlayerDraftSelection() {
-  if (!state.currentQuestion) return false;
-  if (state.currentQuestion.type === "builder") {
-    return state.builderSelectedIndices.length > 0;
-  }
-  return state.draftChoice !== null;
-}
-
-function updateSubmitAnswerButtonUI() {
-  if (state.roundResolved) {
-    el.btnSubmitAnswer.style.display = "none";
-    return;
-  }
-  el.btnSubmitAnswer.style.display = "block";
-  if (state.playerChoice !== null) {
-    el.btnSubmitAnswer.disabled = true;
-    el.btnSubmitAnswer.textContent = "⏳ Ответ отправлен...";
-  } else {
-    el.btnSubmitAnswer.disabled = !hasPlayerDraftSelection();
-    el.btnSubmitAnswer.textContent = "Ответить";
-  }
-}
-
-function renderBuilderUI() {
-  const locked = state.playerChoice !== null || state.roundResolved;
-  const usedSet = new Set(state.builderSelectedIndices);
-
-  el.builderAnswerZone.innerHTML = "";
-  el.builderAnswerZone.classList.toggle("has-words", state.builderSelectedIndices.length > 0 && !state.roundResolved);
-
-  if (state.builderSelectedIndices.length === 0) {
-    const hint = document.createElement("span");
-    hint.className = "builder-empty-hint";
-    hint.textContent = state.roundResolved
-      ? "Предложение не было собрано"
-      : "Нажимай на слова ниже, чтобы собрать предложение...";
-    el.builderAnswerZone.appendChild(hint);
-  } else {
-    state.builderSelectedIndices.forEach((bankIdx, pos) => {
-      const word = state.builderBankWords[bankIdx];
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "word-chip in-answer";
-      chip.textContent = word;
-      chip.disabled = locked;
-      if (!locked) {
-        chip.addEventListener("click", () => {
-          if (state.playerChoice !== null || state.roundResolved) return;
-          state.builderSelectedIndices.splice(pos, 1);
-          renderBuilderUI();
-          updateSubmitAnswerButtonUI();
-        });
-      }
-      el.builderAnswerZone.appendChild(chip);
-    });
-  }
-
-  el.builderWordBank.innerHTML = "";
-  state.builderBankWords.forEach((word, bankIdx) => {
-    const isUsed = usedSet.has(bankIdx);
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = isUsed ? "word-chip used" : "word-chip";
-    chip.textContent = word;
-    chip.disabled = locked || isUsed;
-    if (isUsed) {
-      chip.setAttribute("aria-hidden", "true");
-      chip.tabIndex = -1;
-    } else if (!locked) {
-      chip.addEventListener("click", () => {
-        if (state.playerChoice !== null || state.roundResolved) return;
-        state.builderSelectedIndices.push(bankIdx);
-        renderBuilderUI();
-        updateSubmitAnswerButtonUI();
-      });
-    }
-    el.builderWordBank.appendChild(chip);
-  });
-}
-
-function getRoundStake(roundNum) {
-  const baseStake = roundNum - 1 < ROUND_STAKES.length
-    ? ROUND_STAKES[roundNum - 1]
-    : 2000;
-  const scale = sanitizeDamageScale(state.matchRules.damageScale);
-  return Math.round(baseStake * scale);
-}
-
-function getTargetTier(roundNum) {
-  if (state.selectedDiff === "principiante") {
-    return roundNum <= 5 ? 0 : 1;
-  }
-  if (state.selectedDiff === "novato") {
-    return roundNum <= 4 ? 1 : 2;
-  }
-  return roundNum <= 2 ? 1 : 2;
-}
-
-function getTierLabel(tier) {
-  if (tier === 0) return "Уровень A0";
-  if (tier === 1) return "Уровень A1";
-  return "Уровень A2–B1";
-}
-
-function startBotMatch() {
-  stopSpanishSpeech();
-  clearTimers();
-  const botMeta = LEVEL_META[state.selectedDiff];
-  const randomBotName = BOT_RANDOM_NAMES[Math.floor(Math.random() * BOT_RANDOM_NAMES.length)];
-
-  state.gameMode = "bot";
-  state.matchRules = { ...state.duelSettings };
-  state.matchStarted = true;
-  state.gameOver = false;
-  state.historySavedForMatch = false;
-  state.lastMatchElo = null;
-  state.opponentProfile = {
-    nickname: `${randomBotName} (${botMeta.tierLabel.replace("Уровень ", "")})`,
-    avatarType: "emoji",
-    avatarData: "🤖"
-  };
-
-  state.playerHp = state.matchRules.maxHp;
-  state.oppHp = state.matchRules.maxHp;
-  state.round = 1;
-  state.usedQuestionIds.clear();
-  state.stats = {
-    roundsPlayed: 0,
-    correctAnswers: 0,
-    damageDealt: 0,
-    mistakes: []
-  };
-
-  updateDuelIdentityUI();
-  updateHpBars();
-  switchScreen("duel");
-  startRound();
-}
-
-function pickBotQuestionForRound(roundNum) {
-  const targetTier = getTargetTier(roundNum);
-  const qMode = sanitizeQuestionMode(state.matchRules.questionMode);
-  const tierPool = getTierPoolIndices(targetTier, qMode).map(idx => QUESTION_BANK[idx]);
-
-  let pool = tierPool.filter(q => !state.usedQuestionIds.has(q.id));
-
-  if (pool.length === 0 && tierPool.length > 0) {
-    tierPool.forEach(q => state.usedQuestionIds.delete(q.id));
-    pool = tierPool;
-  }
-  if (pool.length === 0) {
-    pool = QUESTION_BANK.filter(q => !state.usedQuestionIds.has(q.id));
-  }
-  if (pool.length === 0) {
-    state.usedQuestionIds.clear();
-    pool = QUESTION_BANK;
-  }
-
-  const chosen = pool[Math.floor(Math.random() * pool.length)];
-  state.usedQuestionIds.add(chosen.id);
-  return chosen;
-}
-
-function startRound() {
-  stopSpanishSpeech();
-  clearTimers();
-  state.roundResolved = false;
-  state.draftChoice = null;
-  state.builderBankWords = [];
-  state.builderSelectedIndices = [];
-  state.playerChoice = null;
-  state.oppChoice = null;
-  state.botScheduledAt = null;
-  state.timerDeadlineAt = null;
-  state.timeLeft = state.selectedTimerSec;
-  state.lastTickSec = null;
-  state.myNextReady = false;
-  state.oppNextReady = false;
-
-el.btnNextRound.style.display = "";
-
-  el.btnNextRound.disabled = false;
-  el.oppReadyNote.classList.remove("visible");
-  updateResumeDuelBanner();
-
-  const stake = getRoundStake(state.round);
-  let question;
-  let indexedOptions = [];
-  let wordOrder = null;
-
-  if (state.gameMode === "friend") {
-    const deckIdx = (state.round - 1) % state.friendDeck.length;
-    const qIndex = state.friendDeck[deckIdx];
-    question = QUESTION_BANK[qIndex] || QUESTION_BANK[0];
-
-    if (question.type === "builder") {
-      wordOrder = state.friendWordOrders[deckIdx];
-    } else {
-      const order = state.friendOptionOrders[deckIdx] || [0, 1, 2, 3];
-      indexedOptions = order.map(origIdx => ({
-        text: question.options[origIdx],
-        isCorrect: origIdx === question.correct
-      }));
-    }
-  } else {
-    question = pickBotQuestionForRound(state.round);
-    if (question.type !== "builder") {
-      indexedOptions = (question.options || []).map((text, idx) => ({
-        text,
-        isCorrect: idx === question.correct
-      }));
-      for (let i = indexedOptions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [indexedOptions[i], indexedOptions[j]] = [indexedOptions[j], indexedOptions[i]];
-      }
-    }
-  }
-
-  state.currentQuestion = question;
-  state.shuffledOptions = indexedOptions;
-  state.correctOptionIndex = indexedOptions.findIndex(o => o.isCorrect);
-
-  el.hudRound.textContent = `Раунд ${state.round}`;
-  const scaleSuffix = state.matchRules.damageScale !== 1 ? ` (×${state.matchRules.damageScale})` : "";
-  el.hudStakes.textContent = `🔥 НА КОНУ: ${stake} HP${scaleSuffix}`;
-  el.hudTier.textContent = getTierLabel(question.tier);
-
-  if (state.oppDisconnected) {
-    el.botStatus.className = "bot-live-indicator disconnected";
-    el.botStatus.textContent = "Соперник вышел";
-  } else {
-    el.botStatus.className = "bot-live-indicator";
-    el.botStatus.textContent = state.gameMode === "friend"
-      ? `${state.opponentProfile.nickname || "Друг"} думает...`
-      : "Бот думает...";
-  }
-
-  el.qTypeBadge.textContent = question.typeLabel || (question.type === "builder" ? "Конструктор" : "Вопрос");
-  el.qTypeBadge.className = `q-type-badge ${question.type || ""}`;
-
-  if (question.svg) {
-    el.visualStage.style.display = "flex";
-    el.visualStage.innerHTML = question.svg;
-  } else {
-    el.visualStage.style.display = "none";
-    el.visualStage.innerHTML = "";
-  }
-
-  el.audioFallbackSpoiler.classList.remove("visible");
-  el.audioFallbackSpoiler.open = false;
-  el.audioFallbackText.textContent = "";
-
-  if (typeof question.audioText === "string" && question.audioText.trim()) {
-    const phrase = question.audioText.trim();
-    el.audioStage.classList.add("visible");
-    el.audioFallbackText.textContent = phrase;
-
-    state.autoSpeakTimeout = setTimeout(() => {
-      state.autoSpeakTimeout = null;
-      if (!state.roundResolved && state.currentQuestion === question) {
-        speakSpanish(phrase, 1.0);
-      }
-    }, 300);
-  } else {
-    el.audioStage.classList.remove("visible");
-  }
-
-  el.questionPrompt.textContent = question.prompt;
-  if (question.subprompt) {
-    el.questionSubprompt.style.display = "block";
-    el.questionSubprompt.textContent = question.subprompt;
-  } else {
-    el.questionSubprompt.style.display = "none";
-  }
-
-  el.roundResultBox.classList.remove("visible");
-  el.optionsList.innerHTML = "";
-  el.builderAnswerZone.className = "builder-answer-zone";
-  el.builderFeedback.classList.remove("visible");
-  el.builderFeedback.innerHTML = "";
-
-  if (question.type === "builder") {
-    el.optionsList.style.display = "none";
-    el.builderStage.classList.add("visible");
-
-    const rawWords = Array.isArray(question.words) ? question.words : [];
-    if (Array.isArray(wordOrder) && wordOrder.length === rawWords.length) {
-      state.builderBankWords = wordOrder.map(idx => rawWords[idx]);
-    } else {
-      state.builderBankWords = shuffleArray(rawWords);
-    }
-
-    renderBuilderUI();
-  } else {
-    el.builderStage.classList.remove("visible");
-    el.optionsList.style.display = "flex";
-
-    const keys = ["A", "B", "C", "D"];
-    indexedOptions.forEach((opt, idx) => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "option-btn";
-      btn.innerHTML = `
-        <div class="option-left">
-          <span class="option-key">${keys[idx]}</span>
-          <span>${opt.text}</span>
-        </div>
-        <div class="choice-badges"></div>
-      `;
-      btn.addEventListener("click", () => handlePlayerDraftSelect(idx));
-      el.optionsList.appendChild(btn);
-    });
-  }
-
-  updateSubmitAnswerButtonUI();
-
-  if (state.gameMode === "bot") {
-    scheduleBotAnswer(question.tier);
-  }
-  startRoundTimer();
-}
-
-/* ==========================================================================
-   9. PREEMPTION MECHANIC (КРАСНАЯ ВСПЫШКА + ТАЙМЕР ДО 10 СЕК + ЗВУК)
-   ========================================================================== */
-function triggerPreemptPenalty() {
-  el.preemptOverlay.classList.remove("active");
-  void el.preemptOverlay.offsetWidth;
-  el.preemptOverlay.classList.add("active");
-
-  soundFX.preempt();
-
-  if (state.flashTimeout) {
-    clearTimeout(state.flashTimeout);
-  }
-  state.flashTimeout = setTimeout(() => {
-    el.preemptOverlay.classList.remove("active");
-    state.flashTimeout = null;
-  }, 1000);
-
-  if (state.selectedTimerSec === 0 || !state.timerDeadlineAt) return;
-
-  const remainingMs = state.timerDeadlineAt - Date.now();
-  if (remainingMs > 10000) {
-    state.timerDeadlineAt = Date.now() + 10000;
-    state.timeLeft = 10;
-    el.timerText.textContent = "⏱️ 10.0s";
-  }
-}
-
-function buildBotWrongBuilderWords(question) {
-  const answer = Array.isArray(question.answer) ? question.answer : [];
-  const bank = Array.isArray(question.words) ? question.words : answer;
-  if (bank.length <= 1) return [];
-
-  const candidate = shuffleArray(bank).slice(0, Math.max(1, answer.length));
-  if (!isBuilderAnswerCorrect(candidate, answer)) {
-    return candidate;
-  }
-  return candidate.slice().reverse();
-}
-
-function commitBotChoice() {
-  if (state.roundResolved || state.oppChoice !== null) return;
-
-  if (state.playerChoice === null) {
-    triggerPreemptPenalty();
-  }
-
-  if (state.currentQuestion && state.currentQuestion.type === "builder") {
-    if (state.botWillAnswerCorrectly) {
-      state.oppChoice = {
-        kind: "builder",
-        words: (state.currentQuestion.answer || []).slice(),
-        isCorrect: true
+    function applyReceivedOpponentProfile(prof) {
+      if (!prof || typeof prof !== "object") return;
+      const cleanName = typeof prof.nickname === "string" && prof.nickname.trim()
+        ? prof.nickname.trim().slice(0, 20)
+        : (state.isHost ? "Друг" : "Создатель комнаты");
+      const validType = prof.avatarType === "image" && typeof prof.avatarData === "string" && prof.avatarData.startsWith("data:image/")
+        ? "image"
+        : "emoji";
+      const validData = validType === "image"
+        ? prof.avatarData
+        : (typeof prof.avatarData === "string" && prof.avatarData.trim() ? prof.avatarData.trim().slice(0, 4) : "👥");
+
+      state.opponentProfile = {
+        nickname: cleanName,
+        avatarType: validType,
+        avatarData: validData
       };
-    } else {
-      state.oppChoice = {
-        kind: "builder",
-        words: buildBotWrongBuilderWords(state.currentQuestion),
-        isCorrect: false
-      };
-    }
-  } else {
-    if (state.botWillAnswerCorrectly) {
-      state.oppChoice = state.correctOptionIndex;
-    } else {
-      const wrongIndices = [0, 1, 2, 3].filter(i => i !== state.correctOptionIndex);
-      state.oppChoice = wrongIndices[Math.floor(Math.random() * wrongIndices.length)];
-    }
-  }
 
-  el.botStatus.className = "bot-live-indicator locked";
-  el.botStatus.textContent = "Бот ответил ✓";
-  checkIfBothReady();
-}
-
-function scheduleBotAnswer(questionTier) {
-  const bot = LEVEL_META[state.selectedDiff];
-  let minDelay = 3000;
-  let maxDelay = 6000;
-
-  if (state.selectedTimerSec === 15) {
-    minDelay = 4000;
-    maxDelay = 10500;
-  } else if (state.selectedTimerSec > 0) {
-    const totalMs = state.selectedTimerSec * 1000;
-    minDelay = Math.max(2500, totalMs * 0.22);
-    maxDelay = Math.min(12000, totalMs * 0.65);
-  }
-
-  const delay = Math.floor(minDelay + Math.random() * Math.max(500, maxDelay - minDelay));
-  const effectiveAccuracy = Math.max(0.25, bot.baseAccuracy - Math.max(0, questionTier - 1) * bot.tierPenalty);
-  state.botWillAnswerCorrectly = Math.random() < effectiveAccuracy;
-  state.botScheduledAt = Date.now() + delay;
-
-  state.botAnswerTimeout = setTimeout(commitBotChoice, delay);
-}
-
-function capBotDelayToTenSeconds() {
-  if (state.roundResolved || state.oppChoice !== null || !state.botScheduledAt) return;
-
-  const remainingMs = state.botScheduledAt - Date.now();
-  if (remainingMs > 10000) {
-    if (state.botAnswerTimeout) {
-      clearTimeout(state.botAnswerTimeout);
-      state.botAnswerTimeout = null;
-    }
-    state.botScheduledAt = Date.now() + 10000;
-    state.botAnswerTimeout = setTimeout(commitBotChoice, 10000);
-  }
-}
-
-function startRoundTimer() {
-  el.timerText.classList.remove("urgent");
-
-  if (state.selectedTimerSec === 0) {
-    el.timerText.textContent = "⏱️ ∞";
-    el.timerBarFill.style.width = "100%";
-    return;
-  }
-
-  const totalMs = state.selectedTimerSec * 1000;
-  state.timerDeadlineAt = Date.now() + totalMs;
-
-  el.timerText.textContent = `⏱️ ${state.selectedTimerSec.toFixed(1)}s`;
-  el.timerBarFill.style.width = "100%";
-
-state.timerInterval = setInterval(() => {
-    if (state.roundResolved) return;
-
-    const remainingMs = Math.max(0, state.timerDeadlineAt - Date.now());
-    state.timeLeft = remainingMs / 1000;
-
-    el.timerText.textContent = `⏱️ ${state.timeLeft.toFixed(1)}s`;
-    el.timerBarFill.style.width = `${(remainingMs / totalMs) * 100}%`;
-
-    if (state.timeLeft <= 5.0 && remainingMs > 0) {
-      el.timerText.classList.add("urgent");
-      const secCeil = Math.ceil(state.timeLeft);
-      if (secCeil >= 1 && secCeil <= 5 && secCeil !== state.lastTickSec) {
-        state.lastTickSec = secCeil;
-        soundFX.tick();
+      if (state.matchStarted) {
+        updateDuelIdentityUI();
+        updateResumeDuelBanner();
       }
     }
 
-    if (remainingMs <= 0) {
-      clearInterval(state.timerInterval);
-      state.timerInterval = null;
-      handleRoundTimeout();
-    }
-  }, 100);
-}
+    function handleGuestReadyClick() {
+      if (state.isHost || state.matchStarted || state.guestSentReady) return;
 
-function handleRoundTimeout() {
-  if (state.roundResolved) return;
+      if (!state.profile.nickname.trim()) {
+        state.profile.nickname = generateDefaultNickname();
+        saveProfileToStorage();
+        updateProfileUI();
+      }
 
-  if (state.playerChoice === null && hasPlayerDraftSelection()) {
-    submitPlayerAnswer({ fromTimeout: true });
-  }
+      state.guestSentReady = true;
+      el.btnGuestReady.disabled = true;
+      el.btnGuestReady.textContent = "⏳ Запускаем дуэль...";
+      setRoomBanner("Ты готов! Ожидаем синхронного старта...", "ready");
+      updatePresenceSlots(state.hostConnected, true);
 
-  const buttons = el.optionsList.querySelectorAll(".option-btn");
-  buttons.forEach(btn => {
-    btn.disabled = true;
-  });
-  if (state.currentQuestion && state.currentQuestion.type === "builder") {
-    renderBuilderUI();
-  }
-  el.btnSubmitAnswer.disabled = true;
-
-  if (state.gameMode === "friend") {
-    const waitMs = state.isHost ? 350 : 950;
-    state.timeoutGraceTimer = setTimeout(() => {
-      if (state.roundResolved) return;
-      if (state.isHost && state.roomChannel) {
+      const sendReady = () => {
+        if (!state.roomChannel || state.matchStarted) return;
         state.roomChannel.send({
           type: "broadcast",
-          event: "round_sync",
+          event: "guest_ready",
           payload: {
-            round: state.round,
-            hostChoice: state.playerChoice,
-            guestChoice: state.oppChoice
+            senderId: state.clientId,
+            profile: getSanitizedProfilePayload()
           }
         });
-      }
-      resolveRound();
-    }, waitMs);
-  } else {
-    resolveRound();
-  }
-}
+      };
 
-function clearTimers() {
-  if (state.autoSpeakTimeout) {
-    clearTimeout(state.autoSpeakTimeout);
-    state.autoSpeakTimeout = null;
-  }
-  if (state.flashTimeout) {
-    clearTimeout(state.flashTimeout);
-    state.flashTimeout = null;
-  }
-  if (state.botReactionTimeout) {
-    clearTimeout(state.botReactionTimeout);
-    state.botReactionTimeout = null;
-  }
-  el.preemptOverlay.classList.remove("active");
-  state.timerDeadlineAt = null;
+      sendReady();
+      if (state.guestReadyRetryTimer) clearInterval(state.guestReadyRetryTimer);
+      state.guestReadyRetryTimer = setInterval(() => {
+        if (state.matchStarted || !state.roomChannel) {
+          clearInterval(state.guestReadyRetryTimer);
+          state.guestReadyRetryTimer = null;
+          return;
+        }
+        sendReady();
+      }, 1500);
+    }
 
-  if (state.timeoutGraceTimer) {
-    clearTimeout(state.timeoutGraceTimer);
-    state.timeoutGraceTimer = null;
-  }
-  if (state.botAnswerTimeout) {
-    clearTimeout(state.botAnswerTimeout);
-    state.botAnswerTimeout = null;
-  }
- if (state.timerInterval) {
-    clearInterval(state.timerInterval);
-    state.timerInterval = null;
-  }
-  if (state.gameOverDelayTimeout) {
-    clearTimeout(state.gameOverDelayTimeout);
-    state.gameOverDelayTimeout = null;
-  }
-}
-
-function handlePlayerDraftSelect(index) {
-  if (state.roundResolved || state.playerChoice !== null) return;
-
-  state.draftChoice = index;
-  const buttons = el.optionsList.querySelectorAll(".option-btn");
-  buttons.forEach((btn, idx) => {
-    btn.classList.toggle("selected-pending", idx === index);
-  });
-  updateSubmitAnswerButtonUI();
-}
-
-function submitPlayerAnswer({ fromTimeout = false } = {}) {
-  if (state.roundResolved || state.playerChoice !== null) return;
-  if (!hasPlayerDraftSelection()) return;
-
-  const q = state.currentQuestion;
-  if (!q) return;
-
-  if (q.type === "builder") {
-    const assembledWords = state.builderSelectedIndices.map(idx => state.builderBankWords[idx]);
-    const isCorrect = isBuilderAnswerCorrect(assembledWords, q.answer);
-    state.playerChoice = {
-      kind: "builder",
-      words: assembledWords,
-      isCorrect
-    };
-    renderBuilderUI();
-  } else {
-    state.playerChoice = state.draftChoice;
-    const buttons = el.optionsList.querySelectorAll(".option-btn");
-    buttons.forEach((btn, idx) => {
-      btn.disabled = true;
-      btn.classList.toggle("selected-pending", idx === state.playerChoice);
-    });
-  }
-
-  updateSubmitAnswerButtonUI();
-
-  if (state.gameMode === "friend") {
-    if (state.roomChannel) {
-      state.roomChannel.send({
-        type: "broadcast",
-        event: "player_answer",
-        payload: {
-          senderId: state.clientId,
-          round: state.round,
-          visualChoice: state.playerChoice
+    function connectToRoomChannel(client) {
+      const channelName = `linguaduel-room-${state.roomId}`;
+      const channel = client.channel(channelName, {
+        config: {
+          broadcast: { self: false },
+          presence: { key: state.clientId }
         }
       });
-    }
-  } else if (!fromTimeout) {
-    capBotDelayToTenSeconds();
-  }
 
-  if (!fromTimeout) {
-    checkIfBothReady();
-  }
-}
+      state.roomChannel = channel;
 
-function checkIfBothReady() {
-  if (state.playerChoice !== null && state.oppChoice !== null) {
-    setTimeout(() => {
-      if (!state.roundResolved) {
-        if (state.gameMode === "friend" && state.isHost && state.roomChannel) {
-          state.roomChannel.send({
+      // 1. Presence tracking
+      channel.on("presence", { event: "sync" }, () => {
+        const presenceState = channel.presenceState();
+        const participants = [];
+
+        Object.keys(presenceState).forEach(key => {
+          const metas = presenceState[key];
+          if (Array.isArray(metas) && metas.length > 0) {
+            participants.push(metas[0]);
+          }
+        });
+
+        participants.sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
+
+        const myIndex = participants.findIndex(p => p.clientId === state.clientId);
+        if (myIndex >= 2) {
+          setRoomBanner("Комната уже заполнена (максимум 2 игрока).", "error");
+          return;
+        }
+
+        const hostUser = participants.find(p => p.role === "host");
+        const guestUser = participants.find(p => p.role === "guest");
+
+        if (!hostUser && participants.length >= 2) {
+          if (participants[0].clientId === state.clientId) {
+            state.isHost = true;
+            el.inviteBox.style.display = "flex";
+            el.guestReadyControls.style.display = "none";
+            channel.track({
+              clientId: state.clientId,
+              role: "host",
+              joinedAt: participants[0].joinedAt || Date.now()
+            });
+            return;
+          }
+        }
+
+        const hostOnline = Boolean(hostUser);
+        const guestOnline = Boolean(guestUser) || (participants.length >= 2 && hostOnline);
+
+        if (hostUser) state.hostId = hostUser.clientId;
+        state.hostConnected = hostOnline;
+
+        const other = participants.find(p => p.clientId !== state.clientId);
+        state.oppConnected = Boolean(other);
+
+        if (!state.matchStarted) {
+          if (state.isHost) {
+            if (guestOnline) {
+              sendHostRoomInfoBroadcast();
+              if (!state.guestReadyFlag) {
+                setRoomBanner("Друг зашёл в лобби, настраивает профиль...", "ready");
+              }
+            } else {
+              state.guestReadyFlag = false;
+              setRoomBanner("Ожидание друга...", "info");
+            }
+            updatePresenceSlots(true, guestOnline);
+          } else {
+            if (hostOnline) {
+              if (!state.guestSentReady) {
+                el.btnGuestReady.disabled = false;
+                el.btnGuestReady.textContent = "Я готов! Начать дуэль";
+                setRoomBanner("Настрой профиль и нажми «Я готов! Начать дуэль»", "ready");
+              }
+              if (!state.roomTimerSynced) {
+                channel.send({
+                  type: "broadcast",
+                  event: "request_room_info",
+                  payload: { senderId: state.clientId, guestProfile: getSanitizedProfilePayload() }
+                });
+              }
+            } else {
+              if (!state.guestSentReady) {
+                el.btnGuestReady.disabled = true;
+                el.btnGuestReady.textContent = "Ожидаем создателя комнаты...";
+              }
+              setRoomBanner("Ожидаем создателя комнаты...", "info");
+            }
+            updatePresenceSlots(hostOnline, true);
+          }
+        } else {
+          if (!other && !state.oppDisconnected) {
+            state.oppDisconnected = true;
+            el.botStatus.className = "bot-live-indicator disconnected";
+            el.botStatus.textContent = "Соперник вышел";
+            if (state.roundResolved && !state.oppNextReady && state.playerHp > 0 && state.oppHp > 0) {
+              el.btnNextRound.disabled = false;
+              el.btnNextRound.textContent = "Соперник вышел — в меню";
+            }
+          }
+        }
+      });
+
+      // 2. Broadcast events
+      channel.on("broadcast", { event: "player_profile" }, ({ payload }) => {
+        applyReceivedOpponentProfile(payload);
+        if (!state.matchStarted) {
+          updatePresenceSlots(state.isHost ? true : state.hostConnected, state.isHost ? state.oppConnected : true);
+        }
+      });
+
+      channel.on("broadcast", { event: "request_room_info" }, ({ payload }) => {
+        if (payload && payload.guestProfile) {
+          applyReceivedOpponentProfile(payload.guestProfile);
+        }
+        if (state.isHost && !state.matchStarted) {
+          sendHostRoomInfoBroadcast();
+          updatePresenceSlots(true, state.oppConnected);
+        }
+      });
+
+      channel.on("broadcast", { event: "room_info" }, ({ payload }) => {
+        if (!payload || state.isHost || state.matchStarted) return;
+        if (payload.hostProfile) {
+          applyReceivedOpponentProfile(payload.hostProfile);
+        }
+        if (payload.level && LEVEL_META[payload.level]) {
+          state.selectedDiff = payload.level;
+          const meta = LEVEL_META[payload.level];
+          el.roomLevelPill.textContent = `${meta.emoji} ${meta.tierLabel}`;
+        }
+        if (typeof payload.timerSec === "number") {
+          state.selectedTimerSec = payload.timerSec;
+          state.roomTimerSynced = true;
+          el.roomTimerPill.textContent = formatTimerPillText(payload.timerSec);
+        }
+        if (payload.maxHp !== undefined) {
+          state.matchRules.maxHp = sanitizeMaxHp(payload.maxHp);
+        }
+        if (payload.damageScale !== undefined) {
+          state.matchRules.damageScale = sanitizeDamageScale(payload.damageScale);
+        }
+        if (payload.questionMode !== undefined) {
+          state.matchRules.questionMode = sanitizeQuestionMode(payload.questionMode);
+        }
+        updateRoomRulesDisplay();
+        updatePresenceSlots(state.hostConnected, true);
+      });
+
+      channel.on("broadcast", { event: "guest_ready" }, ({ payload }) => {
+        if (!state.isHost || state.matchStarted) return;
+        if (payload && payload.profile) {
+          applyReceivedOpponentProfile(payload.profile);
+        }
+        state.guestReadyFlag = true;
+        updatePresenceSlots(true, true);
+        setRoomBanner("Друг готов! Запускаем дуэль...", "ready");
+        hostBroadcastMatchStart();
+      });
+
+      channel.on("broadcast", { event: "match_start" }, ({ payload }) => {
+        if (!payload || !Array.isArray(payload.deckIndices)) return;
+        if (payload.hostProfile) {
+          applyReceivedOpponentProfile(payload.hostProfile);
+        }
+        if (state.matchStarted && payload.matchToken === state.currentMatchToken) return;
+        beginSyncedFriendMatch(payload);
+      });
+
+      channel.on("broadcast", { event: "request_match_start" }, ({ payload }) => {
+        if (payload && payload.guestProfile) {
+          applyReceivedOpponentProfile(payload.guestProfile);
+        }
+        if (state.isHost && state.matchStarted && state.friendDeck.length) {
+          channel.send({
             type: "broadcast",
-            event: "round_sync",
+            event: "match_start",
             payload: {
-              round: state.round,
-              hostChoice: state.playerChoice,
-              guestChoice: state.oppChoice
+              matchToken: state.currentMatchToken,
+              deckIndices: state.friendDeck,
+              optionOrders: state.friendOptionOrders,
+              wordOrders: state.friendWordOrders,
+              timerSec: state.selectedTimerSec,
+              level: state.selectedDiff,
+              maxHp: state.matchRules.maxHp,
+              damageScale: state.matchRules.damageScale,
+              questionMode: state.matchRules.questionMode,
+              hostId: state.clientId,
+              hostProfile: getSanitizedProfilePayload()
             }
           });
         }
-        resolveRound();
-      }
-    }, 320);
-  }
-}
-
-function resolveRound() {
-  if (state.roundResolved) return;
-  state.roundResolved = true;
-  clearTimers();
-
-  el.btnSubmitAnswer.style.display = "none";
-
-  const q = state.currentQuestion;
-  const isBuilder = Boolean(q && q.type === "builder");
-  const stake = getRoundStake(state.round);
-  const playerCorrect = isBuilder
-    ? Boolean(state.playerChoice && state.playerChoice.isCorrect)
-    : state.playerChoice === state.correctOptionIndex;
-  const oppCorrect = isBuilder
-    ? Boolean(state.oppChoice && state.oppChoice.isCorrect)
-    : state.oppChoice === state.correctOptionIndex;
-  const oppLabel = state.gameMode === "friend"
-    ? (state.opponentProfile.nickname || "Друг")
-    : "Бот";
-
-  state.stats.roundsPlayed += 1;
-  if (playerCorrect) {
-    state.stats.correctAnswers += 1;
-    soundFX.correct();
-    if (isBuilder && state.soundEnabled && Array.isArray(q.answer)) {
-      speakSpanish(q.answer.join(" "));
-    }
-  } else {
-    soundFX.wrong();
-    if (isBuilder) {
-      const correctSentence = Array.isArray(q.answer) ? q.answer.join(" ") : "";
-      const yourSentence = state.playerChoice && Array.isArray(state.playerChoice.words) && state.playerChoice.words.length
-        ? state.playerChoice.words.join(" ")
-        : "Время вышло";
-      state.stats.mistakes.push({
-        questionId: q ? q.id : null,
-        prompt: q ? q.prompt : "",
-        subprompt: q ? (q.subprompt || "") : "",
-        correctAnswer: correctSentence,
-        yourAnswer: yourSentence
       });
-    } else {
-      const correctText = state.shuffledOptions[state.correctOptionIndex]
-        ? state.shuffledOptions[state.correctOptionIndex].text
-        : (q && q.options ? q.options[q.correct] : "");
-      const yourText = state.playerChoice !== null && state.shuffledOptions[state.playerChoice]
-        ? state.shuffledOptions[state.playerChoice].text
-        : "Время вышло";
-      state.stats.mistakes.push({
-        questionId: q ? q.id : null,
-        prompt: q ? q.prompt : "",
-        subprompt: q ? (q.subprompt || q.audioText || "") : "",
-        correctAnswer: correctText,
-        yourAnswer: yourText
+
+      channel.on("broadcast", { event: "player_answer" }, ({ payload }) => {
+        handleOpponentAnswerBroadcast(payload);
+      });
+
+      channel.on("broadcast", { event: "round_sync" }, ({ payload }) => {
+        handleRoundSyncBroadcast(payload);
+      });
+
+      channel.on("broadcast", { event: "next_round_ready" }, ({ payload }) => {
+        handleOpponentNextReady(payload);
+      });
+
+      channel.on("broadcast", { event: "duel_reaction" }, ({ payload }) => {
+        if (!payload || payload.senderId === state.clientId) return;
+        if (!ALLOWED_DUEL_REACTIONS.includes(payload.emoji)) return;
+        if (!screens.duel.classList.contains("active")) return;
+        showReactionBubble("opp", payload.emoji);
+      });
+
+      channel.on("broadcast", { event: "rematch_ready" }, ({ payload }) => {
+        if (payload && payload.profile) {
+          applyReceivedOpponentProfile(payload.profile);
+        }
+        state.oppRematchReady = true;
+        checkFriendRematchStart();
+      });
+
+      channel.subscribe(async status => {
+        if (status === "SUBSCRIBED") {
+          await channel.track({
+            clientId: state.clientId,
+            role: state.isHost ? "host" : "guest",
+            joinedAt: Date.now()
+          });
+
+          sendMyProfileBroadcast();
+
+          if (state.isHost) {
+            sendHostRoomInfoBroadcast();
+          } else {
+            channel.send({
+              type: "broadcast",
+              event: "request_room_info",
+              payload: {
+                senderId: state.clientId,
+                guestProfile: getSanitizedProfilePayload()
+              }
+            });
+          }
+        } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
+          setRoomBanner("Ошибка подключения к Supabase Realtime. Проверь ключи и интернет.", "error");
+        }
       });
     }
-  }
 
-  if (isBuilder) {
-    renderBuilderUI();
-    el.builderAnswerZone.classList.remove("has-words");
-    el.builderAnswerZone.classList.add(playerCorrect ? "correct" : "wrong");
-
-    const correctSentence = Array.isArray(q.answer) ? q.answer.join(" ") : "";
-    el.builderFeedback.innerHTML = "";
-
-    if (!playerCorrect) {
-      const correctLine = document.createElement("div");
-      correctLine.className = "builder-correct-line";
-      correctLine.textContent = `✓ Правильный порядок: ${correctSentence}`;
-      el.builderFeedback.appendChild(correctLine);
-    } else {
-      const okLine = document.createElement("div");
-      okLine.className = "builder-correct-line";
-      okLine.textContent = `✓ Верно собрано: ${correctSentence}`;
-      el.builderFeedback.appendChild(okLine);
+    function leaveSupabaseRoom() {
+      if (state.guestReadyRetryTimer) {
+        clearInterval(state.guestReadyRetryTimer);
+        state.guestReadyRetryTimer = null;
+      }
+      if (state.profileSyncDebounce) {
+        clearTimeout(state.profileSyncDebounce);
+        state.profileSyncDebounce = null;
+      }
+      if (state.roomChannel && state.supabaseClient) {
+        try {
+          state.roomChannel.untrack();
+          state.supabaseClient.removeChannel(state.roomChannel);
+        } catch (e) {}
+      }
+      state.roomChannel = null;
     }
 
-    const oppLine = document.createElement("div");
-    oppLine.className = "builder-opp-line";
-    if (state.oppChoice === null) {
-      oppLine.textContent = `${oppLabel}: ⏱️ не успел ответить`;
-    } else if (oppCorrect) {
-      oppLine.textContent = `${oppLabel}: ✓ собрал предложение верно`;
-    } else {
-      const oppWordsStr = Array.isArray(state.oppChoice.words) && state.oppChoice.words.length
-        ? state.oppChoice.words.join(" ")
-        : "пропуск";
-      oppLine.textContent = `${oppLabel}: ✗ ошибся (${oppWordsStr})`;
-    }
-    el.builderFeedback.appendChild(oppLine);
-    el.builderFeedback.classList.add("visible");
-  } else {
-    const buttons = el.optionsList.querySelectorAll(".option-btn");
-    buttons.forEach((btn, idx) => {
-      btn.disabled = true;
-      btn.classList.remove("selected-pending");
+    function hostBroadcastMatchStart() {
+      if (!state.roomChannel || !state.isHost) return;
 
-      if (idx === state.correctOptionIndex) {
-        btn.classList.add("correct");
-      } else if (idx === state.playerChoice || idx === state.oppChoice) {
-        btn.classList.add("wrong");
+      const rules = {
+        maxHp: sanitizeMaxHp(state.matchRules.maxHp),
+        damageScale: sanitizeDamageScale(state.matchRules.damageScale),
+        questionMode: sanitizeQuestionMode(state.matchRules.questionMode)
+      };
+
+      const { deckIndices, optionOrders, wordOrders } = buildFriendDeckForLevel(state.selectedDiff, rules.questionMode);
+      const matchToken = generateRandomId(6);
+
+      const payload = {
+        matchToken,
+        deckIndices,
+        optionOrders,
+        wordOrders,
+        timerSec: state.selectedTimerSec,
+        level: state.selectedDiff,
+        maxHp: rules.maxHp,
+        damageScale: rules.damageScale,
+        questionMode: rules.questionMode,
+        hostId: state.clientId,
+        hostProfile: getSanitizedProfilePayload()
+      };
+
+      state.roomChannel.send({
+        type: "broadcast",
+        event: "match_start",
+        payload
+      });
+
+      beginSyncedFriendMatch(payload);
+    }
+
+    function beginSyncedFriendMatch(payload) {
+      stopSpanishSpeech();
+      clearTimers();
+      if (state.guestReadyRetryTimer) {
+        clearInterval(state.guestReadyRetryTimer);
+        state.guestReadyRetryTimer = null;
       }
 
-      const badgesContainer = btn.querySelector(".choice-badges");
-      if (idx === state.playerChoice) {
-        const youChip = document.createElement("span");
-        youChip.className = "badge-chip you";
-        youChip.textContent = "Ты";
-        badgesContainer.appendChild(youChip);
-      }
-      if (idx === state.oppChoice) {
-        const oppChip = document.createElement("span");
-        oppChip.className = "badge-chip bot";
-        oppChip.textContent = oppLabel;
-        badgesContainer.appendChild(oppChip);
-      }
-    });
-  }
+      state.matchRules = {
+        maxHp: sanitizeMaxHp(payload.maxHp !== undefined ? payload.maxHp : state.matchRules.maxHp),
+        damageScale: sanitizeDamageScale(payload.damageScale !== undefined ? payload.damageScale : state.matchRules.damageScale),
+        questionMode: sanitizeQuestionMode(payload.questionMode !== undefined ? payload.questionMode : state.matchRules.questionMode)
+      };
 
-  let outcomeType = "draw";
-  let outcomeTitleText = "";
-  let dmgText = "0 HP";
+      state.currentMatchToken = payload.matchToken;
+      state.friendDeck = payload.deckIndices;
+      state.friendOptionOrders = payload.optionOrders;
+      state.friendWordOrders = Array.isArray(payload.wordOrders) ? payload.wordOrders : [];
+      state.selectedTimerSec = typeof payload.timerSec === "number" ? payload.timerSec : 30;
+      state.selectedDiff = payload.level && LEVEL_META[payload.level] ? payload.level : state.selectedDiff;
+      state.hostId = payload.hostId;
+      state.matchStarted = true;
+      state.gameOver = false;
+      state.historySavedForMatch = false;
+      state.lastMatchElo = null;
+      state.oppDisconnected = false;
+      state.myRematchReady = false;
+      state.oppRematchReady = false;
 
-  if (playerCorrect && !oppCorrect) {
-    outcomeType = "win";
-    outcomeTitleText = "🎯 Точное попадание!";
-    dmgText = `${oppLabel} -${stake} HP`;
-    state.oppHp = Math.max(0, state.oppHp - stake);
-    state.stats.damageDealt += stake;
-    triggerDamageFeedback("bot", stake);
-  } else if (!playerCorrect && oppCorrect) {
-    outcomeType = "lose";
-    outcomeTitleText = state.playerChoice === null ? "⏱️ Время вышло!" : "💥 Промах!";
-    dmgText = `Ты -${stake} HP`;
-    state.playerHp = Math.max(0, state.playerHp - stake);
-    triggerDamageFeedback("player", stake);
-  } else if (playerCorrect && oppCorrect) {
-    outcomeType = "draw";
-    outcomeTitleText = "🤝 Оба ответили верно!";
-    dmgText = "0 HP";
-  } else {
-    outcomeType = "draw";
-    outcomeTitleText = "😅 Оба ошиблись!";
-    dmgText = "0 HP";
-  }
+      sendMyProfileBroadcast();
 
-  updateHpBars();
+      state.playerHp = state.matchRules.maxHp;
+      state.oppHp = state.matchRules.maxHp;
+      state.round = 1;
+      state.stats = {
+        roundsPlayed: 0,
+        correctAnswers: 0,
+        damageDealt: 0,
+        mistakes: []
+      };
 
-  if (state.oppChoice === null && !state.oppDisconnected) {
-    el.botStatus.className = "bot-live-indicator";
-    el.botStatus.textContent = state.gameMode === "friend"
-      ? `⏱️ ${oppLabel} не успел`
-      : "⏱️ Бот не успел";
-  }
-
-  el.outcomeTitle.className = `outcome-title ${outcomeType}`;
-  el.outcomeTitle.textContent = outcomeTitleText;
-  el.outcomeDmgPill.textContent = dmgText;
-  el.explanationText.innerHTML = `<strong>Пояснение:</strong> ${state.currentQuestion.explanation}`;
-
-  const isMatchFinished = state.playerHp <= 0 || state.oppHp <= 0;
-
-  if (isMatchFinished) {
-    el.btnNextRound.style.display = "none";
-    el.oppReadyNote.classList.remove("visible");
-    saveMatchToHistory(state.oppHp <= 0 && state.playerHp > 0);
-
-    if (state.gameOverDelayTimeout) {
-      clearTimeout(state.gameOverDelayTimeout);
+      updateDuelIdentityUI();
+      updateHpBars();
+      switchScreen("duel");
+      startRound();
     }
-    state.gameOverDelayTimeout = setTimeout(() => {
-      state.gameOverDelayTimeout = null;
-      if (!state.gameOver && state.matchStarted) {
-        showGameOver();
+
+    function handleOpponentAnswerBroadcast(payload) {
+      if (!payload || payload.round !== state.round || state.roundResolved) return;
+      if (state.oppChoice !== null) return;
+
+      const vc = payload.visualChoice;
+      if (typeof vc === "number") {
+        state.oppChoice = vc;
+      } else if (vc && typeof vc === "object" && vc.kind === "builder") {
+        state.oppChoice = {
+          kind: "builder",
+          words: Array.isArray(vc.words) ? vc.words : [],
+          isCorrect: Boolean(vc.isCorrect)
+        };
+      } else {
+        state.oppChoice = null;
       }
-    }, 2000);
-  } else {
-    el.btnNextRound.style.display = "";
-    if (state.gameMode === "friend" && state.oppDisconnected) {
-      el.btnNextRound.textContent = "Соперник вышел — в меню";
-    } else {
-      const nextStake = getRoundStake(state.round + 1);
-      el.btnNextRound.textContent = `Следующий раунд (на кону ${nextStake} HP)`;
+
+      if (state.playerChoice === null) {
+        triggerPreemptPenalty();
+      }
+
+      const oppName = state.opponentProfile.nickname || "Друг";
+      el.botStatus.className = "bot-live-indicator locked";
+      el.botStatus.textContent = `${oppName} ответил ✓`;
+
+      checkIfBothReady();
     }
-  }
 
-  el.roundResultBox.classList.add("visible");
-  if (screens.duel.classList.contains("active")) {
-    el.roundResultBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  }
-}
+    function handleRoundSyncBroadcast(payload) {
+      if (!payload || payload.round !== state.round) return;
+      if (state.roundResolved) return;
 
-function updateHpBars() {
-  const maxHp = Math.max(1, sanitizeMaxHp(state.matchRules.maxHp));
-  const playerPct = Math.max(0, (state.playerHp / maxHp) * 100);
-  const oppPct = Math.max(0, (state.oppHp / maxHp) * 100);
+      clearTimeout(state.timeoutGraceTimer);
+      state.timeoutGraceTimer = null;
 
-  el.playerHpText.textContent = state.playerHp;
-  el.botHpText.textContent = state.oppHp;
-  el.playerHpBar.style.width = `${playerPct}%`;
-  el.botHpBar.style.width = `${oppPct}%`;
-  updateResumeDuelBanner();
-}
+      if (state.isHost) {
+        state.playerChoice = payload.hostChoice;
+        state.oppChoice = payload.guestChoice;
+      } else {
+        state.playerChoice = payload.guestChoice;
+        state.oppChoice = payload.hostChoice;
+      }
 
-function triggerDamageFeedback(target, amount) {
-  const targetEl = target === "player" ? el.combatantPlayer : el.combatantBot;
-  el.duelHud.classList.remove("shake-hit");
-  void el.duelHud.offsetWidth;
-  el.duelHud.classList.add("shake-hit");
-
-  const popup = document.createElement("div");
-  popup.className = "damage-popup";
-  popup.textContent = `-${amount} HP`;
-  targetEl.appendChild(popup);
-
-  setTimeout(() => {
-    if (popup.parentNode) popup.parentNode.removeChild(popup);
-  }, 1350);
-}
-
-function showGameOver() {
-  stopSpanishSpeech();
-  clearTimers();
-  state.gameOver = true;
-  state.matchStarted = false;
-  updateResumeDuelBanner();
-
-  const playerWon = state.oppHp <= 0 && state.playerHp > 0;
-  saveMatchToHistory(playerWon);
-
-  const accuracy = state.stats.roundsPlayed > 0
-    ? Math.round((state.stats.correctAnswers / state.stats.roundsPlayed) * 100)
-    : 0;
-
-  const isFriend = state.gameMode === "friend";
-  const oppName = state.opponentProfile.nickname || (isFriend ? "Друг" : "Бот");
-
-  el.btnPlayAgain.disabled = false;
-  el.btnPlayAgain.textContent = isFriend ? "Реванш с другом" : "Играть снова";
-
-  if (playerWon) {
-    el.gameoverIcon.textContent = "🏆";
-    el.gameoverTitle.textContent = "¡Victoria! Победа!";
-    el.gameoverTitle.className = "gameover-title victory";
-    el.gameoverSub.textContent = `Ты победил соперника «${oppName}» в испанской дуэли!`;
-    soundFX.victory();
-  } else {
-    el.gameoverIcon.textContent = "💀";
-    el.gameoverTitle.textContent = "Поражение";
-    el.gameoverTitle.className = "gameover-title defeat";
-    el.gameoverSub.textContent = `Соперник «${oppName}» оказался точнее в решающих раундах.`;
-    soundFX.defeat();
-  }
-
-  el.statHpLabel.textContent = `Остаток HP (${state.profile.nickname || "Ты"} / ${oppName})`;
-  el.statHpCompare.textContent = `${state.playerHp} / ${state.oppHp}`;
-  el.statRounds.textContent = state.stats.roundsPlayed;
-  el.statAccuracy.textContent = `${accuracy}%`;
-  el.statDmgDealt.textContent = `${state.stats.damageDealt} HP`;
-
-  if (el.statRankChange) {
-    const eloInfo = state.lastMatchElo || {
-      after: state.elo,
-      delta: 0,
-      rank: getRankForElo(state.elo)
-    };
-    el.statRankChange.textContent = "";
-    const rankMain = document.createTextNode(`${eloInfo.rank.icon} ${eloInfo.rank.name} • ${eloInfo.after} ELO `);
-    const deltaSpan = document.createElement("span");
-    if (eloInfo.delta > 0) {
-      deltaSpan.className = "elo-delta-pos";
-      deltaSpan.textContent = `(+${eloInfo.delta})`;
-    } else if (eloInfo.delta < 0) {
-      deltaSpan.className = "elo-delta-neg";
-      deltaSpan.textContent = `(${eloInfo.delta})`;
-    } else {
-      deltaSpan.textContent = "(0)";
+      resolveRound();
     }
-    el.statRankChange.appendChild(rankMain);
-    el.statRankChange.appendChild(deltaSpan);
-  }
 
-  const timerLabel = state.selectedTimerSec === 0
-    ? "∞ (Без лимита)"
-    : `${state.selectedTimerSec} сек / раунд`;
-  el.statTimerMode.textContent = `${timerLabel} • ${formatRulesSummary(state.matchRules, true)}`;
+    function handleFriendNextRoundClick() {
+      if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
+      if (state.oppDisconnected) {
+        returnToMainLobby();
+        return;
+      }
+      if (state.myNextReady) return;
 
-  switchScreen("gameover");
-}
+      state.myNextReady = true;
+      el.btnNextRound.disabled = true;
+      el.btnNextRound.textContent = "⏳ Ожидаем друга...";
 
+      if (state.roomChannel) {
+        state.roomChannel.send({
+          type: "broadcast",
+          event: "next_round_ready",
+          payload: { senderId: state.clientId, round: state.round }
+        });
+      }
+
+      checkBothReadyForNextRound();
+    }
+
+    function handleOpponentNextReady(payload) {
+      if (!payload || payload.round !== state.round) return;
+      if (state.playerHp <= 0 || state.oppHp <= 0 || state.gameOver) return;
+      state.oppNextReady = true;
+      el.oppReadyNote.classList.add("visible");
+      checkBothReadyForNextRound();
+    }
+
+    function checkBothReadyForNextRound() {
+      if (state.myNextReady && state.oppNextReady) {
+        if (state.playerHp <= 0 || state.oppHp <= 0) {
+          showGameOver();
+        } else {
+          state.round += 1;
+          startRound();
+        }
+      }
+    }
+
+    function handleFriendRematchClick() {
+      if (state.oppDisconnected) {
+        returnToMainLobby();
+        return;
+      }
+      if (state.myRematchReady) return;
+      state.myRematchReady = true;
+      el.btnPlayAgain.disabled = true;
+      el.btnPlayAgain.textContent = "⏳ Ожидаем согласия друга...";
+
+      if (state.roomChannel) {
+        state.roomChannel.send({
+          type: "broadcast",
+          event: "rematch_ready",
+          payload: {
+            senderId: state.clientId,
+            profile: getSanitizedProfilePayload()
+          }
+        });
+      }
+      checkFriendRematchStart();
+    }
+
+    function checkFriendRematchStart() {
+      if (state.myRematchReady && state.oppRematchReady) {
+        if (state.isHost) {
+          hostBroadcastMatchStart();
+        }
+      }
+    }
 /* ==========================================================================
-   9.4. MISTAKES REVIEW MODE (РАБОТА НАД ОШИБКАМИ ЗА ПОСЛЕДНИЕ 30 МАТЧЕЙ)
-   ========================================================================== */
-(function initMistakesReview() {
-  const reviewState = {
-    items: [],
-    totalMatches: 0,
-    currentIndex: 0,
-    fixedCount: 0,
-    shuffledOptions: [],
-    correctOptionIndex: 0,
-    draftChoice: null,
-    builderBankWords: [],
-    builderSelectedIndices: [],
-    resolved: false
-  };
-
-  const reviewAudioUi = {
-    stage: el.reviewAudioStage,
-    playBtn: el.btnReviewAudioPlay,
-    slowBtn: el.btnReviewAudioSlow,
-    spoiler: el.reviewAudioSpoiler,
-    summary: el.reviewAudioSpoilerSummary,
-    text: el.reviewAudioFallbackText
-  };
-
-  function getCurrentItem() {
-    return reviewState.items[reviewState.currentIndex] || null;
-  }
-
-  function exitReviewToMenu() {
-    stopSpanishSpeech();
-    switchScreen("lobby");
-  }
-
-  function showEmptyReviewState(hasMatches, totalMatches) {
-    el.reviewPlayArea.style.display = "none";
-    el.reviewSummaryCard.style.display = "none";
-    el.reviewEmptyCard.style.display = "flex";
-
-    if (!hasMatches) {
-      el.reviewEmptyIcon.textContent = "📭";
-      el.reviewEmptyTitle.className = "gameover-title";
-      el.reviewEmptyTitle.textContent = "Матчей пока не было";
-      el.reviewEmptyDesc.textContent =
-        "Ты ещё не сыграл ни одной дуэли. Сыграй хотя бы один матч против бота или друга — и все неправильные ответы за последние 30 матчей появятся здесь!";
-    } else {
-      el.reviewEmptyIcon.textContent = "✨";
-      el.reviewEmptyTitle.className = "gameover-title victory";
-      el.reviewEmptyTitle.textContent = "Ошибок нет!";
-      el.reviewEmptyDesc.textContent =
-        `За последние ${totalMatches} матчей не найдено ни одной ошибки для повторения. Отличный результат!`;
+       8. SENTENCE BUILDER HELPERS & DUEL MATCH / ROUND LOGIC
+       ========================================================================== */
+    function isBuilderAnswerCorrect(assembledWords, expectedAnswer) {
+      if (!Array.isArray(assembledWords) || !Array.isArray(expectedAnswer)) return false;
+      if (assembledWords.length !== expectedAnswer.length || expectedAnswer.length === 0) return false;
+      for (let i = 0; i < expectedAnswer.length; i++) {
+        const a = String(assembledWords[i] || "").trim().toLowerCase();
+        const b = String(expectedAnswer[i] || "").trim().toLowerCase();
+        if (a !== b) return false;
+      }
+      return true;
     }
-  }
 
-  function hasReviewDraft() {
-    const item = getCurrentItem();
-    if (!item) return false;
-    if (item.question.type === "builder") {
-      return reviewState.builderSelectedIndices.length > 0;
+    function hasPlayerDraftSelection() {
+      if (!state.currentQuestion) return false;
+      if (state.currentQuestion.type === "builder") {
+        return state.builderSelectedIndices.length > 0;
+      }
+      return state.draftChoice !== null;
     }
-    return reviewState.draftChoice !== null;
-  }
 
-  function updateReviewSubmitBtn() {
-    if (reviewState.resolved) {
-      el.btnReviewSubmit.style.display = "none";
-      return;
+    function updateSubmitAnswerButtonUI() {
+      if (state.roundResolved) {
+        el.btnSubmitAnswer.style.display = "none";
+        return;
+      }
+      el.btnSubmitAnswer.style.display = "block";
+      if (state.playerChoice !== null) {
+        el.btnSubmitAnswer.disabled = true;
+        el.btnSubmitAnswer.textContent = "⏳ Ответ отправлен...";
+      } else {
+        el.btnSubmitAnswer.disabled = !hasPlayerDraftSelection();
+        el.btnSubmitAnswer.textContent = "Ответить";
+      }
     }
-    el.btnReviewSubmit.style.display = "block";
-    el.btnReviewSubmit.disabled = !hasReviewDraft();
-    el.btnReviewSubmit.textContent = "Проверить ответ";
-  }
 
-  function renderReviewBuilderUI() {
-    const locked = reviewState.resolved;
-    const usedSet = new Set(reviewState.builderSelectedIndices);
+    function renderBuilderUI() {
+      const locked = state.playerChoice !== null || state.roundResolved;
+      const usedSet = new Set(state.builderSelectedIndices);
 
-    el.reviewBuilderAnswerZone.innerHTML = "";
-    el.reviewBuilderAnswerZone.classList.toggle(
-      "has-words",
-      reviewState.builderSelectedIndices.length > 0 && !locked
-    );
+      el.builderAnswerZone.innerHTML = "";
+      el.builderAnswerZone.classList.toggle("has-words", state.builderSelectedIndices.length > 0 && !state.roundResolved);
 
-    if (reviewState.builderSelectedIndices.length === 0) {
-      const hint = document.createElement("span");
-      hint.className = "builder-empty-hint";
-      hint.textContent = locked
-        ? "Предложение не было собрано"
-        : "Нажимай на слова ниже, чтобы собрать предложение...";
-      el.reviewBuilderAnswerZone.appendChild(hint);
-    } else {
-      reviewState.builderSelectedIndices.forEach((bankIdx, pos) => {
-        const word = reviewState.builderBankWords[bankIdx];
+      if (state.builderSelectedIndices.length === 0) {
+        const hint = document.createElement("span");
+        hint.className = "builder-empty-hint";
+        hint.textContent = state.roundResolved
+          ? "Предложение не было собрано"
+          : "Нажимай на слова ниже, чтобы собрать предложение...";
+        el.builderAnswerZone.appendChild(hint);
+      } else {
+        state.builderSelectedIndices.forEach((bankIdx, pos) => {
+          const word = state.builderBankWords[bankIdx];
+          const chip = document.createElement("button");
+          chip.type = "button";
+          chip.className = "word-chip in-answer";
+          chip.textContent = word;
+          chip.disabled = locked && !state.roundResolved;
+          if (!locked) {
+            chip.addEventListener("click", () => {
+              if (state.playerChoice !== null || state.roundResolved) return;
+              state.builderSelectedIndices.splice(pos, 1);
+              renderBuilderUI();
+              updateSubmitAnswerButtonUI();
+            });
+          } else if (state.roundResolved) {
+            chip.title = "Нажми, чтобы сохранить в словарь и озвучить";
+            chip.addEventListener("click", () => {
+              saveVocabWord(word, state.currentRoundVocabContext, state.currentRoundVocabLevel);
+            });
+          }
+          el.builderAnswerZone.appendChild(chip);
+        });
+      }
+
+      el.builderWordBank.innerHTML = "";
+      state.builderBankWords.forEach((word, bankIdx) => {
+        const isUsed = usedSet.has(bankIdx);
         const chip = document.createElement("button");
         chip.type = "button";
-        chip.className = "word-chip in-answer";
+        chip.className = isUsed ? "word-chip used" : "word-chip";
         chip.textContent = word;
-        chip.disabled = locked;
-        if (!locked) {
+        chip.disabled = (locked && !state.roundResolved) || isUsed;
+        if (isUsed) {
+          chip.setAttribute("aria-hidden", "true");
+          chip.tabIndex = -1;
+        } else if (!locked) {
           chip.addEventListener("click", () => {
-            if (reviewState.resolved) return;
-            reviewState.builderSelectedIndices.splice(pos, 1);
-            renderReviewBuilderUI();
-            updateReviewSubmitBtn();
+            if (state.playerChoice !== null || state.roundResolved) return;
+            state.builderSelectedIndices.push(bankIdx);
+            renderBuilderUI();
+            updateSubmitAnswerButtonUI();
+          });
+        } else if (state.roundResolved) {
+          chip.title = "Нажми, чтобы сохранить в словарь и озвучить";
+          chip.addEventListener("click", () => {
+            saveVocabWord(word, state.currentRoundVocabContext, state.currentRoundVocabLevel);
           });
         }
-        el.reviewBuilderAnswerZone.appendChild(chip);
+        el.builderWordBank.appendChild(chip);
       });
     }
 
-    el.reviewBuilderWordBank.innerHTML = "";
-    reviewState.builderBankWords.forEach((word, bankIdx) => {
-      const isUsed = usedSet.has(bankIdx);
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = isUsed ? "word-chip used" : "word-chip";
-      chip.textContent = word;
-      chip.disabled = locked || isUsed;
-      if (isUsed) {
-        chip.setAttribute("aria-hidden", "true");
-        chip.tabIndex = -1;
-      } else if (!locked) {
-        chip.addEventListener("click", () => {
-          if (reviewState.resolved) return;
-          reviewState.builderSelectedIndices.push(bankIdx);
-          renderReviewBuilderUI();
-          updateReviewSubmitBtn();
+    function getRoundStake(roundNum) {
+      const baseStake = roundNum - 1 < ROUND_STAKES.length
+        ? ROUND_STAKES[roundNum - 1]
+        : 2000;
+      const scale = sanitizeDamageScale(state.matchRules.damageScale);
+      return Math.round(baseStake * scale);
+    }
+
+    function getTargetTier(roundNum) {
+      if (state.selectedDiff === "principiante") {
+        return roundNum <= 5 ? 0 : 1;
+      }
+      if (state.selectedDiff === "novato") {
+        return roundNum <= 4 ? 1 : 2;
+      }
+      return roundNum <= 2 ? 1 : 2;
+    }
+
+    function getTierLabel(tier) {
+      if (tier === 0) return "Уровень A0";
+      if (tier === 1) return "Уровень A1";
+      return "Уровень A2–B1";
+    }
+
+    function startBotMatch() {
+      stopSpanishSpeech();
+      clearTimers();
+      const botMeta = LEVEL_META[state.selectedDiff];
+      const randomBotName = BOT_RANDOM_NAMES[Math.floor(Math.random() * BOT_RANDOM_NAMES.length)];
+
+      state.gameMode = "bot";
+      state.matchRules = { ...state.duelSettings };
+      state.matchStarted = true;
+      state.gameOver = false;
+      state.historySavedForMatch = false;
+      state.lastMatchElo = null;
+      state.opponentProfile = {
+        nickname: `${randomBotName} (${botMeta.tierLabel.replace("Уровень ", "")})`,
+        avatarType: "emoji",
+        avatarData: "🤖"
+      };
+
+      state.playerHp = state.matchRules.maxHp;
+      state.oppHp = state.matchRules.maxHp;
+      state.round = 1;
+      state.usedQuestionIds.clear();
+      state.stats = {
+        roundsPlayed: 0,
+        correctAnswers: 0,
+        damageDealt: 0,
+        mistakes: []
+      };
+
+      updateDuelIdentityUI();
+      updateHpBars();
+      switchScreen("duel");
+      startRound();
+    }
+
+    function pickBotQuestionForRound(roundNum) {
+      const targetTier = getTargetTier(roundNum);
+      const qMode = sanitizeQuestionMode(state.matchRules.questionMode);
+      const tierPool = getTierPoolIndices(targetTier, qMode).map(idx => QUESTION_BANK[idx]);
+
+      let pool = tierPool.filter(q => !state.usedQuestionIds.has(q.id));
+
+      if (pool.length === 0 && tierPool.length > 0) {
+        tierPool.forEach(q => state.usedQuestionIds.delete(q.id));
+        pool = tierPool;
+      }
+      if (pool.length === 0) {
+        pool = QUESTION_BANK.filter(q => !state.usedQuestionIds.has(q.id));
+      }
+      if (pool.length === 0) {
+        state.usedQuestionIds.clear();
+        pool = QUESTION_BANK;
+      }
+
+      const chosen = pool[Math.floor(Math.random() * pool.length)];
+      state.usedQuestionIds.add(chosen.id);
+      return chosen;
+    }
+
+    function startRound() {
+      stopSpanishSpeech();
+      clearTimers();
+      state.roundResolved = false;
+      state.draftChoice = null;
+      state.builderBankWords = [];
+      state.builderSelectedIndices = [];
+      state.playerChoice = null;
+      state.oppChoice = null;
+      state.botScheduledAt = null;
+      state.timerDeadlineAt = null;
+      state.timeLeft = state.selectedTimerSec;
+      state.lastTickSec = null;
+      state.myNextReady = false;
+      state.oppNextReady = false;
+      state.currentRoundVocabContext = "";
+
+      el.btnNextRound.style.display = "";
+      el.btnNextRound.disabled = false;
+      el.oppReadyNote.classList.remove("visible");
+      el.vocabRoundStrip.style.display = "none";
+      el.vocabRoundChips.innerHTML = "";
+      updateResumeDuelBanner();
+
+      const stake = getRoundStake(state.round);
+      let question;
+      let indexedOptions = [];
+      let wordOrder = null;
+
+      if (state.gameMode === "friend") {
+        const deckIdx = (state.round - 1) % state.friendDeck.length;
+        const qIndex = state.friendDeck[deckIdx];
+        question = QUESTION_BANK[qIndex] || QUESTION_BANK[0];
+
+        if (question.type === "builder") {
+          wordOrder = state.friendWordOrders[deckIdx];
+        } else {
+          const order = state.friendOptionOrders[deckIdx] || [0, 1, 2, 3];
+          indexedOptions = order.map(origIdx => ({
+            text: question.options[origIdx],
+            isCorrect: origIdx === question.correct
+          }));
+        }
+      } else {
+        question = pickBotQuestionForRound(state.round);
+        if (question.type !== "builder") {
+          indexedOptions = (question.options || []).map((text, idx) => ({
+            text,
+            isCorrect: idx === question.correct
+          }));
+          for (let i = indexedOptions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indexedOptions[i], indexedOptions[j]] = [indexedOptions[j], indexedOptions[i]];
+          }
+        }
+      }
+
+      state.currentQuestion = question;
+      state.shuffledOptions = indexedOptions;
+      state.correctOptionIndex = indexedOptions.findIndex(o => o.isCorrect);
+
+      el.hudRound.textContent = `Раунд ${state.round}`;
+      const scaleSuffix = state.matchRules.damageScale !== 1 ? ` (×${state.matchRules.damageScale})` : "";
+      el.hudStakes.textContent = `🔥 НА КОНУ: ${stake} HP${scaleSuffix}`;
+      el.hudTier.textContent = getTierLabel(question.tier);
+
+      if (state.oppDisconnected) {
+        el.botStatus.className = "bot-live-indicator disconnected";
+        el.botStatus.textContent = "Соперник вышел";
+      } else {
+        el.botStatus.className = "bot-live-indicator";
+        el.botStatus.textContent = state.gameMode === "friend"
+          ? `${state.opponentProfile.nickname || "Друг"} думает...`
+          : "Бот думает...";
+      }
+
+      el.qTypeBadge.textContent = question.typeLabel || (question.type === "builder" ? "Конструктор" : "Вопрос");
+      el.qTypeBadge.className = `q-type-badge ${question.type || ""}`;
+
+      if (question.svg) {
+        el.visualStage.style.display = "flex";
+        el.visualStage.innerHTML = question.svg;
+      } else {
+        el.visualStage.style.display = "none";
+        el.visualStage.innerHTML = "";
+      }
+
+      el.audioFallbackSpoiler.classList.remove("visible");
+      el.audioFallbackSpoiler.open = false;
+      el.audioFallbackText.textContent = "";
+
+      if (typeof question.audioText === "string" && question.audioText.trim()) {
+        const phrase = question.audioText.trim();
+        el.audioStage.classList.add("visible");
+        el.audioFallbackText.textContent = phrase;
+
+        state.autoSpeakTimeout = setTimeout(() => {
+          state.autoSpeakTimeout = null;
+          if (!state.roundResolved && state.currentQuestion === question) {
+            speakSpanish(phrase, 1.0);
+          }
+        }, 300);
+      } else {
+        el.audioStage.classList.remove("visible");
+      }
+
+      el.questionPrompt.textContent = question.prompt;
+      if (question.subprompt) {
+        el.questionSubprompt.style.display = "block";
+        el.questionSubprompt.textContent = question.subprompt;
+      } else {
+        el.questionSubprompt.style.display = "none";
+      }
+
+      el.roundResultBox.classList.remove("visible");
+      el.optionsList.innerHTML = "";
+      el.builderAnswerZone.className = "builder-answer-zone";
+      el.builderFeedback.classList.remove("visible");
+      el.builderFeedback.innerHTML = "";
+
+      if (question.type === "builder") {
+        el.optionsList.style.display = "none";
+        el.builderStage.classList.add("visible");
+
+        const rawWords = Array.isArray(question.words) ? question.words : [];
+        if (Array.isArray(wordOrder) && wordOrder.length === rawWords.length) {
+          state.builderBankWords = wordOrder.map(idx => rawWords[idx]);
+        } else {
+          state.builderBankWords = shuffleArray(rawWords);
+        }
+
+        renderBuilderUI();
+      } else {
+        el.builderStage.classList.remove("visible");
+        el.optionsList.style.display = "flex";
+
+        const keys = ["A", "B", "C", "D"];
+        indexedOptions.forEach((opt, idx) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "option-btn";
+          btn.innerHTML = `
+            <div class="option-left">
+              <span class="option-key">${keys[idx]}</span>
+              <span>${opt.text}</span>
+            </div>
+            <div class="choice-badges"></div>
+          `;
+          btn.addEventListener("click", () => handlePlayerDraftSelect(idx));
+          el.optionsList.appendChild(btn);
         });
       }
-      el.reviewBuilderWordBank.appendChild(chip);
-    });
-  }
 
-  function renderReviewQuestion() {
-    stopSpanishSpeech();
-    const item = getCurrentItem();
-    if (!item) {
-      showReviewSummary();
-      return;
+      updateSubmitAnswerButtonUI();
+
+      if (state.gameMode === "bot") {
+        scheduleBotAnswer(question.tier);
+      }
+      startRoundTimer();
     }
 
-    const q = item.question;
-    const total = reviewState.items.length;
-    const idx = reviewState.currentIndex;
+    /* ==========================================================================
+       9. PREEMPTION MECHANIC (КРАСНАЯ ВСПЫШКА + ТАЙМЕР ДО 10 СЕК + ЗВУК)
+       ========================================================================== */
+    function triggerPreemptPenalty() {
+      el.preemptOverlay.classList.remove("active");
+      void el.preemptOverlay.offsetWidth;
+      el.preemptOverlay.classList.add("active");
 
-    reviewState.resolved = false;
-    reviewState.draftChoice = null;
-    reviewState.shuffledOptions = [];
-    reviewState.correctOptionIndex = 0;
-    reviewState.builderBankWords = [];
-    reviewState.builderSelectedIndices = [];
+      soundFX.preempt();
 
-    el.reviewProgressPill.textContent = `Вопрос ${idx + 1} / ${total}`;
-    el.reviewSourceInfo.textContent = `Из последних ${reviewState.totalMatches} игр (${getTierLabel(q.tier)})`;
-    el.reviewScoreText.textContent = `Верно: ${reviewState.fixedCount}`;
-    el.reviewProgressBar.style.width = `${((idx + 1) / total) * 100}%`;
+      if (state.flashTimeout) {
+        clearTimeout(state.flashTimeout);
+      }
+      state.flashTimeout = setTimeout(() => {
+        el.preemptOverlay.classList.remove("active");
+        state.flashTimeout = null;
+      }, 1000);
 
-    el.reviewQBadge.textContent = q.typeLabel || (q.type === "builder" ? "Конструктор" : "Вопрос");
-    el.reviewQBadge.className = `q-type-badge ${q.type || ""}`;
+      if (state.selectedTimerSec === 0 || !state.timerDeadlineAt) return;
 
-    if (q.svg) {
-      el.reviewVisualStage.style.display = "flex";
-      el.reviewVisualStage.innerHTML = q.svg;
-    } else {
-      el.reviewVisualStage.style.display = "none";
-      el.reviewVisualStage.innerHTML = "";
+      const remainingMs = state.timerDeadlineAt - Date.now();
+      if (remainingMs > 10000) {
+        state.timerDeadlineAt = Date.now() + 10000;
+        state.timeLeft = 10;
+        el.timerText.textContent = "⏱️ 10.0s";
+      }
     }
 
-    el.reviewAudioSpoiler.classList.remove("visible");
-    el.reviewAudioSpoiler.open = false;
-    el.reviewAudioFallbackText.textContent = "";
+    function buildBotWrongBuilderWords(question) {
+      const answer = Array.isArray(question.answer) ? question.answer : [];
+      const bank = Array.isArray(question.words) ? question.words : answer;
+      if (bank.length <= 1) return [];
 
-    if (typeof q.audioText === "string" && q.audioText.trim()) {
-      const phrase = q.audioText.trim();
-      el.reviewAudioStage.classList.add("visible");
-      el.reviewAudioFallbackText.textContent = phrase;
-      state.autoSpeakTimeout = setTimeout(() => {
-        state.autoSpeakTimeout = null;
-        if (!reviewState.resolved && screens.mistakesReview.classList.contains("active")) {
-          speakSpanish(phrase, 1.0, reviewAudioUi);
+      const candidate = shuffleArray(bank).slice(0, Math.max(1, answer.length));
+      if (!isBuilderAnswerCorrect(candidate, answer)) {
+        return candidate;
+      }
+      return candidate.slice().reverse();
+    }
+
+    function commitBotChoice() {
+      if (state.roundResolved || state.oppChoice !== null) return;
+
+      if (state.playerChoice === null) {
+        triggerPreemptPenalty();
+      }
+
+      if (state.currentQuestion && state.currentQuestion.type === "builder") {
+        if (state.botWillAnswerCorrectly) {
+          state.oppChoice = {
+            kind: "builder",
+            words: (state.currentQuestion.answer || []).slice(),
+            isCorrect: true
+          };
+        } else {
+          state.oppChoice = {
+            kind: "builder",
+            words: buildBotWrongBuilderWords(state.currentQuestion),
+            isCorrect: false
+          };
         }
-      }, 260);
-    } else {
-      el.reviewAudioStage.classList.remove("visible");
+      } else {
+        if (state.botWillAnswerCorrectly) {
+          state.oppChoice = state.correctOptionIndex;
+        } else {
+          const wrongIndices = [0, 1, 2, 3].filter(i => i !== state.correctOptionIndex);
+          state.oppChoice = wrongIndices[Math.floor(Math.random() * wrongIndices.length)];
+        }
+      }
+
+      el.botStatus.className = "bot-live-indicator locked";
+      el.botStatus.textContent = "Бот ответил ✓";
+      checkIfBothReady();
     }
 
-    el.reviewPrompt.textContent = q.prompt;
-    if (q.subprompt) {
-      el.reviewSubprompt.style.display = "block";
-      el.reviewSubprompt.textContent = q.subprompt;
-    } else {
-      el.reviewSubprompt.style.display = "none";
+    function scheduleBotAnswer(questionTier) {
+      const bot = LEVEL_META[state.selectedDiff];
+      let minDelay = 3000;
+      let maxDelay = 6000;
+
+      if (state.selectedTimerSec === 15) {
+        minDelay = 4000;
+        maxDelay = 10500;
+      } else if (state.selectedTimerSec > 0) {
+        const totalMs = state.selectedTimerSec * 1000;
+        minDelay = Math.max(2500, totalMs * 0.22);
+        maxDelay = Math.min(12000, totalMs * 0.65);
+      }
+
+      const delay = Math.floor(minDelay + Math.random() * Math.max(500, maxDelay - minDelay));
+      const effectiveAccuracy = Math.max(0.25, bot.baseAccuracy - Math.max(0, questionTier - 1) * bot.tierPenalty);
+      state.botWillAnswerCorrectly = Math.random() < effectiveAccuracy;
+      state.botScheduledAt = Date.now() + delay;
+
+      state.botAnswerTimeout = setTimeout(commitBotChoice, delay);
     }
 
-    el.reviewResultBox.classList.remove("visible");
-    el.reviewPrevWrong.style.display = "none";
-    el.reviewOptionsList.innerHTML = "";
-    el.reviewBuilderAnswerZone.className = "builder-answer-zone";
-    el.reviewBuilderFeedback.classList.remove("visible");
-    el.reviewBuilderFeedback.innerHTML = "";
+    function capBotDelayToTenSeconds() {
+      if (state.roundResolved || state.oppChoice !== null || !state.botScheduledAt) return;
 
-    if (q.type === "builder") {
-      el.reviewOptionsList.style.display = "none";
-      el.reviewBuilderStage.classList.add("visible");
-      reviewState.builderBankWords = shuffleArray(Array.isArray(q.words) ? q.words : []);
-      renderReviewBuilderUI();
-    } else {
-      el.reviewBuilderStage.classList.remove("visible");
-      el.reviewOptionsList.style.display = "flex";
-
-      const indexedOptions = shuffleArray(
-        (q.options || []).map((text, optIdx) => ({
-          text,
-          isCorrect: optIdx === q.correct
-        }))
-      );
-      reviewState.shuffledOptions = indexedOptions;
-      reviewState.correctOptionIndex = indexedOptions.findIndex(o => o.isCorrect);
-
-      const keys = ["A", "B", "C", "D"];
-      indexedOptions.forEach((opt, optIdx) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "option-btn";
-        btn.innerHTML = `
-          <div class="option-left">
-            <span class="option-key">${keys[optIdx]}</span>
-            <span>${opt.text}</span>
-          </div>
-          <div class="choice-badges"></div>
-        `;
-        btn.addEventListener("click", () => {
-          if (reviewState.resolved) return;
-          reviewState.draftChoice = optIdx;
-          el.reviewOptionsList.querySelectorAll(".option-btn").forEach((b, bIdx) => {
-            b.classList.toggle("selected-pending", bIdx === optIdx);
-          });
-          updateReviewSubmitBtn();
-        });
-        el.reviewOptionsList.appendChild(btn);
-      });
+      const remainingMs = state.botScheduledAt - Date.now();
+      if (remainingMs > 10000) {
+        if (state.botAnswerTimeout) {
+          clearTimeout(state.botAnswerTimeout);
+          state.botAnswerTimeout = null;
+        }
+        state.botScheduledAt = Date.now() + 10000;
+        state.botAnswerTimeout = setTimeout(commitBotChoice, 10000);
+      }
     }
 
-    updateReviewSubmitBtn();
-  }
+    function startRoundTimer() {
+      el.timerText.classList.remove("urgent");
 
-  function submitReviewAnswer() {
-    if (reviewState.resolved || !hasReviewDraft()) return;
-    const item = getCurrentItem();
-    if (!item) return;
+      if (state.selectedTimerSec === 0) {
+        el.timerText.textContent = "⏱️ ∞";
+        el.timerBarFill.style.width = "100%";
+        return;
+      }
 
-    const q = item.question;
-    const isBuilder = q.type === "builder";
-    reviewState.resolved = true;
-    updateReviewSubmitBtn();
+      const totalMs = state.selectedTimerSec * 1000;
+      state.timerDeadlineAt = Date.now() + totalMs;
 
-    let isCorrect = false;
-    if (isBuilder) {
-      const assembledWords = reviewState.builderSelectedIndices.map(idx => reviewState.builderBankWords[idx]);
-      isCorrect = isBuilderAnswerCorrect(assembledWords, q.answer);
-      renderReviewBuilderUI();
-      el.reviewBuilderAnswerZone.classList.remove("has-words");
-      el.reviewBuilderAnswerZone.classList.add(isCorrect ? "correct" : "wrong");
+      el.timerText.textContent = `⏱️ ${state.selectedTimerSec.toFixed(1)}s`;
+      el.timerBarFill.style.width = "100%";
 
-      const correctSentence = Array.isArray(q.answer) ? q.answer.join(" ") : "";
-      el.reviewBuilderFeedback.innerHTML = "";
-      const line = document.createElement("div");
-      line.className = "builder-correct-line";
-      line.textContent = isCorrect
-        ? `✓ Верно собрано: ${correctSentence}`
-        : `✓ Правильный порядок: ${correctSentence}`;
-      el.reviewBuilderFeedback.appendChild(line);
-      el.reviewBuilderFeedback.classList.add("visible");
-    } else {
-      isCorrect = reviewState.draftChoice === reviewState.correctOptionIndex;
-      const buttons = el.reviewOptionsList.querySelectorAll(".option-btn");
-      buttons.forEach((btn, idx) => {
+      state.timerInterval = setInterval(() => {
+        if (state.roundResolved) return;
+
+        const remainingMs = Math.max(0, state.timerDeadlineAt - Date.now());
+        state.timeLeft = remainingMs / 1000;
+
+        el.timerText.textContent = `⏱️ ${state.timeLeft.toFixed(1)}s`;
+        el.timerBarFill.style.width = `${(remainingMs / totalMs) * 100}%`;
+
+        if (state.timeLeft <= 5.0 && remainingMs > 0) {
+          el.timerText.classList.add("urgent");
+          const secCeil = Math.ceil(state.timeLeft);
+          if (secCeil >= 1 && secCeil <= 5 && secCeil !== state.lastTickSec) {
+            state.lastTickSec = secCeil;
+            soundFX.tick();
+          }
+        }
+
+        if (remainingMs <= 0) {
+          clearInterval(state.timerInterval);
+          state.timerInterval = null;
+          handleRoundTimeout();
+        }
+      }, 100);
+    }
+
+    function handleRoundTimeout() {
+      if (state.roundResolved) return;
+
+      if (state.playerChoice === null && hasPlayerDraftSelection()) {
+        submitPlayerAnswer({ fromTimeout: true });
+      }
+
+      const buttons = el.optionsList.querySelectorAll(".option-btn");
+      buttons.forEach(btn => {
         btn.disabled = true;
-        btn.classList.remove("selected-pending");
-        if (idx === reviewState.correctOptionIndex) {
-          btn.classList.add("correct");
-        } else if (idx === reviewState.draftChoice) {
-          btn.classList.add("wrong");
+      });
+      if (state.currentQuestion && state.currentQuestion.type === "builder") {
+        renderBuilderUI();
+      }
+      el.btnSubmitAnswer.disabled = true;
+
+      if (state.gameMode === "friend") {
+        const waitMs = state.isHost ? 350 : 950;
+        state.timeoutGraceTimer = setTimeout(() => {
+          if (state.roundResolved) return;
+          if (state.isHost && state.roomChannel) {
+            state.roomChannel.send({
+              type: "broadcast",
+              event: "round_sync",
+              payload: {
+                round: state.round,
+                hostChoice: state.playerChoice,
+                guestChoice: state.oppChoice
+              }
+            });
+          }
+          resolveRound();
+        }, waitMs);
+      } else {
+        resolveRound();
+      }
+    }
+
+    function clearTimers() {
+      if (state.autoSpeakTimeout) {
+        clearTimeout(state.autoSpeakTimeout);
+        state.autoSpeakTimeout = null;
+      }
+      if (state.flashTimeout) {
+        clearTimeout(state.flashTimeout);
+        state.flashTimeout = null;
+      }
+      if (state.botReactionTimeout) {
+        clearTimeout(state.botReactionTimeout);
+        state.botReactionTimeout = null;
+      }
+      el.preemptOverlay.classList.remove("active");
+      state.timerDeadlineAt = null;
+
+      if (state.timeoutGraceTimer) {
+        clearTimeout(state.timeoutGraceTimer);
+        state.timeoutGraceTimer = null;
+      }
+      if (state.botAnswerTimeout) {
+        clearTimeout(state.botAnswerTimeout);
+        state.botAnswerTimeout = null;
+      }
+      if (state.timerInterval) {
+        clearInterval(state.timerInterval);
+        state.timerInterval = null;
+      }
+      if (state.gameOverDelayTimeout) {
+        clearTimeout(state.gameOverDelayTimeout);
+        state.gameOverDelayTimeout = null;
+      }
+    }
+
+    function handlePlayerDraftSelect(index) {
+      if (state.roundResolved || state.playerChoice !== null) return;
+
+      state.draftChoice = index;
+      const buttons = el.optionsList.querySelectorAll(".option-btn");
+      buttons.forEach((btn, idx) => {
+        btn.classList.toggle("selected-pending", idx === index);
+      });
+      updateSubmitAnswerButtonUI();
+    }
+
+    function submitPlayerAnswer({ fromTimeout = false } = {}) {
+      if (state.roundResolved || state.playerChoice !== null) return;
+      if (!hasPlayerDraftSelection()) return;
+
+      const q = state.currentQuestion;
+      if (!q) return;
+
+      if (q.type === "builder") {
+        const assembledWords = state.builderSelectedIndices.map(idx => state.builderBankWords[idx]);
+        const isCorrect = isBuilderAnswerCorrect(assembledWords, q.answer);
+        state.playerChoice = {
+          kind: "builder",
+          words: assembledWords,
+          isCorrect
+        };
+        renderBuilderUI();
+      } else {
+        state.playerChoice = state.draftChoice;
+        const buttons = el.optionsList.querySelectorAll(".option-btn");
+        buttons.forEach((btn, idx) => {
+          btn.disabled = true;
+          btn.classList.toggle("selected-pending", idx === state.playerChoice);
+        });
+      }
+
+      updateSubmitAnswerButtonUI();
+
+      if (state.gameMode === "friend") {
+        if (state.roomChannel) {
+          state.roomChannel.send({
+            type: "broadcast",
+            event: "player_answer",
+            payload: {
+              senderId: state.clientId,
+              round: state.round,
+              visualChoice: state.playerChoice
+            }
+          });
+        }
+      } else if (!fromTimeout) {
+        capBotDelayToTenSeconds();
+      }
+
+      if (!fromTimeout) {
+        checkIfBothReady();
+      }
+    }
+
+    function checkIfBothReady() {
+      if (state.playerChoice !== null && state.oppChoice !== null) {
+        setTimeout(() => {
+          if (!state.roundResolved) {
+            if (state.gameMode === "friend" && state.isHost && state.roomChannel) {
+              state.roomChannel.send({
+                type: "broadcast",
+                event: "round_sync",
+                payload: {
+                  round: state.round,
+                  hostChoice: state.playerChoice,
+                  guestChoice: state.oppChoice
+                }
+              });
+            }
+            resolveRound();
+          }
+        }, 320);
+      }
+    }
+
+    function resolveRound() {
+      if (state.roundResolved) return;
+      state.roundResolved = true;
+      clearTimers();
+
+      el.btnSubmitAnswer.style.display = "none";
+
+      const q = state.currentQuestion;
+      const isBuilder = Boolean(q && q.type === "builder");
+      const stake = getRoundStake(state.round);
+      const playerCorrect = isBuilder
+        ? Boolean(state.playerChoice && state.playerChoice.isCorrect)
+        : state.playerChoice === state.correctOptionIndex;
+      const oppCorrect = isBuilder
+        ? Boolean(state.oppChoice && state.oppChoice.isCorrect)
+        : state.oppChoice === state.correctOptionIndex;
+      const oppLabel = state.gameMode === "friend"
+        ? (state.opponentProfile.nickname || "Друг")
+        : "Бот";
+
+      const correctAnswerText = isBuilder
+        ? (Array.isArray(q.answer) ? q.answer.join(" ") : "")
+        : (state.shuffledOptions[state.correctOptionIndex]
+            ? state.shuffledOptions[state.correctOptionIndex].text
+            : (q && q.options ? q.options[q.correct] : ""));
+
+      state.stats.roundsPlayed += 1;
+      if (playerCorrect) {
+        state.stats.correctAnswers += 1;
+        soundFX.correct();
+        if (isBuilder && state.soundEnabled && Array.isArray(q.answer)) {
+          speakSpanish(q.answer.join(" "));
+        }
+      } else {
+        soundFX.wrong();
+        if (isBuilder) {
+          const yourSentence = state.playerChoice && Array.isArray(state.playerChoice.words) && state.playerChoice.words.length
+            ? state.playerChoice.words.join(" ")
+            : "Время вышло";
+          state.stats.mistakes.push({
+            questionId: q ? q.id : null,
+            prompt: q ? q.prompt : "",
+            subprompt: q ? (q.subprompt || "") : "",
+            correctAnswer: correctAnswerText,
+            yourAnswer: yourSentence
+          });
+        } else {
+          const yourText = state.playerChoice !== null && state.shuffledOptions[state.playerChoice]
+            ? state.shuffledOptions[state.playerChoice].text
+            : "Время вышло";
+          state.stats.mistakes.push({
+            questionId: q ? q.id : null,
+            prompt: q ? q.prompt : "",
+            subprompt: q ? (q.subprompt || q.audioText || "") : "",
+            correctAnswer: correctAnswerText,
+            yourAnswer: yourText
+          });
+        }
+      }
+
+      if (isBuilder) {
+        renderBuilderUI();
+        el.builderAnswerZone.classList.remove("has-words");
+        el.builderAnswerZone.classList.add(playerCorrect ? "correct" : "wrong");
+
+        el.builderFeedback.innerHTML = "";
+
+        if (!playerCorrect) {
+          const correctLine = document.createElement("div");
+          correctLine.className = "builder-correct-line";
+          correctLine.textContent = `✓ Правильный порядок: ${correctAnswerText}`;
+          el.builderFeedback.appendChild(correctLine);
+        } else {
+          const okLine = document.createElement("div");
+          okLine.className = "builder-correct-line";
+          okLine.textContent = `✓ Верно собрано: ${correctAnswerText}`;
+          el.builderFeedback.appendChild(okLine);
+        }
+
+        const oppLine = document.createElement("div");
+        oppLine.className = "builder-opp-line";
+        if (state.oppChoice === null) {
+          oppLine.textContent = `${oppLabel}: ⏱️ не успел ответить`;
+        } else if (oppCorrect) {
+          oppLine.textContent = `${oppLabel}: ✓ собрал предложение верно`;
+        } else {
+          const oppWordsStr = Array.isArray(state.oppChoice.words) && state.oppChoice.words.length
+            ? state.oppChoice.words.join(" ")
+            : "пропуск";
+          oppLine.textContent = `${oppLabel}: ✗ ошибся (${oppWordsStr})`;
+        }
+        el.builderFeedback.appendChild(oppLine);
+        el.builderFeedback.classList.add("visible");
+      } else {
+        const buttons = el.optionsList.querySelectorAll(".option-btn");
+        buttons.forEach((btn, idx) => {
+          btn.disabled = false;
+          btn.classList.add("resolved");
+          btn.setAttribute("aria-disabled", "true");
+          btn.classList.remove("selected-pending");
+
+          if (idx === state.correctOptionIndex) {
+            btn.classList.add("correct");
+          } else if (idx === state.playerChoice || idx === state.oppChoice) {
+            btn.classList.add("wrong");
+          }
+
+          const badgesContainer = btn.querySelector(".choice-badges");
+          if (idx === state.playerChoice) {
+            const youChip = document.createElement("span");
+            youChip.className = "badge-chip you";
+            youChip.textContent = "Ты";
+            badgesContainer.appendChild(youChip);
+          }
+          if (idx === state.oppChoice) {
+            const oppChip = document.createElement("span");
+            oppChip.className = "badge-chip bot";
+            oppChip.textContent = oppLabel;
+            badgesContainer.appendChild(oppChip);
+          }
+        });
+      }
+
+      let outcomeType = "draw";
+      let outcomeTitleText = "";
+      let dmgText = "0 HP";
+
+      if (playerCorrect && !oppCorrect) {
+        outcomeType = "win";
+        outcomeTitleText = "🎯 Точное попадание!";
+        dmgText = `${oppLabel} -${stake} HP`;
+        state.oppHp = Math.max(0, state.oppHp - stake);
+        state.stats.damageDealt += stake;
+        triggerDamageFeedback("bot", stake);
+      } else if (!playerCorrect && oppCorrect) {
+        outcomeType = "lose";
+        outcomeTitleText = state.playerChoice === null ? "⏱️ Время вышло!" : "💥 Промах!";
+        dmgText = `Ты -${stake} HP`;
+        state.playerHp = Math.max(0, state.playerHp - stake);
+        triggerDamageFeedback("player", stake);
+      } else if (playerCorrect && oppCorrect) {
+        outcomeType = "draw";
+        outcomeTitleText = "🤝 Оба ответили верно!";
+        dmgText = "0 HP";
+      } else {
+        outcomeType = "draw";
+        outcomeTitleText = "😅 Оба ошиблись!";
+        dmgText = "0 HP";
+      }
+
+      updateHpBars();
+
+      if (state.oppChoice === null && !state.oppDisconnected) {
+        el.botStatus.className = "bot-live-indicator";
+        el.botStatus.textContent = state.gameMode === "friend"
+          ? `⏱️ ${oppLabel} не успел`
+          : "⏱️ Бот не успел";
+      }
+
+      el.outcomeTitle.className = `outcome-title ${outcomeType}`;
+      el.outcomeTitle.textContent = outcomeTitleText;
+      el.outcomeDmgPill.textContent = dmgText;
+      el.explanationText.innerHTML = `<strong>Пояснение:</strong> ${state.currentQuestion.explanation}`;
+
+      prepareRoundVocabTools(q, correctAnswerText);
+
+      const isMatchFinished = state.playerHp <= 0 || state.oppHp <= 0;
+
+      if (isMatchFinished) {
+        el.btnNextRound.style.display = "none";
+        el.oppReadyNote.classList.remove("visible");
+        saveMatchToHistory(state.oppHp <= 0 && state.playerHp > 0);
+
+        if (state.gameOverDelayTimeout) {
+          clearTimeout(state.gameOverDelayTimeout);
+        }
+        state.gameOverDelayTimeout = setTimeout(() => {
+          state.gameOverDelayTimeout = null;
+          if (!state.gameOver && state.matchStarted) {
+            showGameOver();
+          }
+        }, 2000);
+      } else {
+        el.btnNextRound.style.display = "";
+        if (state.gameMode === "friend" && state.oppDisconnected) {
+          el.btnNextRound.textContent = "Соперник вышел — в меню";
+        } else {
+          const nextStake = getRoundStake(state.round + 1);
+          el.btnNextRound.textContent = `Следующий раунд (на кону ${nextStake} HP)`;
+        }
+      }
+
+      el.roundResultBox.classList.add("visible");
+      if (screens.duel.classList.contains("active")) {
+        el.roundResultBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+
+    function updateHpBars() {
+      const maxHp = Math.max(1, sanitizeMaxHp(state.matchRules.maxHp));
+      const playerPct = Math.max(0, (state.playerHp / maxHp) * 100);
+      const oppPct = Math.max(0, (state.oppHp / maxHp) * 100);
+
+      el.playerHpText.textContent = state.playerHp;
+      el.botHpText.textContent = state.oppHp;
+      el.playerHpBar.style.width = `${playerPct}%`;
+      el.botHpBar.style.width = `${oppPct}%`;
+      updateResumeDuelBanner();
+    }
+
+    function triggerDamageFeedback(target, amount) {
+      const targetEl = target === "player" ? el.combatantPlayer : el.combatantBot;
+      el.duelHud.classList.remove("shake-hit");
+      void el.duelHud.offsetWidth;
+      el.duelHud.classList.add("shake-hit");
+
+      const popup = document.createElement("div");
+      popup.className = "damage-popup";
+      popup.textContent = `-${amount} HP`;
+      targetEl.appendChild(popup);
+
+      setTimeout(() => {
+        if (popup.parentNode) popup.parentNode.removeChild(popup);
+      }, 1350);
+    }
+
+    function showGameOver() {
+      stopSpanishSpeech();
+      clearTimers();
+      state.gameOver = true;
+      state.matchStarted = false;
+      updateResumeDuelBanner();
+
+      const playerWon = state.oppHp <= 0 && state.playerHp > 0;
+      saveMatchToHistory(playerWon);
+
+      const accuracy = state.stats.roundsPlayed > 0
+        ? Math.round((state.stats.correctAnswers / state.stats.roundsPlayed) * 100)
+        : 0;
+
+      const isFriend = state.gameMode === "friend";
+      const oppName = state.opponentProfile.nickname || (isFriend ? "Друг" : "Бот");
+
+      el.btnPlayAgain.disabled = false;
+      el.btnPlayAgain.textContent = isFriend ? "Реванш с другом" : "Играть снова";
+
+      if (playerWon) {
+        el.gameoverIcon.textContent = "🏆";
+        el.gameoverTitle.textContent = "¡Victoria! Победа!";
+        el.gameoverTitle.className = "gameover-title victory";
+        el.gameoverSub.textContent = `Ты победил соперника «${oppName}» в испанской дуэли!`;
+        soundFX.victory();
+      } else {
+        el.gameoverIcon.textContent = "💀";
+        el.gameoverTitle.textContent = "Поражение";
+        el.gameoverTitle.className = "gameover-title defeat";
+        el.gameoverSub.textContent = `Соперник «${oppName}» оказался точнее в решающих раундах.`;
+        soundFX.defeat();
+      }
+
+      el.statHpLabel.textContent = `Остаток HP (${state.profile.nickname || "Ты"} / ${oppName})`;
+      el.statHpCompare.textContent = `${state.playerHp} / ${state.oppHp}`;
+      el.statRounds.textContent = state.stats.roundsPlayed;
+      el.statAccuracy.textContent = `${accuracy}%`;
+      el.statDmgDealt.textContent = `${state.stats.damageDealt} HP`;
+
+      if (el.statRankChange) {
+        const eloInfo = state.lastMatchElo || {
+          after: state.elo,
+          delta: 0,
+          rank: getRankForElo(state.elo)
+        };
+        el.statRankChange.textContent = "";
+        const rankMain = document.createTextNode(`${eloInfo.rank.icon} ${eloInfo.rank.name} • ${eloInfo.after} ELO `);
+        const deltaSpan = document.createElement("span");
+        if (eloInfo.delta > 0) {
+          deltaSpan.className = "elo-delta-pos";
+          deltaSpan.textContent = `(+${eloInfo.delta})`;
+        } else if (eloInfo.delta < 0) {
+          deltaSpan.className = "elo-delta-neg";
+          deltaSpan.textContent = `(${eloInfo.delta})`;
+        } else {
+          deltaSpan.textContent = "(0)";
+        }
+        el.statRankChange.appendChild(rankMain);
+        el.statRankChange.appendChild(deltaSpan);
+      }
+
+      const timerLabel = state.selectedTimerSec === 0
+        ? "∞ (Без лимита)"
+        : `${state.selectedTimerSec} сек / раунд`;
+      el.statTimerMode.textContent = `${timerLabel} • ${formatRulesSummary(state.matchRules, true)}`;
+
+      switchScreen("gameover");
+    }
+
+    /* ==========================================================================
+       9.4. MISTAKES REVIEW MODE (РАБОТА НАД ОШИБКАМИ ЗА ПОСЛЕДНИЕ 30 МАТЧЕЙ)
+       ========================================================================== */
+    (function initMistakesReview() {
+      const reviewState = {
+        items: [],
+        totalMatches: 0,
+        currentIndex: 0,
+        fixedCount: 0,
+        shuffledOptions: [],
+        correctOptionIndex: 0,
+        draftChoice: null,
+        builderBankWords: [],
+        builderSelectedIndices: [],
+        resolved: false
+      };
+
+      const reviewAudioUi = {
+        stage: el.reviewAudioStage,
+        playBtn: el.btnReviewAudioPlay,
+        slowBtn: el.btnReviewAudioSlow,
+        spoiler: el.reviewAudioSpoiler,
+        summary: el.reviewAudioSpoilerSummary,
+        text: el.reviewAudioFallbackText
+      };
+
+      function getCurrentItem() {
+        return reviewState.items[reviewState.currentIndex] || null;
+      }
+
+      function exitReviewToMenu() {
+        stopSpanishSpeech();
+        switchScreen("lobby");
+      }
+
+      function showEmptyReviewState(hasMatches, totalMatches) {
+        el.reviewPlayArea.style.display = "none";
+        el.reviewSummaryCard.style.display = "none";
+        el.reviewEmptyCard.style.display = "flex";
+
+        if (!hasMatches) {
+          el.reviewEmptyIcon.textContent = "📭";
+          el.reviewEmptyTitle.className = "gameover-title";
+          el.reviewEmptyTitle.textContent = "Матчей пока не было";
+          el.reviewEmptyDesc.textContent =
+            "Ты ещё не сыграл ни одной дуэли. Сыграй хотя бы один матч против бота или друга — и все неправильные ответы за последние 30 матчей появятся здесь!";
+        } else {
+          el.reviewEmptyIcon.textContent = "✨";
+          el.reviewEmptyTitle.className = "gameover-title victory";
+          el.reviewEmptyTitle.textContent = "Ошибок нет!";
+          el.reviewEmptyDesc.textContent =
+            `За последние ${totalMatches} матчей не найдено ни одной ошибки для повторения. Отличный результат!`;
+        }
+      }
+
+      function hasReviewDraft() {
+        const item = getCurrentItem();
+        if (!item) return false;
+        if (item.question.type === "builder") {
+          return reviewState.builderSelectedIndices.length > 0;
+        }
+        return reviewState.draftChoice !== null;
+      }
+
+      function updateReviewSubmitBtn() {
+        if (reviewState.resolved) {
+          el.btnReviewSubmit.style.display = "none";
+          return;
+        }
+        el.btnReviewSubmit.style.display = "block";
+        el.btnReviewSubmit.disabled = !hasReviewDraft();
+        el.btnReviewSubmit.textContent = "Проверить ответ";
+      }
+
+      function renderReviewBuilderUI() {
+        const locked = reviewState.resolved;
+        const usedSet = new Set(reviewState.builderSelectedIndices);
+
+        el.reviewBuilderAnswerZone.innerHTML = "";
+        el.reviewBuilderAnswerZone.classList.toggle(
+          "has-words",
+          reviewState.builderSelectedIndices.length > 0 && !locked
+        );
+
+        if (reviewState.builderSelectedIndices.length === 0) {
+          const hint = document.createElement("span");
+          hint.className = "builder-empty-hint";
+          hint.textContent = locked
+            ? "Предложение не было собрано"
+            : "Нажимай на слова ниже, чтобы собрать предложение...";
+          el.reviewBuilderAnswerZone.appendChild(hint);
+        } else {
+          reviewState.builderSelectedIndices.forEach((bankIdx, pos) => {
+            const word = reviewState.builderBankWords[bankIdx];
+            const chip = document.createElement("button");
+            chip.type = "button";
+            chip.className = "word-chip in-answer";
+            chip.textContent = word;
+            chip.disabled = locked;
+            if (!locked) {
+              chip.addEventListener("click", () => {
+                if (reviewState.resolved) return;
+                reviewState.builderSelectedIndices.splice(pos, 1);
+                renderReviewBuilderUI();
+                updateReviewSubmitBtn();
+              });
+            }
+            el.reviewBuilderAnswerZone.appendChild(chip);
+          });
+        }
+
+        el.reviewBuilderWordBank.innerHTML = "";
+        reviewState.builderBankWords.forEach((word, bankIdx) => {
+          const isUsed = usedSet.has(bankIdx);
+          const chip = document.createElement("button");
+          chip.type = "button";
+          chip.className = isUsed ? "word-chip used" : "word-chip";
+          chip.textContent = word;
+          chip.disabled = locked || isUsed;
+          if (isUsed) {
+            chip.setAttribute("aria-hidden", "true");
+            chip.tabIndex = -1;
+          } else if (!locked) {
+            chip.addEventListener("click", () => {
+              if (reviewState.resolved) return;
+              reviewState.builderSelectedIndices.push(bankIdx);
+              renderReviewBuilderUI();
+              updateReviewSubmitBtn();
+            });
+          }
+          el.reviewBuilderWordBank.appendChild(chip);
+        });
+      }
+
+      function renderReviewQuestion() {
+        stopSpanishSpeech();
+        const item = getCurrentItem();
+        if (!item) {
+          showReviewSummary();
+          return;
+        }
+
+        const q = item.question;
+        const total = reviewState.items.length;
+        const idx = reviewState.currentIndex;
+
+        reviewState.resolved = false;
+        reviewState.draftChoice = null;
+        reviewState.shuffledOptions = [];
+        reviewState.correctOptionIndex = 0;
+        reviewState.builderBankWords = [];
+        reviewState.builderSelectedIndices = [];
+
+        el.reviewProgressPill.textContent = `Вопрос ${idx + 1} / ${total}`;
+        el.reviewSourceInfo.textContent = `Из последних ${reviewState.totalMatches} игр (${getTierLabel(q.tier)})`;
+        el.reviewScoreText.textContent = `Верно: ${reviewState.fixedCount}`;
+        el.reviewProgressBar.style.width = `${((idx + 1) / total) * 100}%`;
+
+        el.reviewQBadge.textContent = q.typeLabel || (q.type === "builder" ? "Конструктор" : "Вопрос");
+        el.reviewQBadge.className = `q-type-badge ${q.type || ""}`;
+
+        if (q.svg) {
+          el.reviewVisualStage.style.display = "flex";
+          el.reviewVisualStage.innerHTML = q.svg;
+        } else {
+          el.reviewVisualStage.style.display = "none";
+          el.reviewVisualStage.innerHTML = "";
+        }
+
+        el.reviewAudioSpoiler.classList.remove("visible");
+        el.reviewAudioSpoiler.open = false;
+        el.reviewAudioFallbackText.textContent = "";
+
+        if (typeof q.audioText === "string" && q.audioText.trim()) {
+          const phrase = q.audioText.trim();
+          el.reviewAudioStage.classList.add("visible");
+          el.reviewAudioFallbackText.textContent = phrase;
+          state.autoSpeakTimeout = setTimeout(() => {
+            state.autoSpeakTimeout = null;
+            if (!reviewState.resolved && screens.mistakesReview.classList.contains("active")) {
+              speakSpanish(phrase, 1.0, reviewAudioUi);
+            }
+          }, 260);
+        } else {
+          el.reviewAudioStage.classList.remove("visible");
+        }
+
+        el.reviewPrompt.textContent = q.prompt;
+        if (q.subprompt) {
+          el.reviewSubprompt.style.display = "block";
+          el.reviewSubprompt.textContent = q.subprompt;
+        } else {
+          el.reviewSubprompt.style.display = "none";
+        }
+
+        el.reviewResultBox.classList.remove("visible");
+        el.reviewPrevWrong.style.display = "none";
+        el.reviewOptionsList.innerHTML = "";
+        el.reviewBuilderAnswerZone.className = "builder-answer-zone";
+        el.reviewBuilderFeedback.classList.remove("visible");
+        el.reviewBuilderFeedback.innerHTML = "";
+
+        if (q.type === "builder") {
+          el.reviewOptionsList.style.display = "none";
+          el.reviewBuilderStage.classList.add("visible");
+          reviewState.builderBankWords = shuffleArray(Array.isArray(q.words) ? q.words : []);
+          renderReviewBuilderUI();
+        } else {
+          el.reviewBuilderStage.classList.remove("visible");
+          el.reviewOptionsList.style.display = "flex";
+
+          const indexedOptions = shuffleArray(
+            (q.options || []).map((text, optIdx) => ({
+              text,
+              isCorrect: optIdx === q.correct
+            }))
+          );
+          reviewState.shuffledOptions = indexedOptions;
+          reviewState.correctOptionIndex = indexedOptions.findIndex(o => o.isCorrect);
+
+          const keys = ["A", "B", "C", "D"];
+          indexedOptions.forEach((opt, optIdx) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "option-btn";
+            btn.innerHTML = `
+              <div class="option-left">
+                <span class="option-key">${keys[optIdx]}</span>
+                <span>${opt.text}</span>
+              </div>
+              <div class="choice-badges"></div>
+            `;
+            btn.addEventListener("click", () => {
+              if (reviewState.resolved) return;
+              reviewState.draftChoice = optIdx;
+              el.reviewOptionsList.querySelectorAll(".option-btn").forEach((b, bIdx) => {
+                b.classList.toggle("selected-pending", bIdx === optIdx);
+              });
+              updateReviewSubmitBtn();
+            });
+            el.reviewOptionsList.appendChild(btn);
+          });
+        }
+
+        updateReviewSubmitBtn();
+      }
+
+      function submitReviewAnswer() {
+        if (reviewState.resolved || !hasReviewDraft()) return;
+        const item = getCurrentItem();
+        if (!item) return;
+
+        const q = item.question;
+        const isBuilder = q.type === "builder";
+        reviewState.resolved = true;
+        updateReviewSubmitBtn();
+
+        let isCorrect = false;
+        if (isBuilder) {
+          const assembledWords = reviewState.builderSelectedIndices.map(idx => reviewState.builderBankWords[idx]);
+          isCorrect = isBuilderAnswerCorrect(assembledWords, q.answer);
+          renderReviewBuilderUI();
+          el.reviewBuilderAnswerZone.classList.remove("has-words");
+          el.reviewBuilderAnswerZone.classList.add(isCorrect ? "correct" : "wrong");
+
+          const correctSentence = Array.isArray(q.answer) ? q.answer.join(" ") : "";
+          el.reviewBuilderFeedback.innerHTML = "";
+          const line = document.createElement("div");
+          line.className = "builder-correct-line";
+          line.textContent = isCorrect
+            ? `✓ Верно собрано: ${correctSentence}`
+            : `✓ Правильный порядок: ${correctSentence}`;
+          el.reviewBuilderFeedback.appendChild(line);
+          el.reviewBuilderFeedback.classList.add("visible");
+        } else {
+          isCorrect = reviewState.draftChoice === reviewState.correctOptionIndex;
+          const buttons = el.reviewOptionsList.querySelectorAll(".option-btn");
+          buttons.forEach((btn, idx) => {
+            btn.disabled = true;
+            btn.classList.remove("selected-pending");
+            if (idx === reviewState.correctOptionIndex) {
+              btn.classList.add("correct");
+            } else if (idx === reviewState.draftChoice) {
+              btn.classList.add("wrong");
+            }
+          });
+        }
+
+        if (isCorrect) {
+          reviewState.fixedCount += 1;
+          soundFX.correct();
+          if (isBuilder && state.soundEnabled && Array.isArray(q.answer)) {
+            speakSpanish(q.answer.join(" "), 1.0, reviewAudioUi);
+          }
+          el.reviewOutcomeTitle.className = "outcome-title win";
+          el.reviewOutcomeTitle.textContent = "✓ Ошибка исправлена!";
+          el.reviewOutcomePill.textContent = "Верно";
+        } else {
+          soundFX.wrong();
+          el.reviewOutcomeTitle.className = "outcome-title lose";
+          el.reviewOutcomeTitle.textContent = "✗ Ещё раз запомни правило";
+          el.reviewOutcomePill.textContent = "Ошибка";
+        }
+
+        el.reviewScoreText.textContent = `Верно: ${reviewState.fixedCount}`;
+
+        if (item.lastWrongAnswer) {
+          el.reviewPrevWrong.style.display = "block";
+          el.reviewPrevWrong.textContent = `В прошлый раз ты ответил: ${item.lastWrongAnswer}`;
+        } else {
+          el.reviewPrevWrong.style.display = "none";
+        }
+
+        el.reviewExplanationText.innerHTML = `<strong>Пояснение:</strong> ${q.explanation}`;
+
+        const isLast = reviewState.currentIndex >= reviewState.items.length - 1;
+        el.btnReviewNext.textContent = isLast ? "Завершить работу над ошибками 🏆" : "Следующий вопрос →";
+        el.reviewResultBox.classList.add("visible");
+        el.reviewResultBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function showReviewSummary() {
+        stopSpanishSpeech();
+        el.reviewPlayArea.style.display = "none";
+        el.reviewEmptyCard.style.display = "none";
+        el.reviewSummaryCard.style.display = "flex";
+
+        const total = reviewState.items.length;
+        const fixed = reviewState.fixedCount;
+        const accuracy = total > 0 ? Math.round((fixed / total) * 100) : 0;
+
+        el.reviewStatTotal.textContent = total;
+        el.reviewStatFixed.textContent = `${fixed} из ${total}`;
+        el.reviewStatAccuracy.textContent = `${accuracy}%`;
+
+        if (accuracy === 100) {
+          el.reviewSummaryIcon.textContent = "🏆";
+          el.reviewSummaryTitle.className = "gameover-title victory";
+          el.reviewSummaryTitle.textContent = "¡Perfecto! Все ошибки исправлены!";
+          el.reviewSummarySub.textContent = "Ты безошибочно прошёл все проблемные вопросы из последних 30 матчей.";
+          soundFX.victory();
+        } else {
+          el.reviewSummaryIcon.textContent = "🎯";
+          el.reviewSummaryTitle.className = "gameover-title victory";
+          el.reviewSummaryTitle.textContent = "Тренировка завершена!";
+          el.reviewSummarySub.textContent = `Исправлено ${fixed} из ${total} ошибок. Можно пройти ещё раз для закрепления.`;
+        }
+      }
+
+      function startReviewSession(data) {
+        reviewState.items = shuffleArray(data.items);
+        reviewState.totalMatches = data.totalMatches;
+        reviewState.currentIndex = 0;
+        reviewState.fixedCount = 0;
+
+        el.reviewEmptyCard.style.display = "none";
+        el.reviewSummaryCard.style.display = "none";
+        el.reviewPlayArea.style.display = "flex";
+
+        renderReviewQuestion();
+      }
+
+      function openMistakesReview() {
+        stopSpanishSpeech();
+        const data = collectReviewMistakesFromHistory();
+        switchScreen("mistakesReview");
+
+        if (!data.hasMatches || data.items.length === 0) {
+          showEmptyReviewState(data.hasMatches, data.totalMatches);
+          return;
+        }
+
+        startReviewSession(data);
+      }
+
+      el.btnOpenMistakesReview.addEventListener("click", openMistakesReview);
+      el.btnReviewEmptyBack.addEventListener("click", exitReviewToMenu);
+      el.btnReviewExit.addEventListener("click", exitReviewToMenu);
+      el.btnReviewSummaryBack.addEventListener("click", exitReviewToMenu);
+      el.btnReviewRestart.addEventListener("click", openMistakesReview);
+
+      el.btnReviewSubmit.addEventListener("click", submitReviewAnswer);
+      el.btnReviewNext.addEventListener("click", () => {
+        stopSpanishSpeech();
+        if (reviewState.currentIndex >= reviewState.items.length - 1) {
+          showReviewSummary();
+        } else {
+          reviewState.currentIndex += 1;
+          renderReviewQuestion();
         }
       });
-    }
 
-    if (isCorrect) {
-      reviewState.fixedCount += 1;
-      soundFX.correct();
-      if (isBuilder && state.soundEnabled && Array.isArray(q.answer)) {
-        speakSpanish(q.answer.join(" "), 1.0, reviewAudioUi);
-      }
-      el.reviewOutcomeTitle.className = "outcome-title win";
-      el.reviewOutcomeTitle.textContent = "✓ Ошибка исправлена!";
-      el.reviewOutcomePill.textContent = "Верно";
-    } else {
-      soundFX.wrong();
-      el.reviewOutcomeTitle.className = "outcome-title lose";
-      el.reviewOutcomeTitle.textContent = "✗ Ещё раз запомни правило";
-      el.reviewOutcomePill.textContent = "Ошибка";
-    }
+      el.btnReviewAudioPlay.addEventListener("click", () => {
+        const item = getCurrentItem();
+        if (item && item.question && item.question.audioText) {
+          speakSpanish(item.question.audioText, 1.0, reviewAudioUi);
+        }
+      });
 
-    el.reviewScoreText.textContent = `Верно: ${reviewState.fixedCount}`;
+      el.btnReviewAudioSlow.addEventListener("click", () => {
+        const item = getCurrentItem();
+        if (item && item.question && item.question.audioText) {
+          speakSpanish(item.question.audioText, 0.75, reviewAudioUi);
+        }
+      });
+    })();
 
-    if (item.lastWrongAnswer) {
-      el.reviewPrevWrong.style.display = "block";
-      el.reviewPrevWrong.textContent = `В прошлый раз ты ответил: ${item.lastWrongAnswer}`;
-    } else {
-      el.reviewPrevWrong.style.display = "none";
-    }
-
-    el.reviewExplanationText.innerHTML = `<strong>Пояснение:</strong> ${q.explanation}`;
-
-    const isLast = reviewState.currentIndex >= reviewState.items.length - 1;
-    el.btnReviewNext.textContent = isLast ? "Завершить работу над ошибками 🏆" : "Следующий вопрос →";
-    el.reviewResultBox.classList.add("visible");
-    el.reviewResultBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  }
-
-  function showReviewSummary() {
-    stopSpanishSpeech();
-    el.reviewPlayArea.style.display = "none";
-    el.reviewEmptyCard.style.display = "none";
-    el.reviewSummaryCard.style.display = "flex";
-
-    const total = reviewState.items.length;
-    const fixed = reviewState.fixedCount;
-    const accuracy = total > 0 ? Math.round((fixed / total) * 100) : 0;
-
-    el.reviewStatTotal.textContent = total;
-    el.reviewStatFixed.textContent = `${fixed} из ${total}`;
-    el.reviewStatAccuracy.textContent = `${accuracy}%`;
-
-    if (accuracy === 100) {
-      el.reviewSummaryIcon.textContent = "🏆";
-      el.reviewSummaryTitle.className = "gameover-title victory";
-      el.reviewSummaryTitle.textContent = "¡Perfecto! Все ошибки исправлены!";
-      el.reviewSummarySub.textContent = "Ты безошибочно прошёл все проблемные вопросы из последних 30 матчей.";
-      soundFX.victory();
-    } else {
-      el.reviewSummaryIcon.textContent = "🎯";
-      el.reviewSummaryTitle.className = "gameover-title victory";
-      el.reviewSummaryTitle.textContent = "Тренировка завершена!";
-      el.reviewSummarySub.textContent = `Исправлено ${fixed} из ${total} ошибок. Можно пройти ещё раз для закрепления.`;
-    }
-  }
-
-  function startReviewSession(data) {
-    reviewState.items = shuffleArray(data.items);
-    reviewState.totalMatches = data.totalMatches;
-    reviewState.currentIndex = 0;
-    reviewState.fixedCount = 0;
-
-    el.reviewEmptyCard.style.display = "none";
-    el.reviewSummaryCard.style.display = "none";
-    el.reviewPlayArea.style.display = "flex";
-
-    renderReviewQuestion();
-  }
-
-  function openMistakesReview() {
-    stopSpanishSpeech();
-    const data = collectReviewMistakesFromHistory();
-    switchScreen("mistakesReview");
-
-    if (!data.hasMatches || data.items.length === 0) {
-      showEmptyReviewState(data.hasMatches, data.totalMatches);
-      return;
-    }
-
-    startReviewSession(data);
-  }
-
-  el.btnOpenMistakesReview.addEventListener("click", openMistakesReview);
-  el.btnReviewEmptyBack.addEventListener("click", exitReviewToMenu);
-  el.btnReviewExit.addEventListener("click", exitReviewToMenu);
-  el.btnReviewSummaryBack.addEventListener("click", exitReviewToMenu);
-  el.btnReviewRestart.addEventListener("click", openMistakesReview);
-
-  el.btnReviewSubmit.addEventListener("click", submitReviewAnswer);
-  el.btnReviewNext.addEventListener("click", () => {
-    stopSpanishSpeech();
-    if (reviewState.currentIndex >= reviewState.items.length - 1) {
-      showReviewSummary();
-    } else {
-      reviewState.currentIndex += 1;
-      renderReviewQuestion();
-    }
-  });
-
-  el.btnReviewAudioPlay.addEventListener("click", () => {
-    const item = getCurrentItem();
-    if (item && item.question && item.question.audioText) {
-      speakSpanish(item.question.audioText, 1.0, reviewAudioUi);
-    }
-  });
-
-  el.btnReviewAudioSlow.addEventListener("click", () => {
-    const item = getCurrentItem();
-    if (item && item.question && item.question.audioText) {
-      speakSpanish(item.question.audioText, 0.75, reviewAudioUi);
-    }
-  });
-})();
-
-/* ==========================================================================
+    /* ==========================================================================
        9.5. EMAIL + PASSWORD AUTH (SUPABASE)
        ========================================================================== */
     (function initEmailAuth() {
@@ -8242,33 +8980,35 @@ function showGameOver() {
         }
       });
     })();
-/* ==========================================================================
-   10. BOOTSTRAP: CHECK URL FOR ?room=ID&level=LEVEL&hp=...&scale=...&qmode=...
-   ========================================================================== */
-(function bootstrapApp() {
-  updateRankUI();
-  updateLobbyUI();
-  updateResumeDuelBanner();
-  updateHistorySummaryUI();
-  const params = new URLSearchParams(window.location.search);
-  const roomParam = params.get("room");
-  const levelParam = params.get("level");
-  const hpParam = params.get("hp");
-  const scaleParam = params.get("scale");
-  const qmodeParam = params.get("qmode");
 
-  if (roomParam && roomParam.trim()) {
-    if (!QUESTION_BANK.length) {
-      alert("Не найден файл questions.js или база вопросов пуста.");
-      return;
-    }
-    joinFriendRoomFromUrl(roomParam.trim(), levelParam || "principiante", {
-      hp: hpParam,
-      scale: scaleParam,
-      qmode: qmodeParam
-    });
-  }
-})();
+    /* ==========================================================================
+       10. BOOTSTRAP: CHECK URL FOR ?room=ID&level=LEVEL&hp=...&scale=...&qmode=...
+       ========================================================================== */
+    (function bootstrapApp() {
+      updateRankUI();
+      updateLobbyUI();
+      updateResumeDuelBanner();
+      updateHistorySummaryUI();
+      updateVocabCounterUI();
+      const params = new URLSearchParams(window.location.search);
+      const roomParam = params.get("room");
+      const levelParam = params.get("level");
+      const hpParam = params.get("hp");
+      const scaleParam = params.get("scale");
+      const qmodeParam = params.get("qmode");
+
+      if (roomParam && roomParam.trim()) {
+        if (!QUESTION_BANK.length) {
+          alert("Не найден файл questions.js или база вопросов пуста.");
+          return;
+        }
+        joinFriendRoomFromUrl(roomParam.trim(), levelParam || "principiante", {
+          hp: hpParam,
+          scale: scaleParam,
+          qmode: qmodeParam
+        });
+      }
+    })();
   </script>
 </body>
 </html>

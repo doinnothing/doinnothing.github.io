@@ -3298,6 +3298,39 @@
       border-radius: var(--radius-sm);
       padding: 6px 10px;
     }
+.review-note-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+    }
+
+    .review-note-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-secondary);
+    }
+
+    .review-note-input {
+      width: 100%;
+      background: var(--bg-inset);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: var(--text-primary);
+      font-size: 12.5px;
+      font-weight: 700;
+      outline: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .review-note-input:focus {
+      border-color: var(--accent-color);
+      background: var(--bg-surface);
+    }
 
     /* Leaderboard Modal */
     .leaderboard-list {
@@ -4093,6 +4126,23 @@
             </div>
             <div id="review-prev-wrong" class="review-prev-wrong" style="display: none;"></div>
             <p id="review-explanation-text" class="explanation-text"></p>
+
+            <div id="review-vocab-strip" class="vocab-round-strip" style="display: none;">
+              <span class="vocab-round-label">📖 Нажми на незнакомое слово, чтобы сохранить его в словарь с озвучкой (или нажми на слово в тексте выше):</span>
+              <div id="review-vocab-chips" class="vocab-chips-row"></div>
+            </div>
+
+            <div class="review-note-wrap">
+              <label for="review-note-input" class="review-note-label">📝 Личная заметка к вопросу (сохраняется автоматически):</label>
+              <input
+                type="text"
+                id="review-note-input"
+                class="review-note-input"
+                maxlength="140"
+                placeholder="Например: panadería — от слова pan (хлеб)..."
+              />
+            </div>
+
             <button type="button" id="btn-review-next" class="primary-btn">
               Следующий вопрос
             </button>
@@ -4568,6 +4618,9 @@
       reviewOutcomePill: document.getElementById("review-outcome-pill"),
       reviewPrevWrong: document.getElementById("review-prev-wrong"),
       reviewExplanationText: document.getElementById("review-explanation-text"),
+      reviewVocabStrip: document.getElementById("review-vocab-strip"),
+      reviewVocabChips: document.getElementById("review-vocab-chips"),
+      reviewNoteInput: document.getElementById("review-note-input"),
       btnReviewNext: document.getElementById("btn-review-next"),
       reviewSummaryCard: document.getElementById("review-summary-card"),
       reviewSummaryIcon: document.getElementById("review-summary-icon"),
@@ -5333,19 +5386,20 @@
     function refreshRoundVocabHighlights() {
       const savedKeys = new Set(loadVocabList().map(item => item.key));
 
-      document.querySelectorAll("#screen-duel .vocab-word-token").forEach(tok => {
+      document.querySelectorAll(".vocab-word-token").forEach(tok => {
         const key = (tok.dataset.vocabKey || "").toLowerCase();
         tok.classList.toggle("saved", savedKeys.has(key));
       });
 
-      if (el.vocabRoundChips) {
-        el.vocabRoundChips.querySelectorAll(".vocab-chip").forEach(chip => {
+      [el.vocabRoundChips, el.reviewVocabChips].forEach(chipsBox => {
+        if (!chipsBox) return;
+        chipsBox.querySelectorAll(".vocab-chip").forEach(chip => {
           const key = (chip.dataset.vocabKey || "").toLowerCase();
           const isSaved = savedKeys.has(key);
           chip.classList.toggle("saved", isSaved);
           chip.textContent = isSaved ? `✓ ${chip.dataset.vocabWord}` : `+ ${chip.dataset.vocabWord}`;
         });
-      }
+      });
     }
 
     function saveVocabWord(rawWord, context = "", level = "A0") {
@@ -5514,6 +5568,63 @@
         });
       } else {
         el.vocabRoundStrip.style.display = "none";
+      }
+    }
+function prepareReviewVocabTools(q, correctAnswerText) {
+      if (!q) return;
+      state.currentRoundVocabContext = buildRoundVocabContext(q, correctAnswerText);
+      state.currentRoundVocabLevel = getTierLabel(q.tier).replace("Уровень ", "");
+
+      if (el.reviewSubprompt.style.display !== "none") {
+        tokenizeSpanishWordsIntoElement(el.reviewSubprompt);
+      }
+      if (typeof q.audioText === "string" && q.audioText.trim()) {
+        tokenizeSpanishWordsIntoElement(el.reviewAudioFallbackText);
+      }
+      tokenizeSpanishWordsIntoElement(el.reviewPrompt);
+      tokenizeSpanishWordsIntoElement(el.reviewExplanationText);
+
+      if (q.type === "builder") {
+        tokenizeSpanishWordsIntoElement(el.reviewBuilderFeedback);
+      } else {
+        el.reviewOptionsList.querySelectorAll(".option-left span:last-child").forEach(span => {
+          tokenizeSpanishWordsIntoElement(span);
+        });
+      }
+
+      const wordsMap = new Map();
+      extractSpanishWordsFromText(q.subprompt, wordsMap);
+      extractSpanishWordsFromText(q.audioText, wordsMap);
+      if (q.type === "builder") {
+        (q.answer || []).forEach(w => extractSpanishWordsFromText(w, wordsMap));
+        (q.words || []).forEach(w => extractSpanishWordsFromText(w, wordsMap));
+      } else {
+        extractSpanishWordsFromText(correctAnswerText, wordsMap);
+        el.reviewOptionsList.querySelectorAll(".option-left span:last-child").forEach(span => {
+          extractSpanishWordsFromText(span.textContent, wordsMap);
+        });
+      }
+      extractSpanishWordsFromText(q.prompt, wordsMap);
+      extractSpanishWordsFromText(q.explanation, wordsMap);
+
+      el.reviewVocabChips.innerHTML = "";
+      if (wordsMap.size > 0) {
+        el.reviewVocabStrip.style.display = "flex";
+        wordsMap.forEach((cleanWord, key) => {
+          const chip = document.createElement("button");
+          chip.type = "button";
+          const saved = isWordInVocab(cleanWord);
+          chip.className = saved ? "vocab-chip saved" : "vocab-chip";
+          chip.dataset.vocabWord = cleanWord;
+          chip.dataset.vocabKey = key;
+          chip.textContent = saved ? `✓ ${cleanWord}` : `+ ${cleanWord}`;
+          chip.addEventListener("click", () => {
+            saveVocabWord(cleanWord, state.currentRoundVocabContext, state.currentRoundVocabLevel);
+          });
+          el.reviewVocabChips.appendChild(chip);
+        });
+      } else {
+        el.reviewVocabStrip.style.display = "none";
       }
     }
 
@@ -8378,6 +8489,8 @@
        9.4. MISTAKES REVIEW MODE (РАБОТА НАД ОШИБКАМИ ЗА ПОСЛЕДНИЕ 30 МАТЧЕЙ)
        ========================================================================== */
     (function initMistakesReview() {
+      const REVIEW_NOTES_STORAGE_KEY = "linguaduel_review_notes";
+
       const reviewState = {
         items: [],
         totalMatches: 0,
@@ -8399,6 +8512,45 @@
         summary: el.reviewAudioSpoilerSummary,
         text: el.reviewAudioFallbackText
       };
+
+      function getReviewNoteKey(q) {
+        if (!q) return "";
+        if (q.id !== undefined && q.id !== null) return String(q.id);
+        return `${q.prompt || ""}::${q.subprompt || q.audioText || ""}`;
+      }
+
+      function loadReviewNotesMap() {
+        try {
+          const raw = localStorage.getItem(REVIEW_NOTES_STORAGE_KEY);
+          if (!raw) return {};
+          const parsed = JSON.parse(raw);
+          return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function getReviewNoteForQuestion(q) {
+        const key = getReviewNoteKey(q);
+        if (!key) return "";
+        const map = loadReviewNotesMap();
+        return typeof map[key] === "string" ? map[key] : "";
+      }
+
+      function saveReviewNoteForQuestion(q, text) {
+        const key = getReviewNoteKey(q);
+        if (!key) return;
+        const map = loadReviewNotesMap();
+        const clean = String(text || "").slice(0, 140);
+        if (clean.trim()) {
+          map[key] = clean;
+        } else {
+          delete map[key];
+        }
+        try {
+          localStorage.setItem(REVIEW_NOTES_STORAGE_KEY, JSON.stringify(map));
+        } catch (e) {}
+      }
 
       function getCurrentItem() {
         return reviewState.items[reviewState.currentIndex] || null;
@@ -8472,13 +8624,18 @@
             chip.type = "button";
             chip.className = "word-chip in-answer";
             chip.textContent = word;
-            chip.disabled = locked;
+            chip.disabled = false;
             if (!locked) {
               chip.addEventListener("click", () => {
                 if (reviewState.resolved) return;
                 reviewState.builderSelectedIndices.splice(pos, 1);
                 renderReviewBuilderUI();
                 updateReviewSubmitBtn();
+              });
+            } else {
+              chip.title = "Нажми, чтобы сохранить в словарь и озвучить";
+              chip.addEventListener("click", () => {
+                saveVocabWord(word, state.currentRoundVocabContext, state.currentRoundVocabLevel);
               });
             }
             el.reviewBuilderAnswerZone.appendChild(chip);
@@ -8492,7 +8649,7 @@
           chip.type = "button";
           chip.className = isUsed ? "word-chip used" : "word-chip";
           chip.textContent = word;
-          chip.disabled = locked || isUsed;
+          chip.disabled = isUsed;
           if (isUsed) {
             chip.setAttribute("aria-hidden", "true");
             chip.tabIndex = -1;
@@ -8502,6 +8659,11 @@
               reviewState.builderSelectedIndices.push(bankIdx);
               renderReviewBuilderUI();
               updateReviewSubmitBtn();
+            });
+          } else {
+            chip.title = "Нажми, чтобы сохранить в словарь и озвучить";
+            chip.addEventListener("click", () => {
+              saveVocabWord(word, state.currentRoundVocabContext, state.currentRoundVocabLevel);
             });
           }
           el.reviewBuilderWordBank.appendChild(chip);
@@ -8526,6 +8688,10 @@
         reviewState.correctOptionIndex = 0;
         reviewState.builderBankWords = [];
         reviewState.builderSelectedIndices = [];
+
+        el.reviewVocabStrip.style.display = "none";
+        el.reviewVocabChips.innerHTML = "";
+        el.reviewNoteInput.value = "";
 
         el.reviewProgressPill.textContent = `Вопрос ${idx + 1} / ${total}`;
         el.reviewSourceInfo.textContent = `Из последних ${reviewState.totalMatches} игр (${getTierLabel(q.tier)})`;
@@ -8631,6 +8797,12 @@
         reviewState.resolved = true;
         updateReviewSubmitBtn();
 
+        const correctAnswerText = isBuilder
+          ? (Array.isArray(q.answer) ? q.answer.join(" ") : "")
+          : (reviewState.shuffledOptions[reviewState.correctOptionIndex]
+              ? reviewState.shuffledOptions[reviewState.correctOptionIndex].text
+              : (q.options ? q.options[q.correct] : ""));
+
         let isCorrect = false;
         if (isBuilder) {
           const assembledWords = reviewState.builderSelectedIndices.map(idx => reviewState.builderBankWords[idx]);
@@ -8639,20 +8811,21 @@
           el.reviewBuilderAnswerZone.classList.remove("has-words");
           el.reviewBuilderAnswerZone.classList.add(isCorrect ? "correct" : "wrong");
 
-          const correctSentence = Array.isArray(q.answer) ? q.answer.join(" ") : "";
           el.reviewBuilderFeedback.innerHTML = "";
           const line = document.createElement("div");
           line.className = "builder-correct-line";
           line.textContent = isCorrect
-            ? `✓ Верно собрано: ${correctSentence}`
-            : `✓ Правильный порядок: ${correctSentence}`;
+            ? `✓ Верно собрано: ${correctAnswerText}`
+            : `✓ Правильный порядок: ${correctAnswerText}`;
           el.reviewBuilderFeedback.appendChild(line);
           el.reviewBuilderFeedback.classList.add("visible");
         } else {
           isCorrect = reviewState.draftChoice === reviewState.correctOptionIndex;
           const buttons = el.reviewOptionsList.querySelectorAll(".option-btn");
           buttons.forEach((btn, idx) => {
-            btn.disabled = true;
+            btn.disabled = false;
+            btn.classList.add("resolved");
+            btn.setAttribute("aria-disabled", "true");
             btn.classList.remove("selected-pending");
             if (idx === reviewState.correctOptionIndex) {
               btn.classList.add("correct");
@@ -8688,6 +8861,9 @@
         }
 
         el.reviewExplanationText.innerHTML = `<strong>Пояснение:</strong> ${q.explanation}`;
+        el.reviewNoteInput.value = getReviewNoteForQuestion(q);
+
+        prepareReviewVocabTools(q, correctAnswerText);
 
         const isLast = reviewState.currentIndex >= reviewState.items.length - 1;
         el.btnReviewNext.textContent = isLast ? "Завершить работу над ошибками 🏆" : "Следующий вопрос →";
@@ -8748,6 +8924,12 @@
 
         startReviewSession(data);
       }
+
+      el.reviewNoteInput.addEventListener("input", () => {
+        const item = getCurrentItem();
+        if (!item) return;
+        saveReviewNoteForQuestion(item.question, el.reviewNoteInput.value);
+      });
 
       el.btnOpenMistakesReview.addEventListener("click", openMistakesReview);
       el.btnReviewEmptyBack.addEventListener("click", exitReviewToMenu);

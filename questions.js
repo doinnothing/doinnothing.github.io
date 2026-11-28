@@ -12430,7 +12430,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
      TIER 0: A0 — ЕЩЁ 50 УНИКАЛЬНЫХ ВОПРОСОВ (a0_283 .. a0_332)
      ======================================================================== */
   {
-    id: "a0_283",
+    id: "a0_393",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Посуда",
@@ -12440,7 +12440,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La cuchara» — ложка."
   },
   {
-    id: "a0_284",
+    id: "a0_394",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Посуда",
@@ -12450,7 +12450,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El cuchillo» — нож."
   },
   {
-    id: "a0_285",
+    id: "a0_395",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Цифры",
@@ -12460,7 +12460,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Diecisiete» — семнадцать (17)."
   },
   {
-    id: "a0_286",
+    id: "a0_396",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Цифры",
@@ -12470,7 +12470,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Diecinueve» — девятнадцать (19)."
   },
   {
-    id: "a0_287",
+    id: "a0_397",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Школа",
@@ -12480,7 +12480,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La pizarra» — доска в классе."
   },
   {
-    id: "a0_288",
+    id: "a0_398",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Школа",
@@ -12490,7 +12490,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El lápiz» — карандаш (мн. ч. — «los lápices»)."
   },
   {
-    id: "a0_289",
+    id: "a0_399",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Город",
@@ -12500,7 +12500,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La plaza» — городская площадь."
   },
   {
-    id: "a0_290",
+    id: "a0_400",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Город",
@@ -12510,7 +12510,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El puente» — мост."
   },
   {
-    id: "a0_291",
+    id: "a0_401",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Еда",
@@ -12520,7 +12520,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El aceite» — масло (в Испании чаще всего «aceite de oliva» — оливковое масло)."
   },
   {
-    id: "a0_292",
+    id: "a0_402",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Еда",
@@ -12530,7 +12530,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El ajo» — чеснок."
   },
   {
-    id: "a0_293",
+    id: "a0_403",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Фрукты",
@@ -12540,7 +12540,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La cereza» — вишня или черешня."
   },
   {
-    id: "a0_294",
+    id: "a0_404",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Животные",
@@ -12550,7 +12550,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La rana» — лягушка."
   },
   {
-    id: "a0_295",
+    id: "a0_405",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Животные",
@@ -12560,7 +12560,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La tortuga» — черепаха."
   },
   {
-    id: "a0_296",
+    id: "a0_406",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Одежда",
@@ -12570,7 +12570,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La gorra» — кепка."
   },
   {
-    id: "a0_297",
+    id: "a0_407",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Тело",
@@ -12580,7 +12580,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El corazón» — сердце."
   },
   {
-    id: "a0_298",
+    id: "a0_408",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Прилагательные",
@@ -12590,7 +12590,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Difícil» — трудный / сложный, «fácil» — лёгкий."
   },
   {
-    id: "a0_299",
+    id: "a0_409",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Прилагательные",
@@ -12600,7 +12600,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Joven» — молодой (не меняется по родам в единственном числе)."
   },
   {
-    id: "a0_300",
+    id: "a0_410",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Глаголы",
@@ -12610,7 +12610,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Bailar» — танцевать."
   },
   {
-    id: "a0_301",
+    id: "a0_411",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Глаголы",
@@ -12620,7 +12620,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mirar» — смотреть (например, «mirar la televisión» — смотреть телевизор)."
   },
   {
-    id: "a0_302",
+    id: "a0_412",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Наречия места",
@@ -12630,7 +12630,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Aquí» — здесь, «allí» — там."
   },
   {
-    id: "a0_303",
+    id: "a0_413",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Глагол Tener",
@@ -12641,7 +12641,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Для «ellos / ellas / ustedes» форма глагола «tener» — «tienen»."
   },
   {
-    id: "a0_304",
+    id: "a0_414",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Глагол Vivir",
@@ -12652,7 +12652,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Для «tú» глаголы на «-ir» имеют окончание «-es»: «vives»."
   },
   {
-    id: "a0_305",
+    id: "a0_415",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Артикли мн. ч.",
@@ -12663,7 +12663,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Casas» — женский род множественного числа, поэтому артикль «Las»."
   },
   {
-    id: "a0_306",
+    id: "a0_416",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Род прилагательных",
@@ -12674,7 +12674,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La gata» — женский род единственного числа, поэтому «blanca»."
   },
   {
-    id: "a0_307",
+    id: "a0_417",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Притяжательные",
@@ -12685,7 +12685,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Во множественном числе «мой / моя» становится «mis»: «mis libros»."
   },
   {
-    id: "a0_308",
+    id: "a0_418",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Глагол Estar",
@@ -12696,7 +12696,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Температура напитка или еды («горячий / холодный») передаётся через «estar»: «está caliente»."
   },
   {
-    id: "a0_309",
+    id: "a0_419",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Союз «и» перед i-/hi-",
@@ -12707,7 +12707,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Перед словами, начинающимися на звук [и] (включая «hi-»), союз «y» меняется на «e»: «hermanos e hijos»."
   },
   {
-    id: "a0_310",
+    id: "a0_420",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Союз «или» перед o-/ho-",
@@ -12718,7 +12718,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Перед словами, начинающимися на звук [о] (включая «ho-»), союз «o» меняется на «u»: «siete u ocho»."
   },
   {
-    id: "a0_311",
+    id: "a0_421",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Цвета",
@@ -12731,7 +12731,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Зелёный цвет по-испански — «verde»."
   },
   {
-    id: "a0_312",
+    id: "a0_422",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Цвета",
@@ -12744,7 +12744,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Синий цвет по-испански — «azul»."
   },
   {
-    id: "a0_313",
+    id: "a0_423",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Природа",
@@ -12757,7 +12757,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La estrella» — звезда."
   },
   {
-    id: "a0_314",
+    id: "a0_424",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Дом",
@@ -12772,7 +12772,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La ventana» — окно."
   },
   {
-    id: "a0_315",
+    id: "a0_425",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Предметы",
@@ -12788,7 +12788,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La silla» — стул."
   },
   {
-    id: "a0_316",
+    id: "a0_426",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Часы",
@@ -12808,7 +12808,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Часовая стрелка на 6, минутная на 12 — «Son las seis»."
   },
   {
-    id: "a0_317",
+    id: "a0_427",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Еда",
@@ -12822,7 +12822,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El huevo» — яйцо."
   },
   {
-    id: "a0_318",
+    id: "a0_428",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Тело",
@@ -12837,7 +12837,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El ojo» — глаз."
   },
   {
-    id: "a0_319",
+    id: "a0_429",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Дом",
@@ -12852,7 +12852,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La cama» — кровать."
   },
   {
-    id: "a0_320",
+    id: "a0_430",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Природа",
@@ -12867,7 +12867,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El mar» — море."
   },
   {
-    id: "a0_321",
+    id: "a0_431",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Приветствие",
@@ -12878,7 +12878,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Buenas noches, hasta mañana» — Спокойной ночи, до завтра."
   },
   {
-    id: "a0_322",
+    id: "a0_432",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Цифры",
@@ -12889,7 +12889,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Tengo tres hermanos y dos perros» — «tres» = 3, «dos» = 2."
   },
   {
-    id: "a0_323",
+    id: "a0_433",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Еда",
@@ -12900,7 +12900,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Agua y pan, por favor» — Воду и хлеб, пожалуйста."
   },
   {
-    id: "a0_324",
+    id: "a0_434",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Семья",
@@ -12911,7 +12911,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mi amigo vive en una casa pequeña» — Мой друг живёт в маленьком доме."
   },
   {
-    id: "a0_325",
+    id: "a0_435",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Цвета",
@@ -12922,7 +12922,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El libro azul está en la mesa» — Синяя книга лежит на столе."
   },
   {
-    id: "a0_326",
+    id: "a0_436",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Знакомство",
@@ -12933,7 +12933,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Sí, hablo un poco de español» — Да, я немного говорю по-испански."
   },
   {
-    id: "a0_327",
+    id: "a0_437",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Животные",
@@ -12944,7 +12944,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El gato blanco está en el jardín» — Белый кот находится в саду."
   },
   {
-    id: "a0_328",
+    id: "a0_438",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Время суток",
@@ -12955,7 +12955,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El sol brilla por la mañana» — Солнце светит утром."
   },
   {
-    id: "a0_build_11",
+    id: "a0_build_23",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор A0 • Еда",
@@ -12965,7 +12965,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Yo como una manzana roja» — Я ем красное яблоко."
   },
   {
-    id: "a0_build_12",
+    id: "a0_build_24",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор A0 • Вежливость",
@@ -12975,7 +12975,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Perdón, ¿dónde está la casa?» — Извините, где находится дом?"
   },
   {
-    id: "a0_build_13",
+    id: "a0_build_25",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор A0 • Семья",
@@ -12985,7 +12985,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mi hermano vive en Madrid» — Мой брат живёт в Мадриде."
   },
   {
-    id: "a0_build_14",
+    id: "a0_build_26",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор A0 • Цвета",
@@ -12995,7 +12995,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El pan blanco está en la mesa» — Белый хлеб лежит на столе."
   },
   {
-    id: "a0_build_15",
+    id: "a0_build_27",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор A0 • Приветствие",
@@ -13005,7 +13005,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Buenas tardes, mucho gusto» — Добрый день, очень приятно."
   },
 {
-    id: "a0_283",
+    id: "a0_439",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Приветствия",
@@ -13015,7 +13015,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Buenas noches» используется вечером и на прощание перед сном."
   },
   {
-    id: "a0_284",
+    id: "a0_440",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Знакомство",
@@ -13026,7 +13026,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Me llamo...» — стандартная фраза «Меня зовут...»."
   },
   {
-    id: "a0_285",
+    id: "a0_441",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Представление",
@@ -13036,7 +13036,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Soy de + город/страна» означает «Я родом из... / Я из...»."
   },
   {
-    id: "a0_286",
+    id: "a0_442",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13047,7 +13047,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Синий цвет по-испански — «azul»."
   },
   {
-    id: "a0_287",
+    id: "a0_443",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Базовые фразы",
@@ -13057,7 +13057,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Gracias» — «спасибо»; «de nada» — «не за что»."
   },
   {
-    id: "a0_288",
+    id: "a0_444",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Числа 1–10",
@@ -13067,7 +13067,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Счёт: seis (6), siete (7), ocho (8), nueve (9)."
   },
   {
-    id: "a0_289",
+    id: "a0_445",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Самочувствие",
@@ -13078,7 +13078,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Estoy muy bien» — «Я очень хорошо / в порядке»."
   },
   {
-    id: "a0_290",
+    id: "a0_446",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Вежливость",
@@ -13088,7 +13088,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Por favor» — пожалуйста; «café» — мужского рода (un café)."
   },
   {
-    id: "a0_291",
+    id: "a0_447",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Артикли и род",
@@ -13098,7 +13098,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Libro» — существительное мужского рода единственного числа, поэтому «un libro»."
   },
   {
-    id: "a0_292",
+    id: "a0_448",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13109,7 +13109,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Красный цвет по-испански — «rojo»."
   },
   {
-    id: "a0_293",
+    id: "a0_449",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Понимание речи",
@@ -13119,7 +13119,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Entender» — понимать; «no entiendo» — «я не понимаю»."
   },
   {
-    id: "a0_294",
+    id: "a0_450",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Числа",
@@ -13130,7 +13130,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Quince» — 15 (cinco — 5, cincuenta — 50, trece — 13)."
   },
   {
-    id: "a0_295",
+    id: "a0_451",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Знакомство",
@@ -13140,7 +13140,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Cómo te llamas?» — стандартный вопрос «Как тебя зовут?»."
   },
   {
-    id: "a0_296",
+    id: "a0_452",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Артикли и род",
@@ -13150,7 +13150,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Casa» — женского рода единственного числа, поэтому «una casa» (или «la casa»)."
   },
   {
-    id: "a0_297",
+    id: "a0_453",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Вопросительные слова",
@@ -13160,7 +13160,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Dónde?» спрашивает о месте или направлении: «Где?» / «Куда?»."
   },
   {
-    id: "a0_298",
+    id: "a0_454",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Прощание",
@@ -13171,7 +13171,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Hasta mañana» — «до завтра»."
   },
   {
-    id: "a0_299",
+    id: "a0_455",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13182,7 +13182,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Зелёный цвет по-испански — «verde»."
   },
   {
-    id: "a0_300",
+    id: "a0_456",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Базовые фразы",
@@ -13192,7 +13192,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Hablo un poco español» — «Я говорю немного по-испански»."
   },
   {
-    id: "a0_301",
+    id: "a0_457",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Дни недели",
@@ -13202,7 +13202,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Четверг — jueves, пятница — viernes, суббота — sábado."
   },
   {
-    id: "a0_302",
+    id: "a0_458",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Базовая лексика",
@@ -13212,7 +13212,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Agua» — вода (в единственном числе используется с артиклем «el agua», но по роду слово женское)."
   },
   {
-    id: "a0_303",
+    id: "a0_459",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Вежливость",
@@ -13223,7 +13223,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Disculpe, ¿dónde está el baño?» — вежливый вопрос о том, где находится туалет."
   },
   {
-    id: "a0_304",
+    id: "a0_460",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13234,7 +13234,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Жёлтый цвет по-испански — «amarillo»."
   },
   {
-    id: "a0_305",
+    id: "a0_461",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Местоположение",
@@ -13244,7 +13244,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Estación» — женского рода (la estación), а для местоположения берём «está»."
   },
   {
-    id: "a0_306",
+    id: "a0_462",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Да / Нет",
@@ -13254,7 +13254,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«No, gracias» — короткий и вежливый отказ «Нет, спасибо»."
   },
   {
-    id: "a0_307",
+    id: "a0_463",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Семья",
@@ -13264,7 +13264,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Hermano» — брат; «hermana» — сестра."
   },
 {
-    id: "a0_308",
+    id: "a0_464",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Приветствия",
@@ -13274,7 +13274,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Buenas tardes» обычно используется со второй половины дня до вечера."
   },
   {
-    id: "a0_309",
+    id: "a0_465",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Числа",
@@ -13285,7 +13285,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Veinte» — 20 (doce — 12, veintidós — 22, treinta — 30)."
   },
   {
-    id: "a0_310",
+    id: "a0_466",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Знакомство",
@@ -13295,7 +13295,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mucho gusto» — устойчивая фраза «Очень приятно» при знакомстве."
   },
   {
-    id: "a0_311",
+    id: "a0_467",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13306,7 +13306,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Чёрный цвет по-испански — «negro»."
   },
   {
-    id: "a0_312",
+    id: "a0_468",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Вопросительные слова",
@@ -13316,7 +13316,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Cuándo?» переводится как «Когда?»."
   },
   {
-    id: "a0_313",
+    id: "a0_469",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Базовые фразы",
@@ -13326,7 +13326,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«De nada» — «не за что / пожалуйста» в ответ на благодарность."
   },
   {
-    id: "a0_314",
+    id: "a0_470",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Понимание речи",
@@ -13337,7 +13337,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«No hablo mucho español» — «Я не много / не очень хорошо говорю по-испански»."
   },
   {
-    id: "a0_315",
+    id: "a0_471",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Местоположение",
@@ -13347,7 +13347,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Aquí» — здесь; для положения в пространстве используется «estar» («Estoy aquí»)."
   },
   {
-    id: "a0_316",
+    id: "a0_472",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Артикли и род",
@@ -13357,7 +13357,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mesa» — женского рода единственного числа, поэтому «una mesa» (или «la mesa»)."
   },
   {
-    id: "a0_317",
+    id: "a0_473",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13368,7 +13368,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Оранжевый цвет по-испански — «naranja»."
   },
   {
-    id: "a0_318",
+    id: "a0_474",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Дни недели",
@@ -13378,7 +13378,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Понедельник — lunes, вторник — martes, среда — miércoles."
   },
   {
-    id: "a0_319",
+    id: "a0_475",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Базовая лексика",
@@ -13389,7 +13389,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El libro» — книга."
   },
   {
-    id: "a0_320",
+    id: "a0_476",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Вежливость",
@@ -13399,7 +13399,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Disculpe, por favor» — вежливое обращение или извинение."
   },
   {
-    id: "a0_321",
+    id: "a0_477",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Семья",
@@ -13409,7 +13409,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Madre» — мать (разговорное — «mamá»)."
   },
   {
-    id: "a0_322",
+    id: "a0_478",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Еда и напитки",
@@ -13419,7 +13419,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Pan» — хлеб."
   },
   {
-    id: "a1_144",
+    id: "a1_275",
     tier: 1,
     type: "mcq",
     typeLabel: "А1 • Настоящее время",
@@ -13430,7 +13430,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Для «nosotros» правильный глагол «vivir» принимает окончание «-imos»: «vivimos»."
   },
   {
-    id: "a1_145",
+    id: "a1_276",
     tier: 1,
     type: "audio",
     typeLabel: "Аудирование А1 • Распорядок дня",
@@ -13441,7 +13441,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Levantarse» — вставать; «a las siete» — в семь часов; «todos los días» — каждый день."
   },
   {
-    id: "a1_146",
+    id: "a1_277",
     tier: 1,
     type: "builder",
     typeLabel: "Конструктор А1 • Предпочтения",
@@ -13451,7 +13451,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Перед инфинитивом («leer») всегда ставится форма единственного числа «gusta»."
   },
   {
-    id: "a1_147",
+    id: "a1_278",
     tier: 1,
     type: "mcq",
     typeLabel: "А1 • Ser vs Estar",
@@ -13462,7 +13462,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Температура и состояние предмета («горячий») передаются через «estar»: «está caliente»."
   },
   {
-    id: "a1_148",
+    id: "a1_279",
     tier: 1,
     type: "mcq",
     typeLabel: "А1 • Притяжательные местоимения",
@@ -13473,7 +13473,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Существительное «amigos» стоит во множественном числе, поэтому берём «mis»."
   },
   {
-    id: "a1_149",
+    id: "a1_280",
     tier: 1,
     type: "audio",
     typeLabel: "Аудирование А1 • В городе",
@@ -13484,7 +13484,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Cerca de aquí» — недалеко отсюда / рядом."
   },
   {
-    id: "a1_150",
+    id: "a1_281",
     tier: 1,
     type: "builder",
     typeLabel: "Конструктор А1 • Планы",
@@ -13494,7 +13494,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Ir a + el cine» сливается в «ir al cine» («идти в кино»)."
   },
   {
-    id: "a1_151",
+    id: "a1_282",
     tier: 1,
     type: "mcq",
     typeLabel: "А1 • Частотность",
@@ -13504,7 +13504,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«A veces» — иногда (nunca — никогда, siempre — всегда, a menudo — часто)."
   },
   {
-    id: "a1_152",
+    id: "a1_283",
     tier: 1,
     type: "visual",
     typeLabel: "Визуальный А1 • Геометрия и формы",
@@ -13515,7 +13515,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Треугольник по-испански — «triángulo»."
   },
   {
-    id: "a1_153",
+    id: "a1_284",
     tier: 1,
     type: "mcq",
     typeLabel: "А1 • Покупки и цены",
@@ -13525,7 +13525,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Cuánto cuesta esto?» — «Сколько это стоит?» (в единственном числе)."
   },
 {
-    id: "a0_323",
+    id: "a0_479",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Чтение и звуки",
@@ -13535,7 +13535,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Буква «h» в испанском почти всегда немая — «hola» читается как [о́ла]."
   },
   {
-    id: "a0_324",
+    id: "a0_480",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Приветствия",
@@ -13546,7 +13546,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Qué tal?» — разговорный вариант «Как дела? / Как оно?»."
   },
   {
-    id: "a0_325",
+    id: "a0_481",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Знакомство",
@@ -13556,7 +13556,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Перед профессией или статусом в испанском артикль обычно опускается: «Soy estudiante»."
   },
   {
-    id: "a0_326",
+    id: "a0_482",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Местоимения",
@@ -13566,7 +13566,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Yo» — я (tú — ты, él — он, nosotros — мы)."
   },
   {
-    id: "a0_327",
+    id: "a0_483",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Геометрия",
@@ -13577,7 +13577,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Круг по-испански — «círculo»."
   },
   {
-    id: "a0_328",
+    id: "a0_484",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Числа 1–10",
@@ -13587,7 +13587,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Tres» — 3 (trece — 13, treinta — 30, dos — 2)."
   },
   {
-    id: "a0_329",
+    id: "a0_485",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Еда и напитки",
@@ -13598,7 +13598,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Café con leche» — классический заказ в Испании: «кофе с молоком»."
   },
   {
-    id: "a0_330",
+    id: "a0_486",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Базовые фразы",
@@ -13608,7 +13608,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«No sé» — базовая фраза «Я не знаю» (от глагола «saber»)."
   },
   {
-    id: "a0_331",
+    id: "a0_487",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Артикли и род",
@@ -13618,7 +13618,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Silla» — слово женского рода (оканчивается на -a), поэтому «una silla» / «la silla»."
   },
   {
-    id: "a0_332",
+    id: "a0_488",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Прощание",
@@ -13628,7 +13628,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Hasta luego» — распространённое прощание «До скорого / Пока»."
   },
   {
-    id: "a0_333",
+    id: "a0_489",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Числа",
@@ -13639,7 +13639,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Diez» — 10."
   },
   {
-    id: "a0_334",
+    id: "a0_490",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Приветствия",
@@ -13649,7 +13649,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Buenos días» используется утром и до обеда."
   },
   {
-    id: "a0_335",
+    id: "a0_491",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13660,7 +13660,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Белый цвет по-испански — «blanco»."
   },
   {
-    id: "a0_336",
+    id: "a0_492",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Базовая лексика",
@@ -13670,7 +13670,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Casa» — дом, жилище."
   },
   {
-    id: "a0_337",
+    id: "a0_493",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Местоимения",
@@ -13680,7 +13680,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Tú» — неформальное «ты»."
   },
   {
-    id: "a0_338",
+    id: "a0_494",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Вежливость",
@@ -13691,7 +13691,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Perdón, no entiendo» — вежливая фраза «Извини, я не понимаю»."
   },
   {
-    id: "a0_339",
+    id: "a0_495",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Знакомство",
@@ -13701,7 +13701,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Me llamo Álex» — «Меня зовут Алекс»."
   },
   {
-    id: "a0_340",
+    id: "a0_496",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Еда и напитки",
@@ -13711,7 +13711,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Leche» — молоко (женского рода: la leche)."
   },
   {
-    id: "a0_341",
+    id: "a0_497",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Вопросительные слова",
@@ -13721,7 +13721,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Qué?» — одно из самых частых вопросительных слов: «Что?» или «Какой/какая?»."
   },
   {
-    id: "a0_342",
+    id: "a0_498",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование А0 • Дни недели",
@@ -13732,7 +13732,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Domingo» — воскресенье."
   },
   {
-    id: "a0_343",
+    id: "a0_499",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор А0 • Покупки",
@@ -13742,7 +13742,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Cuánto cuesta esto?» — «Сколько это стоит?»."
   },
   {
-    id: "a0_344",
+    id: "a0_500",
     tier: 0,
     type: "visual",
     typeLabel: "Визуальный А0 • Цвета",
@@ -13753,7 +13753,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Фиолетовый / сиреневый по-испански — «morado» (в Испании также часто говорят «lila» или «morado»)."
   },
   {
-    id: "a0_345",
+    id: "a0_501",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Семья",
@@ -13763,7 +13763,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Padre» — отец (разговорное — «papá»)."
   },
   {
-    id: "a0_346",
+    id: "a0_502",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Базовая лексика",
@@ -13773,7 +13773,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Sí» (с ударением) — «да»."
   },
   {
-    id: "a0_347",
+    id: "a0_503",
     tier: 0,
     type: "mcq",
     typeLabel: "А0 • Базовая лексика",
@@ -13783,7 +13783,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Amigo» — друг; подруга — «amiga»."
   },
 {
-    id: "a0_283",
+    id: "a0_504",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Посуда",
@@ -13793,7 +13793,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La cuchara» — ложка."
   },
   {
-    id: "a0_284",
+    id: "a0_505",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Посуда",
@@ -13803,7 +13803,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El cuchillo» — нож."
   },
   {
-    id: "a0_285",
+    id: "a0_506",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Цифры",
@@ -13813,7 +13813,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Diecisiete» — семнадцать (17)."
   },
   {
-    id: "a0_286",
+    id: "a0_507",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Цифры",
@@ -13823,7 +13823,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Diecinueve» — девятнадцать (19)."
   },
   {
-    id: "a0_287",
+    id: "a0_508",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Еда",
@@ -13833,7 +13833,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El aceite» — масло (например, «aceite de oliva» — оливковое масло)."
   },
   {
-    id: "a0_288",
+    id: "a0_509",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Еда",
@@ -13843,7 +13843,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El ajo» — чеснок."
   },
   {
-    id: "a0_289",
+    id: "a0_510",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Животные",
@@ -13853,7 +13853,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El perro» — собака, «la perra» — собака женского пола."
   },
   {
-    id: "a0_290",
+    id: "a0_511",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Животные",
@@ -13863,7 +13863,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La rana» — лягушка."
   },
   {
-    id: "a0_291",
+    id: "a0_512",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Дом",
@@ -13873,7 +13873,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El armario» — шкаф."
   },
   {
-    id: "a0_292",
+    id: "a0_513",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Дом",
@@ -13883,7 +13883,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El techo» — потолок или крыша."
   },
   {
-    id: "a0_293",
+    id: "a0_514",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Город",
@@ -13893,7 +13893,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La plaza» — площадь."
   },
   {
-    id: "a0_294",
+    id: "a0_515",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Город",
@@ -13903,7 +13903,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El puente» — мост."
   },
   {
-    id: "a0_295",
+    id: "a0_516",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Прилагательные",
@@ -13913,7 +13913,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Corto» — короткий, «largo» — длинный."
   },
   {
-    id: "a0_296",
+    id: "a0_517",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Прилагательные",
@@ -13923,7 +13923,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Largo» — длинный (ложный друг русского «ларго»)."
   },
   {
-    id: "a0_297",
+    id: "a0_518",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Глаголы",
@@ -13933,7 +13933,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mirar» — смотреть."
   },
   {
-    id: "a0_298",
+    id: "a0_519",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Глаголы",
@@ -13943,7 +13943,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Bailar» — танцевать."
   },
   {
-    id: "a0_299",
+    id: "a0_520",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Местоимения",
@@ -13953,7 +13953,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Ellos» — они (мужской или смешанный род)."
   },
   {
-    id: "a0_300",
+    id: "a0_521",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Артикли",
@@ -13964,7 +13964,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La flor» — существительное женского рода единственного числа."
   },
   {
-    id: "a0_301",
+    id: "a0_522",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Глагол Tener",
@@ -13975,7 +13975,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Для «yo» форма глагола «tener» — «tengo»."
   },
   {
-    id: "a0_302",
+    id: "a0_523",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Глагол Estar",
@@ -13986,7 +13986,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Для местоположения единственного предмета («el gato») используется «está»."
   },
   {
-    id: "a0_303",
+    id: "a0_524",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Множественное число",
@@ -13996,7 +13996,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Артикль «la» меняется на «las», а к слову «casa» добавляется «-s»: «las casas»."
   },
   {
-    id: "a0_304",
+    id: "a0_525",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Природа",
@@ -14011,7 +14011,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Волнистые линии обозначают воду / волны — «el agua»."
   },
   {
-    id: "a0_305",
+    id: "a0_526",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Вещи",
@@ -14026,7 +14026,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "На рисунке телефон — «el teléfono»."
   },
   {
-    id: "a0_306",
+    id: "a0_527",
     tier: 0,
     type: "visual",
     typeLabel: "Картинка A0 • Животные",
@@ -14044,7 +14044,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Длинноухий зверёк — кролик, «el conejo»."
   },
   {
-    id: "a0_307",
+    id: "a0_528",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Приветствие",
@@ -14055,7 +14055,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Hola, ¿cómo te llamas?» — Привет, как тебя зовут?"
   },
   {
-    id: "a0_308",
+    id: "a0_529",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Еда",
@@ -14066,7 +14066,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Pásame el pan y el agua, por favor» — Передай мне хлеб и воду, пожалуйста."
   },
   {
-    id: "a0_309",
+    id: "a0_530",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Семья",
@@ -14077,7 +14077,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mi hermano es alto y simpático» — Мой брат высокий и милый."
   },
   {
-    id: "a0_310",
+    id: "a0_531",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Цвета",
@@ -14088,7 +14088,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La flor es amarilla» — Цветок жёлтый."
   },
   {
-    id: "a0_311",
+    id: "a0_532",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Дом",
@@ -14099,7 +14099,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La silla está en la cocina» — Стул находится на кухне."
   },
   {
-    id: "a0_312",
+    id: "a0_533",
     tier: 0,
     type: "builder",
     typeLabel: "Конструктор A0 • База",
@@ -14112,7 +14112,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
      TIER 0: A0 — ЕЩЁ 10 ВОПРОСОВ (a0_313 .. a0_322)
      ======================================================================== */
   {
-    id: "a0_313",
+    id: "a0_534",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Еда",
@@ -14122,7 +14122,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La miel» — мёд (женского рода)."
   },
   {
-    id: "a0_314",
+    id: "a0_535",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Еда",
@@ -14132,7 +14132,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La mantequilla» — сливочное масло."
   },
   {
-    id: "a0_315",
+    id: "a0_536",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Животные",
@@ -14142,7 +14142,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La tortuga» — черепаха."
   },
   {
-    id: "a0_316",
+    id: "a0_537",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Животные",
@@ -14152,7 +14152,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El lobo» — волк."
   },
   {
-    id: "a0_317",
+    id: "a0_538",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Предметы",
@@ -14162,7 +14162,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El lápiz» — карандаш (мн. ч. — «los lápices»)."
   },
   {
-    id: "a0_318",
+    id: "a0_539",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Дом",
@@ -14172,7 +14172,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«El suelo» — пол в помещении или земля под ногами."
   },
   {
-    id: "a0_319",
+    id: "a0_540",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Прилагательные",
@@ -14182,7 +14182,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Vacío» — пустой, «lleno» — полный."
   },
   {
-    id: "a0_320",
+    id: "a0_541",
     tier: 0,
     type: "translate",
     typeLabel: "База A0 • Глаголы",
@@ -14192,7 +14192,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Ayudar» — помогать."
   },
   {
-    id: "a0_321",
+    id: "a0_542",
     tier: 0,
     type: "grammar",
     typeLabel: "Грамматика A0 • Множественное число",
@@ -14203,7 +14203,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Слово «flor» заканчивается на согласную, поэтому во множественном числе добавляется «-es»: «flores»."
   },
   {
-    id: "a0_322",
+    id: "a0_543",
     tier: 0,
     type: "audio",
     typeLabel: "Аудирование A0 • Прощание",
@@ -14218,7 +14218,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
      TIER 1: A1 — ЕЩЁ 10 ВОПРОСОВ (a1_219 .. a1_228)
      ======================================================================== */
   {
-    id: "a1_219",
+    id: "a1_285",
     tier: 1,
     type: "translate",
     typeLabel: "Перевод A1 • Месяцы",
@@ -14228,7 +14228,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Mayo» — май."
   },
   {
-    id: "a1_220",
+    id: "a1_286",
     tier: 1,
     type: "translate",
     typeLabel: "Перевод A1 • Числительные",
@@ -14238,7 +14238,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Setenta» — семьдесят (70)."
   },
   {
-    id: "a1_221",
+    id: "a1_287",
     tier: 1,
     type: "translate",
     typeLabel: "Перевод A1 • Порядковые",
@@ -14248,7 +14248,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Tercero / tercera» — третий / третья."
   },
   {
-    id: "a1_222",
+    id: "a1_288",
     tier: 1,
     type: "translate",
     typeLabel: "Перевод A1 • Город",
@@ -14258,7 +14258,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«La librería» — книжный магазин (ложный друг русского слова «библиотека» — «la biblioteca»)."
   },
   {
-    id: "a1_223",
+    id: "a1_289",
     tier: 1,
     type: "translate",
     typeLabel: "Перевод A1 • Выражения с Tener",
@@ -14268,7 +14268,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«Tener suerte» — иметь удачу / везти."
   },
   {
-    id: "a1_224",
+    id: "a1_290",
     tier: 1,
     type: "grammar",
     typeLabel: "Грамматика A1 • Глагол Dormir",
@@ -14279,7 +14279,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "В настоящем времени чередование корневой гласной в «dormir» не затрагивает форму «nosotros»: «dormimos»."
   },
   {
-    id: "a1_225",
+    id: "a1_291",
     tier: 1,
     type: "grammar",
     typeLabel: "Грамматика A1 • Глагол Pedir",
@@ -14290,7 +14290,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Для «ellos» корневая «e» в «pedir» меняется на «i»: «piden»."
   },
   {
-    id: "a1_226",
+    id: "a1_292",
     tier: 1,
     type: "grammar",
     typeLabel: "Грамматика A1 • Предлоги",
@@ -14301,7 +14301,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "С видами транспорта («tren», «avión», «coche», «barco») используется предлог «en»."
   },
   {
-    id: "a1_227",
+    id: "a1_293",
     tier: 1,
     type: "grammar",
     typeLabel: "Грамматика A1 • Согласование",
@@ -14312,7 +14312,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "Прилагательные на согласную («difícil») образуют множественное число с окончанием «-es»: «difíciles»."
   },
   {
-    id: "a1_228",
+    id: "a1_294",
     tier: 1,
     type: "audio",
     typeLabel: "Аудирование A1 • Город",
@@ -14323,7 +14323,7 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     explanation: "«¿Hay una panadería cerca de aquí?» — Есть ли поблизости отсюда булочная?"
   },
 {
-    id: "a0_283",
+    id: "a0_544",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14332,10 +14332,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "¿Qué es esto?",
     options: ["¿Qué es esto?", "¿Quién es esto?", "¿Dónde es esto?", "¿Cuándo es esto?"],
     correct: 0,
-    hint: "«Что» по-испански — qué, а «это» (предмет рядом) — esto."
+    explanation: "«Что» по-испански — qué, а «это» (предмет рядом) — esto."
   },
   {
-    id: "a0_284",
+    id: "a0_545",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14344,10 +14344,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "No sé",
     options: ["No sé", "No soy", "No estoy", "No tengo"],
     correct: 0,
-    hint: "Форма от глагола saber («знать») в 1-м лице — sé."
+    explanation: "Форма от глагола saber («знать») в 1-м лице — sé."
   },
   {
-    id: "a0_285",
+    id: "a0_546",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14356,10 +14356,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Hablo un poco de español",
     options: ["Hablo un poco de español", "Hablo mucho español", "Entiendo todo español", "Hablo sin español"],
     correct: 0,
-    hint: "Un poco — «немного»."
+    explanation: "Un poco — «немного»."
   },
   {
-    id: "a0_286",
+    id: "a0_547",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14368,10 +14368,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Repita, por favor",
     options: ["Repita, por favor", "Baja, por favor", "Cierra, por favor", "Abre, por favor"],
     correct: 0,
-    hint: "Repetir («повторять») в вежливой форме — repita."
+    explanation: "Repetir («повторять») в вежливой форме — repita."
   },
   {
-    id: "a0_287",
+    id: "a0_548",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14380,10 +14380,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "No entiendo",
     options: ["No entiendo", "No escucho", "No miro", "No leo"],
     correct: 0,
-    hint: "Entender («понимать») -> yo entiendo."
+    explanation: "Entender («понимать») -> yo entiendo."
   },
   {
-    id: "a0_288",
+    id: "a0_549",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14392,10 +14392,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Muy bien",
     options: ["Muy bien", "Muy mal", "Muy tarde", "Muy lejos"],
     correct: 0,
-    hint: "Muy («очень») + bien («хорошо»)."
+    explanation: "Muy («очень») + bien («хорошо»)."
   },
   {
-    id: "a0_289",
+    id: "a0_550",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14404,10 +14404,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "¿Y tú?",
     options: ["¿Y tú?", "¿Y yo?", "¿Y él?", "¿Y aquí?"],
     correct: 0,
-    hint: "Tú — «ты», y — «и / а»."
+    explanation: "Tú — «ты», y — «и / а»."
   },
   {
-    id: "a0_290",
+    id: "a0_551",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14416,10 +14416,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Yo también",
     options: ["Yo también", "Yo tampoco", "Yo ahora", "Yo aquí"],
     correct: 0,
-    hint: "También — «тоже / также»."
+    explanation: "También — «тоже / также»."
   },
   {
-    id: "a0_291",
+    id: "a0_552",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14428,10 +14428,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Yo tampoco",
     options: ["Yo tampoco", "Yo también", "Yo solo", "Yo pronto"],
     correct: 0,
-    hint: "Tampoco — «тоже нет / тоже не»."
+    explanation: "Tampoco — «тоже нет / тоже не»."
   },
   {
-    id: "a0_292",
+    id: "a0_553",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14440,10 +14440,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Sin problema",
     options: ["Sin problema", "Con prisa", "Por aquí", "Hasta luego"],
     correct: 0,
-    hint: "Sin — «без»."
+    explanation: "Sin — «без»."
   },
   {
-    id: "a0_293",
+    id: "a0_554",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14452,10 +14452,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Ahora",
     options: ["Ahora", "Ayer", "Mañana", "Nunca"],
     correct: 0,
-    hint: "Ahora («сейчас») — одно из самых частых слов в речи."
+    explanation: "Ahora («сейчас») — одно из самых частых слов в речи."
   },
   {
-    id: "a0_294",
+    id: "a0_555",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14464,10 +14464,10 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "¿Quién es?",
     options: ["¿Quién es?", "¿Qué es?", "¿Dónde es?", "¿Cuánto es?"],
     correct: 0,
-    hint: "Quién — «кто»."
+    explanation: "Quién — «кто»."
   },
   {
-    id: "a0_295",
+    id: "a0_556",
     tier: 0,
     type: "choice",
     typeLabel: "База A0 • Живые фразы",
@@ -14476,69 +14476,512 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     audioText: "Espera un momento",
     options: ["Espera un momento", "Mira un momento", "Lee un momento", "Come un momento"],
     correct: 0,
-    hint: "Esperar («ждать») -> espera."
+    explanation: "Esperar («ждать») -> espera."
   },
   {
-    id: "a0_296",
-    tier: 0,
-    type: "builder",
-    typeLabel: "База A0 • Живые фразы",
-    prompt: "Собери фразу: «Я не говорю по-испански»",
-    subprompt: "Нажми на слова в нужном порядке",
-    audioText: "No hablo español",
-    words: ["No", "hablo", "español", "tengo", "agua"],
-    correctOrder: ["No", "hablo", "español"],
-    hint: "Отрицание no ставится перед глаголом hablo."
+  id: "a0_557",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Части лица",
+  prompt: "Как переводится на русский слово «la nariz»?",
+  options: ["нос", "глаз", "ухо", "рот"],
+  correct: 0,
+  explanation: "«La nariz» — нос (женский род, артикль la)."
+},
+{
+  id: "a0_558",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Канцелярия",
+  prompt: "Как сказать по-испански «линейка»?",
+  options: ["la regla", "el borrador", "la grapadora", "el cuaderno"],
+  correct: 0,
+  explanation: "«La regla» означает «линейка» (а также «правило»)."
+},
+{
+  id: "a0_559",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Сладости и выпечка",
+  prompt: "Что означает слово «la galleta»?",
+  options: ["печенье", "конфета", "мороженое", "булочка"],
+  correct: 0,
+  explanation: "«La galleta» переводится как «печенье»."
+},
+{
+  id: "a0_560",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Космос",
+  prompt: "Как переводится «la estrella»?",
+  options: ["звезда", "планета", "луна", "ракета"],
+  correct: 0,
+  explanation: "«La estrella» — звезда (обрати внимание на двойную l)."
+},
+{
+  id: "a0_561",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Пляжные вещи",
+  prompt: "Как по-испански «солнцезащитные очки»?",
+  options: ["las gafas de sol", "la toalla de playa", "el sombrero", "la sombrilla"],
+  correct: 0,
+  explanation: "«Las gafas de sol» — буквально «очки от солнца»."
+},
+{
+  id: "a0_562",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Части лица",
+  prompt: "Выбери правильный артикль:",
+  subprompt: "_____ ojos son marrones.",
+  options: ["Los", "Las", "El", "La"],
+  correct: 0,
+  explanation: "«El ojo» — слово мужского рода, во множественном числе используется артикль «los»."
+},
+{
+  id: "a0_563",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Канцелярия",
+  prompt: "Выбери правильный артикль:",
+  subprompt: "Tengo _____ lápiz amarillo.",
+  options: ["un", "una", "unos", "unas"],
+  correct: 0,
+  explanation: "«Lápiz» — существительное мужского рода единственного числа, поэтому «un»."
+},
+{
+  id: "a0_564",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Сладости и выпечка",
+  prompt: "Выбери правильную форму множественного числа:",
+  subprompt: "Dos _____ de chocolate.",
+  options: ["pasteles", "pastels", "pastela", "pastelas"],
+  correct: 0,
+  explanation: "Слова на согласную (как «pastel») образуют множественное число с помощью окончания -es."
+},
+{
+  id: "a0_565",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Космос",
+  prompt: "Выбери правильный артикль:",
+  subprompt: "_____ luna brilla en el cielo.",
+  options: ["La", "El", "Los", "Las"],
+  correct: 0,
+  explanation: "«Luna» (луна) — существительное женского рода, используется артикль «la»."
+},
+{
+  id: "a0_566",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Инструменты и ремонт",
+  prompt: "Выбери правильный неопределённый артикль:",
+  subprompt: "Necesito _____ martillo.",
+  options: ["un", "una", "unas", "el"],
+  correct: 0,
+  explanation: "«Martillo» (молоток) — мужской род единственного числа, поэтому «un»."
+},
+{
+  id: "a0_567",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Эмоции",
+  prompt: "Выбери правильную форму:",
+  subprompt: "María está _____ hoy.",
+  options: ["contenta", "contento", "contentos", "contentas"],
+  correct: 0,
+  explanation: "María — женский род единственного числа, поэтому прилагательное «contenta» заканчивается на -a."
+},
+{
+  id: "a0_audio_99",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Насекомые",
+  prompt: "Послушай слово и выбери перевод:",
+  audioText: "La mariposa",
+  options: ["бабочка", "муравей", "пчела", "паук"],
+  correct: 0,
+  explanation: "«La mariposa» переводится как «бабочка»."
+},
+{
+  id: "a0_audio_100",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Бытовая техника",
+  prompt: "Послушай слово и выбери перевод:",
+  audioText: "La nevera",
+  options: ["холодильник", "микроволновка", "стиральная машина", "пылесос"],
+  correct: 0,
+  explanation: "«La nevera» — холодильник (также в ряде стран используют «el refrigerador»)."
+},
+{
+  id: "a0_audio_101",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Эмоции",
+  prompt: "Послушай фразу и выбери перевод:",
+  audioText: "Estoy cansado",
+  options: ["Я устал", "Я голоден", "Я рад", "Я боюсь"],
+  correct: 0,
+  explanation: "«Estoy cansado» — «Я устал» (форма для говорящего мужского рода)."
+},
+{
+  id: "a0_audio_102",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Пляжные вещи",
+  prompt: "Послушай словосочетание и выбери перевод:",
+  audioText: "La toalla grande",
+  options: ["большое полотенце", "маленький мяч", "холодная вода", "белый песок"],
+  correct: 0,
+  explanation: "«La toalla» — полотенце, «grande» — большой/большое."
+},
+{
+  id: "a0_audio_103",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Насекомые",
+  prompt: "Послушай слово и выбери перевод:",
+  audioText: "La abeja",
+  options: ["пчела", "жук", "комар", "стрекоза"],
+  correct: 0,
+  explanation: "«La abeja» означает «пчела»."
+},
+{
+  id: "a0_audio_104",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Бытовая техника",
+  prompt: "Послушай слово и выбери перевод:",
+  audioText: "La lámpara",
+  options: ["лампа", "розетка", "утюг", "чайник"],
+  correct: 0,
+  explanation: "«La lámpara» — лампа или светильник."
+},
+{
+  id: "a0_build_28",
+  tier: 0,
+  type: "builder",
+  typeLabel: "Конструктор A0 • Космос",
+  prompt: "Собери на испанском: «Солнце большое»",
+  words: ["grande", "El", "sol", "es", "La", "pequeño"],
+  answer: ["El", "sol", "es", "grande"],
+  explanation: "«El sol es grande» — «Солнце большое» (глагол ser для постоянного признака)."
+},
+{
+  id: "a0_build_29",
+  tier: 0,
+  type: "builder",
+  typeLabel: "Конструктор A0 • Канцелярия",
+  prompt: "Собери на испанском: «У меня есть тетрадь»",
+  words: ["tengo", "Yo", "un", "cuaderno", "una", "tienes"],
+  answer: ["Yo", "tengo", "un", "cuaderno"],
+  explanation: "«Yo tengo un cuaderno» — «У меня есть тетрадь» («cuaderno» — мужской род)."
+},
+{
+  id: "a0_568",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Космос",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><circle cx=\"65\" cy=\"45\" r=\"22\" fill=\"#FDB813\"/><line x1=\"65\" y1=\"8\" x2=\"65\" y2=\"18\" stroke=\"#FDB813\" stroke-width=\"3\"/><line x1=\"65\" y1=\"72\" x2=\"65\" y2=\"82\" stroke=\"#FDB813\" stroke-width=\"3\"/><line x1=\"28\" y1=\"45\" x2=\"38\" y2=\"45\" stroke=\"#FDB813\" stroke-width=\"3\"/><line x1=\"92\" y1=\"45\" x2=\"102\" y2=\"45\" stroke=\"#FDB813\" stroke-width=\"3\"/></svg>",
+  prompt: "Как называется этот объект по-испански?",
+  options: ["el sol", "la luna", "la nube", "el rayo"],
+  correct: 0,
+  explanation: "На картинке изображено солнце — «el sol»."
+},
+{
+  id: "a0_569",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Инструменты и ремонт",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><rect x=\"58\" y=\"38\" width=\"12\" height=\"38\" rx=\"3\" fill=\"#8D5524\"/><rect x=\"36\" y=\"20\" width=\"54\" height=\"18\" rx=\"3\" fill=\"#607D8B\"/></svg>",
+  prompt: "Какой инструмент изображён на картинке?",
+  options: ["el martillo", "el destornillador", "la sierra", "la llave"],
+  correct: 0,
+  explanation: "На рисунке молоток — «el martillo»."
+},
+{
+  id: "a0_570",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Сладости и выпечка",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><circle cx=\"65\" cy=\"48\" r=\"24\" fill=\"#D28A4C\"/><circle cx=\"56\" cy=\"42\" r=\"3\" fill=\"#4E2A14\"/><circle cx=\"74\" cy=\"44\" r=\"3\" fill=\"#4E2A14\"/><circle cx=\"65\" cy=\"55\" r=\"3\" fill=\"#4E2A14\"/></svg>",
+  prompt: "Что изображено на картинке?",
+  options: ["la galleta", "la tarta", "el helado", "la miel"],
+  correct: 0,
+  explanation: "Это печенье с шоколадными кусочками — «la galleta»."
+},
+{
+  id: "a0_571",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Части лица",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><ellipse cx=\"65\" cy=\"45\" rx=\"32\" ry=\"16\" fill=\"none\" stroke=\"#37474F\" stroke-width=\"3\"/><circle cx=\"65\" cy=\"45\" r=\"10\" fill=\"#4FC3F7\"/><circle cx=\"65\" cy=\"45\" r=\"4\" fill=\"#102027\"/></svg>",
+  prompt: "Какая часть лица изображена?",
+  options: ["el ojo", "la oreja", "la boca", "la ceja"],
+  correct: 0,
+  explanation: "На рисунке глаз — «el ojo»."
+},
+{
+  id: "a0_572",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Пляжные вещи",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><path d=\"M25 45 Q65 12 105 45 Z\" fill=\"#FF5252\"/><line x1=\"65\" y1=\"45\" x2=\"65\" y2=\"78\" stroke=\"#795548\" stroke-width=\"4\"/></svg>",
+  prompt: "Какой пляжный предмет нарисован?",
+  options: ["la sombrilla", "la toalla", "el flotador", "la chancla"],
+  correct: 0,
+  explanation: "На картинке пляжный зонт — «la sombrilla»."
+},
+{
+  id: "a0_573",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Бытовая техника",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><rect x=\"42\" y=\"14\" width=\"46\" height=\"62\" rx=\"4\" fill=\"#ECEFF1\" stroke=\"#546E7A\" stroke-width=\"3\"/><line x1=\"42\" y1=\"36\" x2=\"88\" y2=\"36\" stroke=\"#546E7A\" stroke-width=\"3\"/><line x1=\"80\" y1=\"22\" x2=\"80\" y2=\"30\" stroke=\"#546E7A\" stroke-width=\"3\"/><line x1=\"80\" y1=\"43\" x2=\"80\" y2=\"55\" stroke=\"#546E7A\" stroke-width=\"3\"/></svg>",
+  prompt: "Какой прибор изображён на картинке?",
+  options: ["la nevera", "el horno", "la lavadora", "el microondas"],
+  correct: 0,
+  explanation: "На рисунке двухкамерный холодильник — «la nevera»."
+},
+{
+  id: "a0_574",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Погода и природа",
+  prompt: "Как переводится на русский слово «la lluvia»?",
+  options: ["дождь", "снег", "ветер", "туман"],
+  correct: 0,
+  explanation: "«La lluvia» — дождь (женский род, артикль la)."
+},
+{
+  id: "a0_575",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Одежда",
+  prompt: "Как сказать по-испански «куртка»?",
+  options: ["la chaqueta", "el calcetín", "el cinturón", "la bufanda"],
+  correct: 0,
+  explanation: "«La chaqueta» означает «куртка» или «пиджак»."
+},
+{
+  id: "a0_576",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Фрукты и ягоды",
+  prompt: "Что означает слово «la fresa»?",
+  options: ["клубника", "вишня", "персик", "груша"],
+  correct: 0,
+  explanation: "«La fresa» переводится как «клубника»."
+},
+{
+  id: "a0_577",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Мебель",
+  prompt: "Как переводится «la estantería»?",
+  options: ["книжная полка", "кресло", "шкаф", "диван"],
+  correct: 0,
+  explanation: "«La estantería» — полка или стеллаж."
+},
+{
+  id: "a0_578",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Погода и природа",
+  prompt: "Выбери правильный артикль:",
+  subprompt: "_____ viento es frío.",
+  options: ["El", "La", "Los", "Las"],
+  correct: 0,
+  explanation: "«Viento» (ветер) — существительное мужского рода единственного числа, поэтому «el»."
+},
+{
+  id: "a0_579",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Одежда",
+  prompt: "Выбери правильную форму множественного числа:",
+  subprompt: "Tengo dos _____ negros.",
+  options: ["calcetines", "calcetins", "calcetina", "calcetinas"],
+  correct: 0,
+  explanation: "«Calcetín» заканчивается на согласную n, поэтому во множественном числе добавляется -es: «calcetines»."
+},
+{
+  id: "a0_580",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Фрукты и ягоды",
+  prompt: "Выбери правильный артикль:",
+  subprompt: "Quiero _____ pera madura.",
+  options: ["una", "un", "unas", "unos"],
+  correct: 0,
+  explanation: "«Pera» (груша) — женский род единственного числа, используется неопределённый артикль «una»."
   },
   {
-    id: "a0_297",
-    tier: 0,
-    type: "builder",
-    typeLabel: "База A0 • Живые фразы",
-    prompt: "Собери вопрос: «Как это называется?»",
-    subprompt: "Собери частый вопрос для пополнения словаря",
-    audioText: "¿Cómo se llama esto?",
-    words: ["¿Cómo", "se", "llama", "esto?", "dónde"],
-    correctOrder: ["¿Cómo", "se", "llama", "esto?"],
-    hint: "Cómo («как») + se llama («называется») + esto («это»)."
-  },
-  {
-    id: "a0_298",
-    tier: 0,
-    type: "builder",
-    typeLabel: "База A0 • Живые фразы",
-    prompt: "Собери фразу: «Мне нужен кофе»",
-    subprompt: "Базовая конструкция с necesito",
-    audioText: "Necesito un café",
-    words: ["Necesito", "un", "café", "la", "casa"],
-    correctOrder: ["Necesito", "un", "café"],
-    hint: "Necesitar («нуждаться / быть нужным») -> necesito."
-  },
-  {
-    id: "a0_299",
-    tier: 0,
-    type: "builder",
-    typeLabel: "База A0 • Живые фразы",
-    prompt: "Собери фразу: «До завтра»",
-    subprompt: "Простое прощание на день вперёд",
-    audioText: "Hasta mañana",
-    words: ["Hasta", "mañana", "hoy", "gracias"],
-    correctOrder: ["Hasta", "mañana"],
-    hint: "Hasta («до») + mañana («завтра»)."
-  },
-  {
-    id: "a0_300",
-    tier: 0,
-    type: "builder",
-    typeLabel: "База A0 • Живые фразы",
-    prompt: "Собери фразу: «Очень вкусно»",
-    subprompt: "Похвала еде или напитку",
-    audioText: "Muy rico",
-    words: ["Muy", "rico", "frío", "mal"],
-    correctOrder: ["Muy", "rico"],
-    hint: "Rico в значении про еду значит «вкусный»."
-  }
-
+  id: "a0_580",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Спорт и хобби",
+  prompt: "Как переводится на русский слово «la pelota»?",
+  options: ["мяч", "велосипед", "ракетка", "коньки"],
+  correct: 0,
+  explanation: "«La pelota» — мяч (слово женского рода, артикль la)."
+},
+{
+  id: "a0_581",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Профессии",
+  prompt: "Как сказать по-испански «пожарный»?",
+  options: ["el bombero", "el cocinero", "el cartero", "el pintor"],
+  correct: 0,
+  explanation: "«El bombero» означает «пожарный»."
+},
+{
+  id: "a0_582",
+  tier: 0,
+  type: "translate",
+  typeLabel: "Перевод A0 • Музыкальные инструменты",
+  prompt: "Что означает слово «el tambor»?",
+  options: ["барабан", "гитара", "флейта", "скрипка"],
+  correct: 0,
+  explanation: "«El tambor» переводится как «барабан»."
+},
+{
+  id: "a0_583",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Спорт и хобби",
+  prompt: "Выбери правильный артикль:",
+  subprompt: "Tengo _____ bicicleta nueva.",
+  options: ["una", "un", "unos", "el"],
+  correct: 0,
+  explanation: "«Bicicleta» — существительное женского рода единственного числа, поэтому используется «una»."
+},
+{
+  id: "a0_584",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Профессии",
+  prompt: "Выбери правильную форму:",
+  subprompt: "Ana es _____.",
+  options: ["médica", "médico", "médicos", "médicas"],
+  correct: 0,
+  explanation: "Ana — женский род единственного числа, поэтому используется форма «médica» (врач)."
+},
+{
+  id: "a0_585",
+  tier: 0,
+  type: "grammar",
+  typeLabel: "Грамматика A0 • Музыкальные инструменты",
+  prompt: "Выбери правильную форму множественного числа:",
+  subprompt: "En la tienda hay dos _____.",
+  options: ["guitarras", "guitarra", "guitarres", "guitarros"],
+  correct: 0,
+  explanation: "Слова на гласную (как «guitarra») образуют множественное число добавлением окончания -s."
+},
+{
+  id: "a0_audio_105",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Спорт и хобби",
+  prompt: "Послушай слово и выбери перевод:",
+  audioText: "La piscina",
+  options: ["бассейн", "стадион", "каток", "спортзал"],
+  correct: 0,
+  explanation: "«La piscina» переводится как «бассейн»."
+},
+{
+  id: "a0_audio_106",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Профессии",
+  prompt: "Послушай словосочетание и выбери перевод:",
+  audioText: "El panadero",
+  options: ["пекарь", "водитель", "учитель", "продавец"],
+  correct: 0,
+  explanation: "«El panadero» — пекарь (от слова «el pan» — хлеб)."
+},
+{
+  id: "a0_audio_107",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Музыкальные инструменты",
+  prompt: "Послушай фразу и выбери перевод:",
+  audioText: "Toco el piano",
+  options: ["Я играю на пианино", "Я слушаю радио", "Я пою песню", "Я покупаю гитару"],
+  correct: 0,
+  explanation: "Глагол «tocar» с музыкальными инструментами означает «играть на чём-либо»."
+},
+{
+  id: "a0_audio_108",
+  tier: 0,
+  type: "audio",
+  typeLabel: "Аудирование A0 • Транспорт",
+  prompt: "Послушай словосочетание и выбери перевод:",
+  audioText: "El barco blanco",
+  options: ["белый корабль", "чёрный поезд", "красный автобус", "синий самолёт"],
+  correct: 0,
+  explanation: "«El barco» — корабль/лодка, «blanco» — белый."
+},
+{
+  id: "a0_build_30",
+  tier: 0,
+  type: "builder",
+  typeLabel: "Конструктор A0 • Спорт и хобби",
+  prompt: "Собери на испанском: «Мяч красный»",
+  words: ["roja", "La", "pelota", "es", "El", "rojo"],
+  answer: ["La", "pelota", "es", "roja"],
+  explanation: "«La pelota es roja» — прилагательное «roja» согласуется в женском роде со словом «pelota»."
+},
+{
+  id: "a0_586",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Спорт и хобби",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><circle cx=\"65\" cy=\"45\" r=\"26\" fill=\"#FF7043\" stroke=\"#3E2723\" stroke-width=\"2.5\"/><line x1=\"39\" y1=\"45\" x2=\"91\" y2=\"45\" stroke=\"#3E2723\" stroke-width=\"2.5\"/><line x1=\"65\" y1=\"19\" x2=\"65\" y2=\"71\" stroke=\"#3E2723\" stroke-width=\"2.5\"/><path d=\"M47 26 Q65 45 47 64\" fill=\"none\" stroke=\"#3E2723\" stroke-width=\"2.5\"/><path d=\"M83 26 Q65 45 83 64\" fill=\"none\" stroke=\"#3E2723\" stroke-width=\"2.5\"/></svg>",
+  prompt: "Какой спортивный предмет изображён?",
+  options: ["la pelota", "la raqueta", "el casco", "la red"],
+  correct: 0,
+  explanation: "На картинке баскетбольный мяч — «la pelota»."
+},
+{
+  id: "a0_587",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Транспорт",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><polygon points=\"25,52 105,52 92,72 38,72\" fill=\"#1E88E5\"/><polygon points=\"65,16 65,48 92,48\" fill=\"#ECEFF1\" stroke=\"#90A4AE\" stroke-width=\"2\"/><line x1=\"65\" y1=\"16\" x2=\"65\" y2=\"52\" stroke=\"#5D4037\" stroke-width=\"3\"/></svg>",
+  prompt: "Какой вид транспорта нарисован?",
+  options: ["el barco", "el avión", "el tren", "el coche"],
+  correct: 0,
+  explanation: "На рисунке парусная лодка/корабль — «el barco»."
+},
+{
+  id: "a0_588",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Музыкальные инструменты",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><ellipse cx=\"65\" cy=\"32\" rx=\"26\" ry=\"9\" fill=\"#FDD835\" stroke=\"#5D4037\" stroke-width=\"2\"/><rect x=\"39\" y=\"32\" width=\"52\" height=\"34\" fill=\"#E53935\"/><ellipse cx=\"65\" cy=\"66\" rx=\"26\" ry=\"9\" fill=\"#B71C1C\"/><line x1=\"48\" y1=\"36\" x2=\"58\" y2=\"64\" stroke=\"#FFF\" stroke-width=\"2\"/><line x1=\"65\" y1=\"38\" x2=\"58\" y2=\"64\" stroke=\"#FFF\" stroke-width=\"2\"/><line x1=\"65\" y1=\"38\" x2=\"76\" y2=\"64\" stroke=\"#FFF\" stroke-width=\"2\"/><line x1=\"82\" y1=\"36\" x2=\"76\" y2=\"64\" stroke=\"#FFF\" stroke-width=\"2\"/></svg>",
+  prompt: "Какой музыкальный инструмент изображён?",
+  options: ["el tambor", "el violín", "la flauta", "el piano"],
+  correct: 0,
+  explanation: "На картинке барабан — «el tambor»."
+},
+{
+  id: "a0_589",
+  tier: 0,
+  type: "visual",
+  typeLabel: "Картинка A0 • Дом и сад",
+  svg: "<svg width=\"130\" height=\"90\" viewBox=\"0 0 130 90\"><polygon points=\"65,16 100,44 30,44\" fill=\"#D84315\"/><rect x=\"38\" y=\"44\" width=\"54\" height=\"34\" fill=\"#FFF8E1\" stroke=\"#8D6E63\" stroke-width=\"2\"/><rect x=\"58\" y=\"56\" width=\"14\" height=\"22\" fill=\"#6D4C41\"/></svg>",
+  prompt: "Что изображено на картинке?",
+  options: ["la casa", "el puente", "la torre", "el árbol"],
+  correct: 0,
+  explanation: "На рисунке дом с крышей и дверью — «la casa»."
+}
+  
+  
 
 
 

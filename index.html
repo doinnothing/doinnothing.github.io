@@ -5880,7 +5880,19 @@ function prepareReviewVocabTools(q, correctAnswerText) {
 
       applySoundBtnUI();
 
-      return {
+      const api = {
+        click() {
+          playTone({ freq: 520, endFreq: 340, type: "sine", startOffset: 0.0, duration: 0.045, gain: 0.04 });
+        },
+
+        select() {
+          playTone({ freq: 440, endFreq: 660, type: "triangle", startOffset: 0.0, duration: 0.065, gain: 0.055 });
+        },
+
+        confirm() {
+          playTone({ freq: 560, endFreq: 740, type: "sine", startOffset: 0.0, duration: 0.08, gain: 0.05 });
+        },
+
         correct() {
           playTone({ freq: 523.25, type: "sine", startOffset: 0.0, duration: 0.16, gain: 0.11 });
           playTone({ freq: 659.25, type: "triangle", startOffset: 0.0, duration: 0.16, gain: 0.05 });
@@ -5921,6 +5933,56 @@ function prepareReviewVocabTools(q, correctAnswerText) {
           playTone({ freq: 261.63, type: "triangle", startOffset: 0.48, duration: 0.48, gain: 0.10 });
         }
       };
+
+      document.addEventListener("click", e => {
+        if (!state.soundEnabled) return;
+        const target = e.target && e.target.closest
+          ? e.target.closest("button, summary, .vocab-word-token")
+          : null;
+        if (!target) return;
+
+        if (target.disabled || target.getAttribute("aria-disabled") === "true") {
+          return;
+        }
+
+        // Пропускаем кнопки, у которых уже есть свой звук или голосовая озвучка
+        if (
+          target.id === "btn-sound-toggle" ||
+          target.id === "btn-review-submit" ||
+          target.id === "btn-audio-play" ||
+          target.id === "btn-audio-slow" ||
+          target.id === "btn-review-audio-play" ||
+          target.id === "btn-review-audio-slow" ||
+          target.classList.contains("reaction-btn")
+        ) {
+          return;
+        }
+
+        if (target.classList.contains("vocab-action-btn") && !target.classList.contains("del")) {
+          return;
+        }
+
+        if (target.classList.contains("option-btn")) {
+          if (target.classList.contains("resolved")) return;
+          api.select();
+          return;
+        }
+
+        if (target.classList.contains("word-chip")) {
+          if (target.classList.contains("used")) return;
+          api.select();
+          return;
+        }
+
+        if (target.id === "btn-submit-answer") {
+          api.confirm();
+          return;
+        }
+
+        api.click();
+      }, true);
+
+      return api;
     })();
 
     /* ==========================================================================

@@ -11468,6 +11468,1541 @@ explanation: "Для местоимения «vosotros» (вы, мн. ч.) гл�
     options: ["В 9:00", "В 8:00", "В 10:00", "В 7:00"],
     correct: 0,
     explanation: "«La tienda abre a las nueve» — Магазин открывается в девять часов."
+  },
+/* ========================================================================
+     НОВЫЕ 50 ВОПРОСОВ: УРОВЕНЬ A0 (tier: 0)
+     a0_362..392 + a0_audio_85..98 + a0_build_18..22
+     ======================================================================== */
+  {
+    id: "a0_362",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Животные",
+    prompt: "Что означает слово «La serpiente»?",
+    options: ["Змея", "Черепаха", "Лягушка", "Ящерица"],
+    correct: 0,
+    explanation: "«La serpiente» — змея (женского рода)."
+  },
+  {
+    id: "a0_363",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Животные",
+    prompt: "Как по-испански называется «Дельфин»?",
+    options: ["El delfín", "El tiburón", "La ballena", "El pez"],
+    correct: 0,
+    explanation: "«El delfín» — дельфин."
+  },
+  {
+    id: "a0_364",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Животные",
+    prompt: "Что означает слово «La hormiga»?",
+    options: ["Муравей", "Пчела", "Бабочка", "Паук"],
+    correct: 0,
+    explanation: "«La hormiga» — муравей."
+  },
+  {
+    id: "a0_365",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Еда",
+    prompt: "Как по-испански называется «Растительное / оливковое масло»?",
+    options: ["El aceite", "La mantequilla", "El vinagre", "La salsa"],
+    correct: 0,
+    explanation: "«El aceite» — жидкое масло (оливковое — «aceite de oliva»)."
+  },
+  {
+    id: "a0_366",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Еда",
+    prompt: "Что означает слово «La pimienta»?",
+    options: ["Перец (специя)", "Соль", "Сахар", "Мука"],
+    correct: 0,
+    explanation: "«La pimienta» — молотый перец или перец горошком (а овощ — «el pimiento»)."
+  },
+  {
+    id: "a0_367",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Еда",
+    prompt: "Как по-испански будет «Йогурт»?",
+    options: ["El yogur", "El queso", "La crema", "El flan"],
+    correct: 0,
+    explanation: "«El yogur» — йогурт."
+  },
+  {
+    id: "a0_368",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Фрукты",
+    prompt: "Что означает слово «El melocotón»?",
+    options: ["Персик", "Абрикос", "Слива", "Груша"],
+    correct: 0,
+    explanation: "«El melocotón» — персик."
+  },
+  {
+    id: "a0_369",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Одежда",
+    prompt: "Как по-испански называются «Сапоги / ботинки»?",
+    options: ["Las botas", "Los calcetines", "Los zapatos", "Las sandalias"],
+    correct: 0,
+    explanation: "«Las botas» — сапоги или высокие ботинки."
+  },
+  {
+    id: "a0_370",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Одежда",
+    prompt: "Что означает слово «La corbata»?",
+    options: ["Галстук", "Ремень", "Воротник", "Пиджак"],
+    correct: 0,
+    explanation: "«La corbata» — галстук."
+  },
+  {
+    id: "a0_371",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Одежда",
+    prompt: "Как по-испански будет «Пижама»?",
+    options: ["El pijama", "El vestido", "La falda", "El abrigo"],
+    correct: 0,
+    explanation: "«El pijama» — пижама (в Испании обычно мужского рода)."
+  },
+  {
+    id: "a0_372",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Тело",
+    prompt: "Что означает слово «La rodilla»?",
+    options: ["Колено", "Локоть", "Плечо", "Спина"],
+    correct: 0,
+    explanation: "«La rodilla» — колено."
+  },
+  {
+    id: "a0_373",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Тело",
+    prompt: "Как по-испански сказать «Плечо»?",
+    options: ["El hombro", "El brazo", "El cuello", "El dedo"],
+    correct: 0,
+    explanation: "«El hombro» — плечо."
+  },
+  {
+    id: "a0_374",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Дом",
+    prompt: "Что означает слово «La alfombra»?",
+    options: ["Ковёр", "Штора", "Подушка", "Одеяло"],
+    correct: 0,
+    explanation: "«La alfombra» — ковёр на полу."
+  },
+  {
+    id: "a0_375",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Дом",
+    prompt: "Как по-испански называется «Спальня»?",
+    options: ["El dormitorio", "La cocina", "El jardín", "El pasillo"],
+    correct: 0,
+    explanation: "«El dormitorio» (также «la habitación») — спальня."
+  },
+  {
+    id: "a0_376",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Дом",
+    prompt: "Что означает слово «El techo»?",
+    options: ["Крыша / потолок", "Стена", "Пол", "Балкон"],
+    correct: 0,
+    explanation: "«El techo» — потолок внутри комнаты или крыша здания."
+  },
+  {
+    id: "a0_377",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Школа",
+    prompt: "Как по-испански будут «Ножницы»?",
+    options: ["Las tijeras", "Las gafas", "Las llaves", "Las reglas"],
+    correct: 0,
+    explanation: "«Las tijeras» — ножницы (как и в русском, обычно во множественном числе)."
+  },
+  {
+    id: "a0_378",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Школа",
+    prompt: "Что означает слово «La regla» в школьном пенале?",
+    options: ["Линейка", "Ластик", "Точилка", "Тетрадь"],
+    correct: 0,
+    explanation: "«La regla» — линейка (а также «правило»)."
+  },
+  {
+    id: "a0_379",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Природа",
+    prompt: "Как по-испански сказать «Песок»?",
+    options: ["La arena", "La piedra", "La hierba", "La tierra"],
+    correct: 0,
+    explanation: "«La arena» — песок (например, на пляже)."
+  },
+  {
+    id: "a0_380",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Природа",
+    prompt: "Что означает слово «La hoja» (на дереве или в книге)?",
+    options: ["Лист", "Ветка", "Корень", "Цветок"],
+    correct: 0,
+    explanation: "«La hoja» — лист дерева или лист бумаги."
+  },
+  {
+    id: "a0_381",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Прилагательные",
+    prompt: "Как по-испански сказать «Низкий» (антоним к «alto»)?",
+    options: ["Bajo", "Corto", "Débil", "Lento"],
+    correct: 0,
+    explanation: "«Bajo» — низкий (о росте, здании или уровне)."
+  },
+  {
+    id: "a0_382",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Прилагательные",
+    prompt: "Что означает слово «Amargo» (о вкусе)?",
+    options: ["Горький", "Сладкий", "Солёный", "Кислый"],
+    correct: 0,
+    explanation: "«Amargo» — горький (например, «chocolate amargo» — горький шоколад)."
+  },
+  {
+    id: "a0_383",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Глаголы",
+    prompt: "Как по-испански будет «Танцевать»?",
+    options: ["Bailar", "Cantar", "Saltar", "Dibujar"],
+    correct: 0,
+    explanation: "«Bailar» — танцевать."
+  },
+  {
+    id: "a0_384",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Глагол Caminar",
+    prompt: "Вставь правильную форму глагола «caminar» («Мы идём в парк»):",
+    subprompt: "Nosotros _____ por el parque.",
+    options: ["caminamos", "camino", "caminas", "caminan"],
+    correct: 0,
+    explanation: "Для «nosotros» глаголы на «-ar» имеют окончание «-amos»: «caminamos»."
+  },
+  {
+    id: "a0_385",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Род и число",
+    prompt: "Выбери правильную форму прилагательного («белые облака»):",
+    subprompt: "En el cielo hay nubes _____.",
+    options: ["blancas", "blanco", "blanca", "blancos"],
+    correct: 0,
+    explanation: "«Nubes» — женский род множественное число, поэтому нужно окончание «-as»: «blancas»."
+  },
+  {
+    id: "a0_386",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Глагол Estar",
+    prompt: "Вставь правильную форму глагола «estar» («Они находятся дома»):",
+    subprompt: "Ellos _____ en casa ahora.",
+    options: ["están", "estamos", "está", "son"],
+    correct: 0,
+    explanation: "Для местоимения «ellos» (они) форма глагола «estar» — «están»."
+  },
+  {
+    id: "a0_387",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Школа",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="20" y="34" width="90" height="22" rx="3" fill="#fbbf24" stroke="#92400e" stroke-width="2"/>
+            <g stroke="#0f172a" stroke-width="2">
+              <line x1="34" y1="34" x2="34" y2="44"/>
+              <line x1="48" y1="34" x2="48" y2="41"/>
+              <line x1="62" y1="34" x2="62" y2="44"/>
+              <line x1="76" y1="34" x2="76" y2="41"/>
+              <line x1="90" y1="34" x2="90" y2="44"/>
+              <line x1="104" y1="34" x2="104" y2="41"/>
+            </g>
+          </svg>`,
+    prompt: "Какой школьный предмет изображён на картинке?",
+    options: ["La regla", "La goma", "El lápiz", "El libro"],
+    correct: 0,
+    explanation: "Линейка с делениями — «la regla»."
+  },
+  {
+    id: "a0_388",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Дом",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="22" y="44" width="86" height="18" rx="3" fill="#38bdf8"/>
+            <rect x="22" y="28" width="8" height="44" rx="2" fill="#94a3b8"/>
+            <rect x="100" y="38" width="8" height="34" rx="2" fill="#94a3b8"/>
+            <rect x="33" y="36" width="22" height="10" rx="4" fill="#f8fafc"/>
+          </svg>`,
+    prompt: "Какой предмет мебели нарисован на картинке?",
+    options: ["La cama", "La mesa", "La silla", "El armario"],
+    correct: 0,
+    explanation: "Кровать с подушкой — «la cama»."
+  },
+  {
+    id: "a0_389",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Природа",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <path d="M35 66 Q45 22 96 24 Q92 68 35 66 Z" fill="#22c55e"/>
+            <path d="M24 72 L90 28" stroke="#15803d" stroke-width="3" stroke-linecap="round"/>
+            <line x1="54" y1="52" x2="50" y2="38" stroke="#15803d" stroke-width="2" stroke-linecap="round"/>
+            <line x1="68" y1="43" x2="78" y2="48" stroke="#15803d" stroke-width="2" stroke-linecap="round"/>
+          </svg>`,
+    prompt: "Что изображено на картинке?",
+    options: ["La hoja", "La flor", "La nube", "La piedra"],
+    correct: 0,
+    explanation: "Зелёный лист дерева — «la hoja»."
+  },
+  {
+    id: "a0_390",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Еда",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <ellipse cx="65" cy="48" rx="34" ry="22" fill="#f8fafc"/>
+            <circle cx="66" cy="46" r="12" fill="#fbbf24"/>
+            <circle cx="62" cy="42" r="3" fill="#fde68a"/>
+          </svg>`,
+    prompt: "Какой продукт изображён на картинке?",
+    options: ["El huevo", "El queso", "El pan", "La leche"],
+    correct: 0,
+    explanation: "Яйцо — «el huevo»."
+  },
+  {
+    id: "a0_391",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Животные",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <ellipse cx="47" cy="36" rx="18" ry="14" fill="#f472b6"/>
+            <ellipse cx="83" cy="36" rx="18" ry="14" fill="#f472b6"/>
+            <ellipse cx="50" cy="57" rx="13" ry="11" fill="#fb7185"/>
+            <ellipse cx="80" cy="57" rx="13" ry="11" fill="#fb7185"/>
+            <rect x="62" y="26" width="6" height="44" rx="3" fill="#0f172a"/>
+            <path d="M62 26 Q56 16 50 18 M68 26 Q74 16 80 18" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+          </svg>`,
+    prompt: "Кто изображён на картинке?",
+    options: ["La mariposa", "El pájaro", "La rana", "La tortuga"],
+    correct: 0,
+    explanation: "Бабочка по-испански — «la mariposa»."
+  },
+  {
+    id: "a0_392",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Часы",
+    svg: `<svg width="110" height="100" viewBox="0 0 110 100">
+            <circle cx="55" cy="50" r="40" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+            <text x="55" y="21" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">12</text>
+            <text x="85" y="54" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">3</text>
+            <text x="55" y="85" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">6</text>
+            <text x="25" y="54" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">9</text>
+            <line x1="55" y1="50" x2="34" y2="38" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+            <line x1="55" y1="50" x2="55" y2="23" stroke="#f1f5f9" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="55" cy="50" r="3.5" fill="#38bdf8"/>
+          </svg>`,
+    prompt: "Который час показывают часы?",
+    options: ["Son las diez", "Son las dos", "Son las ocho", "Son las cuatro"],
+    correct: 0,
+    explanation: "Часовая стрелка указывает на 10, минутная на 12 — ровно десять часов: «Son las diez»."
+  },
+  {
+    id: "a0_audio_85",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Природа",
+    prompt: "Послушай фразу и выбери правильный перевод:",
+    audioText: "El delfín nada en el mar azul.",
+    options: [
+      "Дельфин плавает в синем море.",
+      "Большая рыба плавает в реке.",
+      "Лодка плывёт по глубокому озеру.",
+      "Утка плавает рядом с берегом."
+    ],
+    correct: 0,
+    explanation: "«El delfín nada en el mar azul» — Дельфин плавает в синем море."
+  },
+  {
+    id: "a0_audio_86",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Еда",
+    prompt: "Что человек хочет на завтрак?",
+    audioText: "Quiero un yogur con miel para desayunar.",
+    options: [
+      "Йогурт с мёдом на завтрак",
+      "Хлеб с маслом и сыром",
+      "Сладкий пирог и чашку чая",
+      "Стакан молока и банан"
+    ],
+    correct: 0,
+    explanation: "«Quiero un yogur con miel para desayunar» — Я хочу йогурт с мёдом на завтрак."
+  },
+  {
+    id: "a0_audio_87",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Одежда",
+    prompt: "Во что одет его отец?",
+    audioText: "Mi padre lleva una corbata azul y camisa blanca.",
+    options: [
+      "В синем галстуке и белой рубашке",
+      "В чёрном пальто и сером свитере",
+      "В коричневых брюках и жёлтой футболке",
+      "В тёплом шарфе и синей куртке"
+    ],
+    correct: 0,
+    explanation: "«Una corbata azul y camisa blanca» — синий галстук и белая рубашка."
+  },
+  {
+    id: "a0_audio_88",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Отдых",
+    prompt: "Что делают дети на пляже?",
+    audioText: "Los niños juegan con la arena en la playa.",
+    options: [
+      "Дети играют с песком на пляже.",
+      "Дети плавают в тёплой воде.",
+      "Дети едят мороженое под зонтом.",
+      "Дети ищут красивые камни у реки."
+    ],
+    correct: 0,
+    explanation: "«Los niños juegan con la arena en la playa» — Дети играют с песком на пляже."
+  },
+  {
+    id: "a0_audio_89",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Дом",
+    prompt: "Где лежит новый ковёр?",
+    audioText: "La alfombra nueva está en el dormitorio.",
+    options: ["В спальне", "На кухне", "В саду", "На балконе"],
+    correct: 0,
+    explanation: "«La alfombra nueva está en el dormitorio» — Новый ковёр находится в спальне."
+  },
+  {
+    id: "a0_audio_90",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Школа",
+    prompt: "Что нужно ученику для школы?",
+    audioText: "Necesito unas tijeras y papel para el colegio.",
+    options: [
+      "Ножницы и бумага для школы",
+      "Линейка и ластик для урока",
+      "Книга и словарь для дома",
+      "Синяя ручка и новая тетрадь"
+    ],
+    correct: 0,
+    explanation: "«Unas tijeras y papel para el colegio» — ножницы и бумага для школы."
+  },
+  {
+    id: "a0_audio_91",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Вкус",
+    prompt: "Какой вкус у кофе?",
+    audioText: "Este café está muy amargo sin azúcar.",
+    options: [
+      "Кофе очень горький без сахара.",
+      "Кофе слишком сладкий и холодный.",
+      "Кофе горячий, но очень вкусный.",
+      "Кофе с молоком уже остыл."
+    ],
+    correct: 0,
+    explanation: "«Este café está muy amargo sin azúcar» — Этот кофе очень горький без сахара."
+  },
+  {
+    id: "a0_audio_92",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Прогулка",
+    prompt: "Как они идут по улице?",
+    audioText: "Hoy caminamos despacio por la calle.",
+    options: [
+      "Сегодня они медленно идут по улице.",
+      "Сегодня они быстро бегут в школу.",
+      "Сегодня они едут на автобусе в центр.",
+      "Сегодня они гуляют по лесу."
+    ],
+    correct: 0,
+    explanation: "«Hoy caminamos despacio por la calle» — Сегодня мы медленно идём по улице."
+  },
+  {
+    id: "a0_audio_93",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Дом",
+    prompt: "Где стоят чёрные сапоги?",
+    audioText: "Las botas negras están debajo de la cama.",
+    options: ["Под кроватью", "Внутри шкафа", "Рядом с дверью", "На стуле"],
+    correct: 0,
+    explanation: "«Debajo de la cama» — под кроватью."
+  },
+  {
+    id: "a0_audio_94",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Животные",
+    prompt: "Где спит собака?",
+    audioText: "El perro duerme encima de la alfombra.",
+    options: [
+      "Собака спит на ковре.",
+      "Собака спит на диване.",
+      "Собака сидит под столом.",
+      "Собака гуляет в саду."
+    ],
+    correct: 0,
+    explanation: "«El perro duerme encima de la alfombra» — Собака спит на ковре."
+  },
+  {
+    id: "a0_audio_95",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Цифры",
+    prompt: "Сколько книг в комнате у говорящего?",
+    audioText: "Tengo veinte libros en mi habitación.",
+    options: ["20", "12", "15", "18"],
+    correct: 0,
+    explanation: "«Tengo veinte libros en mi habitación» — У меня двадцать книг в комнате («veinte» = 20)."
+  },
+  {
+    id: "a0_audio_96",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Кухня",
+    prompt: "Чего не хватает в супе?",
+    audioText: "La sopa necesita un poco de sal y pimienta.",
+    options: [
+      "Немного соли и перца",
+      "Масла и свежего чеснока",
+      "Помидоров и зелёного лука",
+      "Воды и картофеля"
+    ],
+    correct: 0,
+    explanation: "«Un poco de sal y pimienta» — немного соли и перца."
+  },
+  {
+    id: "a0_audio_97",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Город",
+    prompt: "Как описывается белое здание?",
+    audioText: "El edificio blanco es muy alto y moderno.",
+    options: [
+      "Оно очень высокое и современное.",
+      "Оно маленькое и старое.",
+      "Оно низкое и красивое.",
+      "Оно серое и тёмное."
+    ],
+    correct: 0,
+    explanation: "«Muy alto y moderno» — очень высокое и современное."
+  },
+  {
+    id: "a0_audio_98",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Досуг",
+    prompt: "Что делает её двоюродная сестра?",
+    audioText: "Mi prima baila muy bien todos los días.",
+    options: [
+      "Очень хорошо танцует каждый день.",
+      "Красиво поёт по выходным.",
+      "Быстро бегает каждое утро.",
+      "Рисует картины в саду."
+    ],
+    correct: 0,
+    explanation: "«Mi prima baila muy bien todos los días» — Моя двоюродная сестра очень хорошо танцует каждый день."
+  },
+  {
+    id: "a0_build_18",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Одежда",
+    prompt: "Собери на испанском: «У меня есть новая синяя рубашка»",
+    words: ["nueva", "Tengo", "azul", "camisa", "una", "un", "nuevo"],
+    answer: ["Tengo", "una", "camisa", "azul", "nueva"],
+    explanation: "«Tengo una camisa azul nueva» — «camisa» женского рода («una», «nueva»)."
+  },
+  {
+    id: "a0_build_19",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Жильё",
+    prompt: "Собери на испанском: «Мы живём в маленькой квартире»",
+    words: ["pequeño", "en", "Vivimos", "piso", "un", "una", "pequeña"],
+    answer: ["Vivimos", "en", "un", "piso", "pequeño"],
+    explanation: "«Vivimos en un piso pequeño» — слово «el piso» (квартира) мужского рода."
+  },
+  {
+    id: "a0_build_20",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Животные",
+    prompt: "Собери на испанском: «Коричневая собака спит под столом»",
+    words: ["mesa", "duerme", "El", "debajo", "marrón", "la", "perro", "de", "encima"],
+    answer: ["El", "perro", "marrón", "duerme", "debajo", "de", "la", "mesa"],
+    explanation: "«El perro marrón duerme debajo de la mesa» — «debajo de» означает «под»."
+  },
+  {
+    id: "a0_build_21",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Природа",
+    prompt: "Собери на испанском: «Дети рисуют жёлтое солнце»",
+    words: ["amarillo", "niños", "Los", "sol", "dibujan", "un", "Las", "amarilla"],
+    answer: ["Los", "niños", "dibujan", "un", "sol", "amarillo"],
+    explanation: "«Los niños dibujan un sol amarillo» — «el sol» мужского рода («un sol amarillo»)."
+  },
+  {
+    id: "a0_build_22",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Семья",
+    prompt: "Собери на испанском: «Моя бабушка готовит вкусный суп»",
+    words: ["rica", "Mi", "sopa", "prepara", "abuela", "una", "un", "rico"],
+    answer: ["Mi", "abuela", "prepara", "una", "sopa", "rica"],
+    explanation: "«Mi abuela prepara una sopa rica» — «la sopa» женского рода («una sopa rica»)."
+  },
+
+  /* ========================================================================
+     НОВЫЕ 25 ВОПРОСОВ: УРОВЕНЬ A1 (tier: 1)
+     a1_259..274 + a1_audio_65..70 + a1_build_42..44
+     ======================================================================== */
+  {
+    id: "a1_259",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Числительные",
+    prompt: "Какое число означает словосочетание «Ciento cincuenta»?",
+    options: ["150", "50", "510", "115"],
+    correct: 0,
+    explanation: "После ста (101–199) вместо «cien» используется «ciento»: «ciento cincuenta» = 150."
+  },
+  {
+    id: "a1_260",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Порядковые",
+    prompt: "Как по-испански сказать «Четвёртый» (например, четвёртый этаж)?",
+    options: ["Cuarto", "Cuatro", "Tercero", "Quinto"],
+    correct: 0,
+    explanation: "«Cuarto» — четвёртый (а «cuatro» — четыре)."
+  },
+  {
+    id: "a1_261",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Время",
+    prompt: "Что означает выражение «Pasado mañana»?",
+    options: ["Послезавтра", "Позавчера", "На прошлой неделе", "Вчера вечером"],
+    correct: 0,
+    explanation: "«Pasado mañana» — послезавтра, «anteayer» — позавчера."
+  },
+  {
+    id: "a1_262",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Время",
+    prompt: "Как по-испански сказать «Позавчера»?",
+    options: ["Anteayer", "Pasado mañana", "Anoche", "Todavía"],
+    correct: 0,
+    explanation: "«Anteayer» — позавчера (день перед «ayer»)."
+  },
+  {
+    id: "a1_263",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Профессии",
+    prompt: "Кто такой «El abogado»?",
+    options: ["Адвокат / юрист", "Архитектор", "Стоматолог", "Музыкант"],
+    correct: 0,
+    explanation: "«El abogado / la abogada» — адвокат, юрист."
+  },
+  {
+    id: "a1_264",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Профессии",
+    prompt: "Как по-испански называется «Пожарный»?",
+    options: ["El bombero", "El fotógrafo", "El vendedor", "El conductor"],
+    correct: 0,
+    explanation: "«El bombero» — пожарный."
+  },
+  {
+    id: "a1_265",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Путешествия",
+    prompt: "Что означает слово «La taquilla» на вокзале или в театре?",
+    options: ["Билетная касса", "Зал ожидания", "Платформа", "Камера хранения"],
+    correct: 0,
+    explanation: "«La taquilla» — билетная касса (а также индивидуальный шкафчик в раздевалке)."
+  },
+  {
+    id: "a1_266",
+    tier: 1,
+    type: "translate",
+    typeLabel: "Перевод A1 • Транспорт",
+    prompt: "Что означает слово «El asiento» в поезде или самолёте?",
+    options: ["Место / сиденье", "Окно", "Проход", "Полка для багажа"],
+    correct: 0,
+    explanation: "«El asiento» — пассажирское место, сиденье."
+  },
+  {
+    id: "a1_267",
+    tier: 1,
+    type: "grammar",
+    typeLabel: "Грамматика A1 • Глагол Seguir",
+    prompt: "Выбери правильную форму глагола «seguir» (продолжать / следовать) для «yo»:",
+    subprompt: "Yo _____ todo recto hasta la plaza.",
+    options: ["sigo", "seguo", "sigues", "seguimos"],
+    correct: 0,
+    explanation: "Глагол «seguir» меняет «e → i» и теряет немую «u» перед «o»: «yo sigo»."
+  },
+  {
+    id: "a1_268",
+    tier: 1,
+    type: "grammar",
+    typeLabel: "Грамматика A1 • Неопределённые",
+    prompt: "Вставь правильное слово в вопросе («В офисе кто-нибудь есть?»):",
+    subprompt: "¿Hay _____ en la oficina ahora?",
+    options: ["alguien", "nadie", "algo", "algún"],
+    correct: 0,
+    explanation: "Для одушевлённого «кто-нибудь» используется «alguien»."
+  },
+  {
+    id: "a1_269",
+    tier: 1,
+    type: "grammar",
+    typeLabel: "Грамматика A1 • Неправильный герундий",
+    prompt: "Выбери правильную форму герундия от глагола «dormir» («Кот сейчас спит»):",
+    subprompt: "No hagas ruido, el gato está _____ en el sofá.",
+    options: ["durmiendo", "dormiendo", "dormido", "duerme"],
+    correct: 0,
+    explanation: "У глагола «dormir» в герундии корневая «o» переходит в «u»: «durmiendo»."
+  },
+  {
+    id: "a1_270",
+    tier: 1,
+    type: "grammar",
+    typeLabel: "Грамматика A1 • Предлоги места",
+    prompt: "Выбери правильный предлог («Банк находится между аптекой и музеем»):",
+    subprompt: "El banco está _____ la farmacia y el museo.",
+    options: ["entre", "sobre", "detrás", "lejos"],
+    correct: 0,
+    explanation: "Предлог «entre» означает «между»."
+  },
+  {
+    id: "a1_271",
+    tier: 1,
+    type: "grammar",
+    typeLabel: "Грамматика A1 • Время работы",
+    prompt: "Вставь парный предлог к «desde» («с девяти до восьми»):",
+    subprompt: "La tienda abre desde las nueve _____ las ocho de la noche.",
+    options: ["hasta", "a", "por", "para"],
+    correct: 0,
+    explanation: "В испанском пара предлогов «desde ... hasta ...» означает «от / с ... до ...»."
+  },
+  {
+    id: "a1_272",
+    tier: 1,
+    type: "visual",
+    typeLabel: "Картинка A1 • Время",
+    svg: `<svg width="110" height="100" viewBox="0 0 110 100">
+            <circle cx="55" cy="50" r="40" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+            <text x="55" y="21" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">12</text>
+            <text x="85" y="54" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">3</text>
+            <text x="55" y="85" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">6</text>
+            <text x="25" y="54" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">9</text>
+            <line x1="55" y1="50" x2="36" y2="65" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+            <line x1="55" y1="50" x2="29" y2="50" stroke="#f1f5f9" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="55" cy="50" r="3.5" fill="#38bdf8"/>
+          </svg>`,
+    prompt: "Который час показывают часы?",
+    options: [
+      "Son las ocho menos cuarto",
+      "Son las siete y cuarto",
+      "Son las nueve menos cuarto",
+      "Son las ocho y media"
+    ],
+    correct: 0,
+    explanation: "Часовая стрелка почти на 8, минутная на 9 (без пятнадцати восемь) — «Son las ocho menos cuarto»."
+  },
+  {
+    id: "a1_273",
+    tier: 1,
+    type: "visual",
+    typeLabel: "Картинка A1 • Аэропорт",
+    svg: `<svg width="215" height="90" viewBox="0 0 215 90">
+            <rect x="8" y="8" width="199" height="74" rx="10" fill="#0f172a" stroke="#22c55e" stroke-width="2.5"/>
+            <text x="107" y="38" fill="#6ee7b7" font-size="15" font-weight="bold" text-anchor="middle">LLEGADAS</text>
+            <text x="107" y="60" fill="#94a3b8" font-size="11" text-anchor="middle">Terminal 1 • Puerta B</text>
+          </svg>`,
+    prompt: "Какая зона аэропорта или вокзала обозначена табличкой «LLEGADAS»?",
+    options: [
+      "Зона прилёта / прибытия",
+      "Зона вылета / отправления",
+      "Паспортный контроль",
+      "Выдача багажа"
+    ],
+    correct: 0,
+    explanation: "От глагола «llegar» (прибывать): «llegadas» — прилёты / прибытие (а «salidas» — вылеты / отправление)."
+  },
+  {
+    id: "a1_274",
+    tier: 1,
+    type: "visual",
+    typeLabel: "Картинка A1 • Знак",
+    svg: `<svg width="215" height="92" viewBox="0 0 215 92">
+            <rect x="8" y="8" width="199" height="76" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
+            <circle cx="44" cy="46" r="22" fill="none" stroke="#ef4444" stroke-width="4"/>
+            <rect x="31" y="43" width="22" height="5" fill="#f8fafc"/>
+            <rect x="53" y="43" width="5" height="5" fill="#f97316"/>
+            <line x1="29" y1="31" x2="59" y2="61" stroke="#ef4444" stroke-width="4"/>
+            <text x="135" y="42" fill="#fda4af" font-size="12" font-weight="bold" text-anchor="middle">PROHIBIDO</text>
+            <text x="135" y="60" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">FUMAR</text>
+          </svg>`,
+    prompt: "Что запрещает табличка «PROHIBIDO FUMAR»?",
+    options: [
+      "Курить запрещено",
+      "Фотографировать запрещено",
+      "Вход с собаками запрещён",
+      "Шуметь запрещено"
+    ],
+    correct: 0,
+    explanation: "«Fumar» — курить; «Prohibido fumar» — «Курить запрещено»."
+  },
+  {
+    id: "a1_audio_65",
+    tier: 1,
+    type: "audio",
+    typeLabel: "Аудирование A1 • Здоровье",
+    prompt: "Когда и к кому идёт говорящий?",
+    audioText: "Pasado mañana tengo una cita con el dentista.",
+    options: [
+      "Послезавтра у него запись к стоматологу.",
+      "Завтра утром он идёт к терапевту.",
+      "Позавчера он был у глазного врача.",
+      "В пятницу он встречается с адвокатом."
+    ],
+    correct: 0,
+    explanation: "«Pasado mañana tengo una cita con el dentista» — Послезавтра у меня приём у стоматолога."
+  },
+  {
+    id: "a1_audio_66",
+    tier: 1,
+    type: "audio",
+    typeLabel: "Аудирование A1 • Город",
+    prompt: "Где находится театр?",
+    audioText: "El teatro está entre el museo y la plaza mayor.",
+    options: [
+      "Между музеем и главной площадью",
+      "Напротив музея за парком",
+      "Рядом с вокзалом на углу улицы",
+      "Внутри культурного центра"
+    ],
+    correct: 0,
+    explanation: "«Entre el museo y la plaza mayor» — между музеем и главной площадью."
+  },
+  {
+    id: "a1_audio_67",
+    tier: 1,
+    type: "audio",
+    typeLabel: "Аудирование A1 • Досуг",
+    prompt: "Что они делают перед входом?",
+    audioText: "Compramos las entradas en la taquilla antes de entrar.",
+    options: [
+      "Покупают билеты в кассе перед тем, как зайти.",
+      "Показывают электронные билеты на входе.",
+      "Оставляют верхнюю одежду в гардеробе.",
+      "Ждут своих друзей рядом со входом."
+    ],
+    correct: 0,
+    explanation: "«Compramos las entradas en la taquilla antes de entrar» — Мы покупаем билеты в кассе перед входом."
+  },
+  {
+    id: "a1_audio_68",
+    tier: 1,
+    type: "audio",
+    typeLabel: "Аудирование A1 • Встреча",
+    prompt: "О чём спрашивает друг?",
+    audioText: "¿A qué hora quedamos delante de la biblioteca?",
+    options: [
+      "Во сколько встречаемся перед библиотекой?",
+      "Когда открывается городская библиотека?",
+      "Где находится вход в библиотеку?",
+      "Сколько часов работает библиотека сегодня?"
+    ],
+    correct: 0,
+    explanation: "«¿A qué hora quedamos delante de la biblioteca?» — Во сколько мы встречаемся перед библиотекой?"
+  },
+  {
+    id: "a1_audio_69",
+    tier: 1,
+    type: "audio",
+    typeLabel: "Аудирование A1 • Транспорт",
+    prompt: "Где находится его место?",
+    audioText: "Mi asiento está al lado de la ventana.",
+    options: [
+      "Рядом с окном",
+      "Около прохода",
+      "В первом вагоне",
+      "Напротив входа"
+    ],
+    correct: 0,
+    explanation: "«Mi asiento está al lado de la ventana» — Моё место рядом с окном."
+  },
+  {
+    id: "a1_audio_70",
+    tier: 1,
+    type: "audio",
+    typeLabel: "Аудирование A1 • Работа",
+    prompt: "Какой график работы у офиса?",
+    audioText: "La oficina atiende desde las nueve hasta las cinco.",
+    options: [
+      "С 9:00 до 17:00",
+      "С 8:00 до 16:00",
+      "С 10:00 до 18:00",
+      "С 9:00 до 14:00"
+    ],
+    correct: 0,
+    explanation: "«Desde las nueve hasta las cinco» — с девяти утра до пяти вечера."
+  },
+  {
+    id: "a1_build_42",
+    tier: 1,
+    type: "builder",
+    typeLabel: "Конструктор A1 • Отрицание",
+    prompt: "Собери на испанском: «В офисе никого нет сейчас»",
+    words: ["oficina", "nadie", "No", "ahora", "en", "hay", "la", "alguien", "está"],
+    answer: ["No", "hay", "nadie", "en", "la", "oficina", "ahora"],
+    explanation: "«No hay nadie en la oficina ahora» — двойное отрицание с «hay» и «nadie»."
+  },
+  {
+    id: "a1_build_43",
+    tier: 1,
+    type: "builder",
+    typeLabel: "Конструктор A1 • Город",
+    prompt: "Собери на испанском: «Аптека находится между банком и парком»",
+    words: ["parque", "La", "y", "está", "farmacia", "banco", "entre", "el", "el", "es"],
+    answer: ["La", "farmacia", "está", "entre", "el", "banco", "y", "el", "parque"],
+    explanation: "«La farmacia está entre el banco y el parque» — «entre A y B» переводится как «между А и Б»."
+  },
+  {
+    id: "a1_build_44",
+    tier: 1,
+    type: "builder",
+    typeLabel: "Конструктор A1 • Встреча",
+    prompt: "Собери вопрос на испанском: «Во сколько мы встречаемся завтра?»",
+    words: ["quedamos", "hora", "A", "mañana", "qué", "En", "ayer"],
+    answer: ["A", "qué", "hora", "quedamos", "mañana"],
+    explanation: "«¿A qué hora quedamos mañana?» — глагол «quedar» используется в значении «договариваться о встрече»."
+  },
+/* ========================================================================
+     TIER 0: A0 — ЕЩЁ 50 УНИКАЛЬНЫХ ВОПРОСОВ (a0_283 .. a0_332)
+     ======================================================================== */
+  {
+    id: "a0_283",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Посуда",
+    prompt: "Что означает слово «La cuchara»?",
+    options: ["Ложка", "Вилка", "Нож", "Чашка"],
+    correct: 0,
+    explanation: "«La cuchara» — ложка."
+  },
+  {
+    id: "a0_284",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Посуда",
+    prompt: "Как по-испански называется «Нож»?",
+    options: ["El cuchillo", "El tenedor", "El plato", "El vaso"],
+    correct: 0,
+    explanation: "«El cuchillo» — нож."
+  },
+  {
+    id: "a0_285",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Цифры",
+    prompt: "Какое число означает слово «Diecisiete»?",
+    options: ["17", "7", "16", "70"],
+    correct: 0,
+    explanation: "«Diecisiete» — семнадцать (17)."
+  },
+  {
+    id: "a0_286",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Цифры",
+    prompt: "Как по-испански будет число «19»?",
+    options: ["Diecinueve", "Dieciocho", "Nueve", "Noventa"],
+    correct: 0,
+    explanation: "«Diecinueve» — девятнадцать (19)."
+  },
+  {
+    id: "a0_287",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Школа",
+    prompt: "Что означает слово «La pizarra»?",
+    options: ["Доска (школьная)", "Тетрадь", "Рюкзак", "Учебник"],
+    correct: 0,
+    explanation: "«La pizarra» — доска в классе."
+  },
+  {
+    id: "a0_288",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Школа",
+    prompt: "Как по-испански называется «Карандаш»?",
+    options: ["El lápiz", "El bolígrafo", "La regla", "La goma"],
+    correct: 0,
+    explanation: "«El lápiz» — карандаш (мн. ч. — «los lápices»)."
+  },
+  {
+    id: "a0_289",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Город",
+    prompt: "Что означает слово «La plaza»?",
+    options: ["Площадь", "Улица", "Мост", "Угол"],
+    correct: 0,
+    explanation: "«La plaza» — городская площадь."
+  },
+  {
+    id: "a0_290",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Город",
+    prompt: "Как по-испански будет «Мост»?",
+    options: ["El puente", "El túnel", "La torre", "El edificio"],
+    correct: 0,
+    explanation: "«El puente» — мост."
+  },
+  {
+    id: "a0_291",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Еда",
+    prompt: "Что означает слово «El aceite»?",
+    options: ["Масло (растительное / оливковое)", "Уксус", "Вода", "Молоко"],
+    correct: 0,
+    explanation: "«El aceite» — масло (в Испании чаще всего «aceite de oliva» — оливковое масло)."
+  },
+  {
+    id: "a0_292",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Еда",
+    prompt: "Как по-испански называется «Чеснок»?",
+    options: ["El ajo", "La cebolla", "El tomate", "La patata"],
+    correct: 0,
+    explanation: "«El ajo» — чеснок."
+  },
+  {
+    id: "a0_293",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Фрукты",
+    prompt: "Что означает слово «La cereza»?",
+    options: ["Вишня / черешня", "Груша", "Слива", "Персик"],
+    correct: 0,
+    explanation: "«La cereza» — вишня или черешня."
+  },
+  {
+    id: "a0_294",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Животные",
+    prompt: "Как по-испански будет «Лягушка»?",
+    options: ["La rana", "La tortuga", "La serpiente", "El pato"],
+    correct: 0,
+    explanation: "«La rana» — лягушка."
+  },
+  {
+    id: "a0_295",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Животные",
+    prompt: "Что означает слово «La tortuga»?",
+    options: ["Черепаха", "Белка", "Ёж", "Лиса"],
+    correct: 0,
+    explanation: "«La tortuga» — черепаха."
+  },
+  {
+    id: "a0_296",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Одежда",
+    prompt: "Как по-испански называется «Кепка / шапка»?",
+    options: ["La gorra", "El cinturón", "La camisa", "La falda"],
+    correct: 0,
+    explanation: "«La gorra» — кепка."
+  },
+  {
+    id: "a0_297",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Тело",
+    prompt: "Что означает слово «El corazón»?",
+    options: ["Сердце", "Голова", "Желудок", "Глаз"],
+    correct: 0,
+    explanation: "«El corazón» — сердце."
+  },
+  {
+    id: "a0_298",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Прилагательные",
+    prompt: "Как по-испански сказать «Трудный / сложный»?",
+    options: ["Difícil", "Fácil", "Barato", "Limpio"],
+    correct: 0,
+    explanation: "«Difícil» — трудный / сложный, «fácil» — лёгкий."
+  },
+  {
+    id: "a0_299",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Прилагательные",
+    prompt: "Что означает слово «Joven»?",
+    options: ["Молодой", "Старый", "Высокий", "Тихий"],
+    correct: 0,
+    explanation: "«Joven» — молодой (не меняется по родам в единственном числе)."
+  },
+  {
+    id: "a0_300",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Глаголы",
+    prompt: "Как по-испански будет «Танцевать»?",
+    options: ["Bailar", "Cantar", "Pintar", "Cocinar"],
+    correct: 0,
+    explanation: "«Bailar» — танцевать."
+  },
+  {
+    id: "a0_301",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Глаголы",
+    prompt: "Что означает глагол «Mirar»?",
+    options: ["Смотреть", "Слушать", "Говорить", "Ждать"],
+    correct: 0,
+    explanation: "«Mirar» — смотреть (например, «mirar la televisión» — смотреть телевизор)."
+  },
+  {
+    id: "a0_302",
+    tier: 0,
+    type: "translate",
+    typeLabel: "База A0 • Наречия места",
+    prompt: "Что означает слово «Aquí»?",
+    options: ["Здесь", "Там", "Везде", "Нигде"],
+    correct: 0,
+    explanation: "«Aquí» — здесь, «allí» — там."
+  },
+  {
+    id: "a0_303",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Глагол Tener",
+    prompt: "Вставь правильную форму глагола «tener» («У них есть собака»):",
+    subprompt: "Ellos _____ un perro pequeño.",
+    options: ["tienen", "tenemos", "tiene", "tengo"],
+    correct: 0,
+    explanation: "Для «ellos / ellas / ustedes» форма глагола «tener» — «tienen»."
+  },
+  {
+    id: "a0_304",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Глагол Vivir",
+    prompt: "Вставь правильную форму глагола «vivir» («Ты живёшь в городе?»):",
+    subprompt: "¿Tú _____ en la ciudad?",
+    options: ["vives", "vivo", "vive", "vivimos"],
+    correct: 0,
+    explanation: "Для «tú» глаголы на «-ir» имеют окончание «-es»: «vives»."
+  },
+  {
+    id: "a0_305",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Артикли мн. ч.",
+    prompt: "Выбери правильный определённый артикль для «las casas» (дома):",
+    subprompt: "_____ casas son blancas.",
+    options: ["Las", "Los", "El", "Un"],
+    correct: 0,
+    explanation: "«Casas» — женский род множественного числа, поэтому артикль «Las»."
+  },
+  {
+    id: "a0_306",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Род прилагательных",
+    prompt: "Выбери правильную форму прилагательного («белая кошка»):",
+    subprompt: "La gata es _____.",
+    options: ["blanca", "blanco", "blancas", "blancos"],
+    correct: 0,
+    explanation: "«La gata» — женский род единственного числа, поэтому «blanca»."
+  },
+  {
+    id: "a0_307",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Притяжательные",
+    prompt: "Как сказать «мои книги» по-испански?",
+    subprompt: "_____ libros están aquí.",
+    options: ["Mis", "Mi", "Tus", "Sus"],
+    correct: 0,
+    explanation: "Во множественном числе «мой / моя» становится «mis»: «mis libros»."
+  },
+  {
+    id: "a0_308",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Глагол Estar",
+    prompt: "Вставь правильную форму глагола «estar» («Кофе горячий»):",
+    subprompt: "El café _____ caliente.",
+    options: ["está", "es", "están", "estoy"],
+    correct: 0,
+    explanation: "Температура напитка или еды («горячий / холодный») передаётся через «estar»: «está caliente»."
+  },
+  {
+    id: "a0_309",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Союз «и» перед i-/hi-",
+    prompt: "Какой союз ставится вместо «y» перед словом «hijos» («дети / сыновья»)?",
+    subprompt: "Tengo hermanos _____ hijos.",
+    options: ["e", "y", "u", "o"],
+    correct: 0,
+    explanation: "Перед словами, начинающимися на звук [и] (включая «hi-»), союз «y» меняется на «e»: «hermanos e hijos»."
+  },
+  {
+    id: "a0_310",
+    tier: 0,
+    type: "grammar",
+    typeLabel: "Грамматика A0 • Союз «или» перед o-/ho-",
+    prompt: "Какой союз ставится вместо «o» перед словом «ocho» («восемь»)?",
+    subprompt: "Siete _____ ocho.",
+    options: ["u", "o", "y", "e"],
+    correct: 0,
+    explanation: "Перед словами, начинающимися на звук [о] (включая «ho-»), союз «o» меняется на «u»: «siete u ocho»."
+  },
+  {
+    id: "a0_311",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Цвета",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="30" y="20" width="70" height="50" rx="8" fill="#22c55e"/>
+          </svg>`,
+    prompt: "Какого цвета прямоугольник на картинке?",
+    options: ["Verde", "Azul", "Rojo", "Amarillo"],
+    correct: 0,
+    explanation: "Зелёный цвет по-испански — «verde»."
+  },
+  {
+    id: "a0_312",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Цвета",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <circle cx="65" cy="45" r="26" fill="#3b82f6"/>
+          </svg>`,
+    prompt: "Какого цвета круг на картинке?",
+    options: ["Azul", "Negro", "Blanco", "Gris"],
+    correct: 0,
+    explanation: "Синий цвет по-испански — «azul»."
+  },
+  {
+    id: "a0_313",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Природа",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <polygon points="65,14 72,35 94,35 76,48 83,69 65,56 47,69 54,48 36,35 58,35" fill="#fbbf24"/>
+          </svg>`,
+    prompt: "Что изображено на картинке?",
+    options: ["La estrella", "La luna", "El sol", "La nube"],
+    correct: 0,
+    explanation: "«La estrella» — звезда."
+  },
+  {
+    id: "a0_314",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Дом",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="32" y="20" width="66" height="50" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+            <line x1="65" y1="20" x2="65" y2="70" stroke="#38bdf8" stroke-width="3"/>
+            <line x1="32" y1="45" x2="98" y2="45" stroke="#38bdf8" stroke-width="3"/>
+          </svg>`,
+    prompt: "Что нарисовано на картинке?",
+    options: ["La ventana", "La puerta", "La mesa", "La cama"],
+    correct: 0,
+    explanation: "«La ventana» — окно."
+  },
+  {
+    id: "a0_315",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Предметы",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="44" y="18" width="42" height="28" rx="4" fill="#e2e8f0"/>
+            <line x1="44" y1="46" x2="44" y2="74" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+            <line x1="86" y1="46" x2="86" y2="74" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+            <line x1="44" y1="54" x2="86" y2="54" stroke="#94a3b8" stroke-width="4"/>
+          </svg>`,
+    prompt: "Какой предмет мебели изображён на картинке?",
+    options: ["La silla", "La cama", "El sofá", "El espejo"],
+    correct: 0,
+    explanation: "«La silla» — стул."
+  },
+  {
+    id: "a0_316",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Часы",
+    svg: `<svg width="110" height="100" viewBox="0 0 110 100">
+            <circle cx="55" cy="50" r="40" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+            <text x="55" y="21" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">12</text>
+            <text x="85" y="54" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">3</text>
+            <text x="55" y="85" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">6</text>
+            <text x="25" y="54" fill="#f1f5f9" font-size="10" font-weight="bold" text-anchor="middle">9</text>
+            <line x1="55" y1="50" x2="55" y2="74" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+            <line x1="55" y1="50" x2="55" y2="23" stroke="#f1f5f9" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="55" cy="50" r="3.5" fill="#38bdf8"/>
+          </svg>`,
+    prompt: "Который час показывают часы?",
+    options: ["Son las seis", "Son las doce", "Son las tres", "Son las nueve"],
+    correct: 0,
+    explanation: "Часовая стрелка на 6, минутная на 12 — «Son las seis»."
+  },
+  {
+    id: "a0_317",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Еда",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <ellipse cx="65" cy="50" rx="22" ry="26" fill="#fef08a" stroke="#eab308" stroke-width="2.5"/>
+            <ellipse cx="65" cy="52" rx="11" ry="13" fill="#fbbf24"/>
+          </svg>`,
+    prompt: "Какой продукт изображён на картинке?",
+    options: ["El huevo", "La manzana", "El queso", "La naranja"],
+    correct: 0,
+    explanation: "«El huevo» — яйцо."
+  },
+  {
+    id: "a0_318",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Тело",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <ellipse cx="65" cy="45" rx="28" ry="16" fill="#f8fafc"/>
+            <circle cx="65" cy="45" r="10" fill="#0284c7"/>
+            <circle cx="65" cy="45" r="4" fill="#0f172a"/>
+          </svg>`,
+    prompt: "Какой орган изображён на картинке?",
+    options: ["El ojo", "La boca", "La nariz", "La oreja"],
+    correct: 0,
+    explanation: "«El ojo» — глаз."
+  },
+  {
+    id: "a0_319",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Дом",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="22" y="46" width="86" height="22" rx="5" fill="#94a3b8"/>
+            <rect x="22" y="34" width="20" height="34" rx="4" fill="#64748b"/>
+            <rect x="42" y="38" width="58" height="14" rx="4" fill="#e2e8f0"/>
+          </svg>`,
+    prompt: "Что изображено на картинке?",
+    options: ["La cama", "La mesa", "La puerta", "La ventana"],
+    correct: 0,
+    explanation: "«La cama» — кровать."
+  },
+  {
+    id: "a0_320",
+    tier: 0,
+    type: "visual",
+    typeLabel: "Картинка A0 • Природа",
+    svg: `<svg width="130" height="90" viewBox="0 0 130 90">
+            <rect x="16" y="24" width="98" height="44" rx="8" fill="#0284c7"/>
+            <path d="M22 46 Q42 36 62 46 T108 46" fill="none" stroke="#bae6fd" stroke-width="3" stroke-linecap="round"/>
+            <path d="M22 56 Q42 46 62 56 T108 56" fill="none" stroke="#7dd3fc" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>`,
+    prompt: "Что изображено на картинке?",
+    options: ["El mar", "El sol", "La luna", "El árbol"],
+    correct: 0,
+    explanation: "«El mar» — море."
+  },
+  {
+    id: "a0_321",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Приветствие",
+    prompt: "Послушай и выбери правильный перевод:",
+    audioText: "Buenas noches, hasta mañana.",
+    options: ["Спокойной ночи, до завтра.", "Доброе утро, как дела?", "Привет, спасибо за помощь.", "Добрый день, до скорого."],
+    correct: 0,
+    explanation: "«Buenas noches, hasta mañana» — Спокойной ночи, до завтра."
+  },
+  {
+    id: "a0_322",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Цифры",
+    prompt: "Какое число называет диктор?",
+    audioText: "Tengo tres hermanos y dos perros.",
+    options: ["3 брата и 2 собаки", "2 брата и 3 собаки", "4 брата и 1 собака", "5 братьев и 2 собаки"],
+    correct: 0,
+    explanation: "«Tengo tres hermanos y dos perros» — «tres» = 3, «dos» = 2."
+  },
+  {
+    id: "a0_323",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Еда",
+    prompt: "Что просит человек?",
+    audioText: "Agua y pan, por favor.",
+    options: ["Воду и хлеб, пожалуйста.", "Молоко и сыр, пожалуйста.", "Чай и яблоко, пожалуйста.", "Кофе и молоко, пожалуйста."],
+    correct: 0,
+    explanation: "«Agua y pan, por favor» — Воду и хлеб, пожалуйста."
+  },
+  {
+    id: "a0_324",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Семья",
+    prompt: "О ком говорит человек?",
+    audioText: "Mi amigo vive en una casa pequeña.",
+    options: ["Мой друг живёт в маленьком доме.", "Моя сестра живёт в большом доме.", "Мой папа работает в школе.", "Мой брат любит читать книги."],
+    correct: 0,
+    explanation: "«Mi amigo vive en una casa pequeña» — Мой друг живёт в маленьком доме."
+  },
+  {
+    id: "a0_325",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Цвета",
+    prompt: "Какого цвета книга?",
+    audioText: "El libro azul está en la mesa.",
+    options: ["Синяя", "Красная", "Жёлтая", "Зелёная"],
+    correct: 0,
+    explanation: "«El libro azul está en la mesa» — Синяя книга лежит на столе."
+  },
+  {
+    id: "a0_326",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Знакомство",
+    prompt: "Что говорит собеседник?",
+    audioText: "Sí, hablo un poco de español.",
+    options: ["Да, я немного говорю по-испански.", "Нет, я совсем не понимаю по-испански.", "Да, я живу в Испании уже год.", "Извините, я не знаю этот город."],
+    correct: 0,
+    explanation: "«Sí, hablo un poco de español» — Да, я немного говорю по-испански."
+  },
+  {
+    id: "a0_327",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Животные",
+    prompt: "Кто находится в саду?",
+    audioText: "El gato blanco está en el jardín.",
+    options: ["Белый кот в саду", "Чёрный пёс на улице", "Маленькая птица на окне", "Большая лошадь в поле"],
+    correct: 0,
+    explanation: "«El gato blanco está en el jardín» — Белый кот находится в саду."
+  },
+  {
+    id: "a0_328",
+    tier: 0,
+    type: "audio",
+    typeLabel: "Аудирование A0 • Время суток",
+    prompt: "Когда светит солнце?",
+    audioText: "El sol brilla por la mañana.",
+    options: ["Утром", "Ночью", "Зимой", "Вчера"],
+    correct: 0,
+    explanation: "«El sol brilla por la mañana» — Солнце светит утром."
+  },
+  {
+    id: "a0_build_11",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Еда",
+    prompt: "Собери на испанском: «Я ем красное яблоко»",
+    words: ["manzana", "roja", "una", "Yo", "como", "bebo", "verde"],
+    answer: ["Yo", "como", "una", "manzana", "roja"],
+    explanation: "«Yo como una manzana roja» — Я ем красное яблоко."
+  },
+  {
+    id: "a0_build_12",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Вежливость",
+    prompt: "Собери на испанском: «Извините, где здесь дом?»",
+    words: ["casa", "está", "Perdón", "la", "dónde", "es", "aquí"],
+    answer: ["Perdón", "dónde", "está", "la", "casa"],
+    explanation: "«Perdón, ¿dónde está la casa?» — Извините, где находится дом?"
+  },
+  {
+    id: "a0_build_13",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Семья",
+    prompt: "Собери на испанском: «Мой брат живёт в Мадриде»",
+    words: ["Madrid", "vive", "Mi", "en", "hermano", "madre", "vivo"],
+    answer: ["Mi", "hermano", "vive", "en", "Madrid"],
+    explanation: "«Mi hermano vive en Madrid» — Мой брат живёт в Мадриде."
+  },
+  {
+    id: "a0_build_14",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Цвета",
+    prompt: "Собери на испанском: «Белый хлеб на столе»",
+    words: ["mesa", "está", "El", "en", "pan", "la", "blanco", "negro"],
+    answer: ["El", "pan", "blanco", "está", "en", "la", "mesa"],
+    explanation: "«El pan blanco está en la mesa» — Белый хлеб лежит на столе."
+  },
+  {
+    id: "a0_build_15",
+    tier: 0,
+    type: "builder",
+    typeLabel: "Конструктор A0 • Приветствие",
+    prompt: "Собери на испанском: «Добрый день, очень приятно»",
+    words: ["gusto", "tardes", "Buenas", "mucho", "días", "poco"],
+    answer: ["Buenas", "tardes", "mucho", "gusto"],
+    explanation: "«Buenas tardes, mucho gusto» — Добрый день, очень приятно."
   }
 
 

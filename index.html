@@ -4206,6 +4206,7 @@
     const HISTORY_MAX_ITEMS = 30;
     const ELO_STORAGE_KEY = "linguaduel_rank";
     const VOCAB_STORAGE_KEY = "linguaduel_vocab";
+    const REVIEW_FIXED_STORAGE_KEY = "linguaduel_review_fixed";
     const VOCAB_IGNORED_WORDS = new Set(["hp", "elo", "ai", "a0", "a1", "a2", "b1", "b2", "c1", "c2", "pvp", "svg"]);
 
     const ELO_RULES = {
@@ -5066,22 +5067,58 @@
       return null;
     }
 
+    function getMistakeUniqueKey(q) {
+      if (!q) return "";
+      if (q.id !== undefined && q.id !== null) return String(q.id);
+      return `${q.prompt || ""}::${q.subprompt || q.audioText || ""}`;
+    }
+
+    function loadFixedMistakesMap() {
+      try {
+        const raw = localStorage.getItem(REVIEW_FIXED_STORAGE_KEY);
+        if (!raw) return {};
+        const parsed = JSON.parse(raw);
+        return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function markMistakeFixed(q) {
+      const key = getMistakeUniqueKey(q);
+      if (!key) return;
+      const map = loadFixedMistakesMap();
+      map[key] = Date.now();
+      try {
+        localStorage.setItem(REVIEW_FIXED_STORAGE_KEY, JSON.stringify(map));
+      } catch (e) {}
+    }
+
     function collectReviewMistakesFromHistory() {
       const history = loadMatchHistory().slice(0, HISTORY_MAX_ITEMS);
       if (history.length === 0) {
         return { hasMatches: false, totalMatches: 0, items: [] };
       }
 
+      const fixedMap = loadFixedMistakesMap();
       const seenQuestionIds = new Set();
       const items = [];
 
       history.forEach(match => {
+        const matchTime = Number(match && match.timestamp) || 0;
         const mistakes = Array.isArray(match && match.mistakes) ? match.mistakes : [];
         mistakes.forEach(m => {
           const q = findQuestionForMistake(m);
           if (!q) return;
-          const uniqueKey = q.id !== undefined && q.id !== null ? String(q.id) : `${q.prompt}::${q.subprompt || q.audioText || ""}`;
-          if (seenQuestionIds.has(uniqueKey)) return;
+          const uniqueKey = getMistakeUniqueKey(q);
+          if (!uniqueKey || seenQuestionIds.has(uniqueKey)) return;
+
+          const fixedAt = Number(fixedMap[uniqueKey]) || 0;
+          if (fixedAt >= matchTime) {
+            seenQuestionIds.add(uniqueKey);
+            return;
+          }
+
           seenQuestionIds.add(uniqueKey);
           items.push({
             question: q,
@@ -5314,6 +5351,7 @@
         if (!confirm("Очистить всю историю сыгранных дуэлей?")) return;
         try {
           localStorage.removeItem(HISTORY_STORAGE_KEY);
+          localStorage.removeItem(REVIEW_FIXED_STORAGE_KEY);
         } catch (e) {}
         renderHistoryModalList();
       });
@@ -8897,8 +8935,10 @@ function prepareReviewVocabTools(q, correctAnswerText) {
           });
         }
 
-        if (isCorrect) {
+       if (isCorrect) {
           reviewState.fixedCount += 1;
+          markMistakeFixed(q);
+          updateHistorySummaryUI();
           soundFX.correct();
           if (isBuilder && state.soundEnabled && Array.isArray(q.answer)) {
             speakSpanish(q.answer.join(" "), 1.0, reviewAudioUi);
@@ -8951,13 +8991,21 @@ function prepareReviewVocabTools(q, correctAnswerText) {
           el.reviewSummaryIcon.textContent = "🏆";
           el.reviewSummaryTitle.className = "gameover-title victory";
           el.reviewSummaryTitle.textContent = "¡Perfecto! Все ошибки исправлены!";
-          el.reviewSummarySub.textContent = "Ты безошибочно прошёл все проблемные вопросы из последних 30 матчей.";
+          el.reviewSummarySub.textContent = "Ты безошибочно прошёл все проблемные вопросы и очистил список ошибок.";
           soundFX.victory();
         } else {
           el.reviewSummaryIcon.textContent = "🎯";
           el.reviewSummaryTitle.className = "gameover-title victory";
           el.reviewSummaryTitle.textContent = "Тренировка завершена!";
-          el.reviewSummarySub.textContent = `Исправлено ${fixed} из ${total} ошибок. Можно пройти ещё раз для закрепления.`;
+          el.reviewSummarySub.textContent = `Исправлено ${fixed} из ${total} ошибок. Правильные ответы убраны из списка.`;
+        }
+
+        const remainingCount = collectReviewMistakesFromHistory().items.length;
+        if (remainingCount === 0) {
+          el.btnReviewRestart.style.display = "none";
+        } else {
+          el.btnReviewRestart.style.display = "block";
+          el.btnReviewRestart.textContent = `Отработать оставшиеся ошибки (${remainingCount})`;
         }
       }
 
